@@ -7,493 +7,164 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy:   #1a2e4a;
-      --navy2:  #243d60;
-      --teal:   #2e7d8c;
-      --teal2:  #3a9db0;
-      --light:  #f4f7f9;
-      --white:  #ffffff;
-      --text:   #333333;
-      --muted:  #666666;
-      --border: #d8e3eb;
+      --navy:  #1a2e4a;
+      --navy2: #243d60;
+      --teal:  #2e7d8c;
+      --teal2: #3a9db0;
+      --light: #f4f7f9;
+      --white: #ffffff;
+      --text:  #333333;
+      --muted: #5a6a7a;
+      --border:#d8e3eb;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.75; }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text);
-      line-height: 1.7;
-    }
+    /* TOP BAR */
+    .topbar { background: var(--navy2); color: rgba(255,255,255,.75); font-size:.78rem; padding:6px 0; }
+    .topbar-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; justify-content:flex-end; gap:24px; }
+    .topbar a { color:rgba(255,255,255,.75); text-decoration:none; }
+    .topbar a:hover { color:#fff; }
 
-    /* ─── TOP BAR ─── */
-    .topbar {
-      background: var(--navy2);
-      color: rgba(255,255,255,0.75);
-      font-size: 0.78rem;
-      padding: 6px 0;
-    }
-    .topbar-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 24px;
-    }
-    .topbar a { color: rgba(255,255,255,0.75); text-decoration: none; }
-    .topbar a:hover { color: #fff; }
+    /* NAV */
+    nav { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,.25); }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo { font-family:'Merriweather',serif; font-size:1.1rem; color:#fff; text-decoration:none; }
+    .logo span { color:var(--teal2); }
+    .nav-links { display:flex; gap:4px; list-style:none; }
+    .nav-links a { color:rgba(255,255,255,.85); text-decoration:none; font-size:.87rem; font-weight:600; padding:8px 13px; border-radius:4px; transition:.2s; }
+    .nav-links a:hover { background:rgba(255,255,255,.1); color:#fff; }
+    .nav-cta { background:var(--teal)!important; color:#fff!important; }
+    .nav-cta:hover { background:var(--teal2)!important; }
 
-    /* ─── NAV ─── */
-    nav {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
-      font-family: 'Merriweather', serif;
-      font-size: 1.15rem;
-      color: #fff;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-    .logo span { color: var(--teal2); }
-    .nav-links {
-      display: flex;
-      gap: 4px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 4px;
-      transition: background .2s, color .2s;
-      letter-spacing: 0.3px;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,0.1); color: #fff; }
-    .nav-cta {
-      background: var(--teal) !important;
-      color: #fff !important;
-      padding: 8px 18px !important;
-      border-radius: 4px !important;
-    }
-    .nav-cta:hover { background: var(--teal2) !important; }
-
-    /* ─── HERO ─── */
+    /* HERO */
     .hero {
-      position: relative;
-      min-height: 480px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      background:
-        linear-gradient(to right, rgba(15,30,50,0.82) 45%, rgba(15,30,50,0.35) 100%),
+      position:relative; min-height:500px; display:flex; align-items:flex-end; overflow:hidden;
+      background: linear-gradient(to right, rgba(15,30,50,.88) 40%, rgba(15,30,50,.45) 100%),
         url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80') center/cover no-repeat;
     }
-    .hero-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 72px 24px 64px;
-      width: 100%;
-    }
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--teal2);
-      margin-bottom: 14px;
-    }
-    .hero h1 {
-      font-family: 'Merriweather', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: #fff;
-      line-height: 1.2;
-      max-width: 620px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.82);
-      max-width: 540px;
-      margin-bottom: 32px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 13px 28px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .btn-primary { background: var(--teal); color: #fff; }
-    .btn-primary:hover { background: var(--teal2); }
-    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); margin-left: 12px; }
-    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    .hero-content { max-width:1200px; margin:0 auto; padding:80px 24px 72px; width:100%; }
+    .hero-eyebrow { font-size:.72rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--teal2); margin-bottom:16px; }
+    .hero h1 { font-family:'Merriweather',serif; font-size:clamp(2rem,3.8vw,3rem); color:#fff; line-height:1.2; max-width:640px; margin-bottom:22px; }
+    .hero p { font-size:1.05rem; color:rgba(255,255,255,.82); max-width:540px; margin-bottom:36px; }
+    .btn { display:inline-block; padding:13px 28px; border-radius:4px; font-weight:700; font-size:.9rem; text-decoration:none; transition:.2s; }
+    .btn-primary { background:var(--teal); color:#fff; }
+    .btn-primary:hover { background:var(--teal2); }
+    .btn-outline { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.6); margin-left:12px; }
+    .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,.1); }
 
-    /* ─── BREADCRUMB ─── */
-    .breadcrumb {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 0;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .breadcrumb a { color: var(--navy); text-decoration: underline; }
+    /* BREADCRUMB */
+    .breadcrumb { background:var(--white); border-bottom:1px solid var(--border); padding:12px 0; font-size:.78rem; color:var(--muted); }
+    .breadcrumb-inner { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .breadcrumb a { color:var(--navy); text-decoration:underline; }
 
-    /* ─── INTRO TEXT ─── */
-    .intro {
-      background: var(--white);
-      padding: 60px 24px;
-    }
-    .intro-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .intro h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.6rem;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-    .intro p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 640px;
-      margin: 0 auto;
-    }
+    /* SECTIONS — general */
+    .section-eyebrow { font-size:.72rem; letter-spacing:2.5px; font-weight:700; text-transform:uppercase; color:var(--teal); margin-bottom:14px; display:block; }
+    .section-h2 { font-family:'Merriweather',serif; font-size:1.75rem; color:var(--navy); margin-bottom:16px; line-height:1.3; }
+    .section-lead { color:var(--muted); max-width:640px; margin-bottom:48px; font-size:.97rem; }
 
-    /* ─── CLIENT LOGOS ─── */
-    .logos {
-      background: var(--light);
-      padding: 40px 24px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .logos-inner { max-width: 1200px; margin: 0 auto; }
-    .logos-label {
-      text-align: center;
-      font-size: 0.72rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-    .logos-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 32px 48px;
-      align-items: center;
-    }
-    .logo-item {
-      font-family: 'Merriweather', serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--muted);
-      letter-spacing: 1px;
-      opacity: 0.7;
-    }
+    /* INTRO */
+    .intro { background:var(--white); padding:64px 24px; }
+    .intro-inner { max-width:780px; margin:0 auto; }
+    .intro h2 { font-family:'Merriweather',serif; font-size:1.65rem; color:var(--navy); margin-bottom:18px; }
+    .intro p { font-size:1rem; color:var(--muted); margin-bottom:14px; }
 
-    /* ─── TWO-COL SECTION ─── */
-    .split { padding: 72px 24px; }
-    .split.bg-light { background: var(--light); }
-    .split.bg-white { background: var(--white); }
-    .split-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .split-inner.reverse { direction: rtl; }
-    .split-inner.reverse > * { direction: ltr; }
-    .split-img {
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    }
-    .split-img img { width: 100%; display: block; height: 380px; object-fit: cover; }
-    .split-text h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.6rem;
-      color: var(--navy);
-      margin-bottom: 16px;
-      line-height: 1.35;
-    }
-    .split-text p { color: var(--muted); margin-bottom: 14px; font-size: 0.97rem; }
-    .split-text ul {
-      list-style: none;
-      margin: 16px 0 24px;
-    }
-    .split-text ul li {
-      padding: 5px 0 5px 24px;
-      position: relative;
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-    .split-text ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--teal);
-      font-size: 0.9rem;
-      top: 6px;
-    }
-    .split-text .btn-text {
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border-bottom: 2px solid var(--teal);
-      padding-bottom: 2px;
-    }
+    /* LOGOS */
+    .logos { background:var(--light); padding:36px 24px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .logos-inner { max-width:1200px; margin:0 auto; }
+    .logos-label { text-align:center; font-size:.72rem; letter-spacing:2px; font-weight:700; text-transform:uppercase; color:var(--muted); margin-bottom:24px; }
+    .logos-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px 48px; align-items:center; }
+    .logo-item { font-family:'Merriweather',serif; font-size:.82rem; font-weight:700; color:var(--muted); opacity:.65; letter-spacing:.5px; }
 
-    /* ─── YDELSER GRID ─── */
-    .services {
-      background: var(--navy);
-      padding: 80px 24px;
-    }
-    .services-inner { max-width: 1200px; margin: 0 auto; }
-    .section-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 2.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--teal2);
-      margin-bottom: 12px;
-    }
-    .services h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    .services > .services-inner > p {
-      color: rgba(255,255,255,0.7);
-      max-width: 560px;
-      margin-bottom: 48px;
-      font-size: 0.97rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-    .card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      padding: 28px 24px;
-      transition: background .2s, transform .2s;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-    }
-    .card:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-3px);
-    }
-    .card-icon {
-      font-size: 1.8rem;
-      margin-bottom: 14px;
-    }
-    .card h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 1rem;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .card p {
-      color: rgba(255,255,255,0.65);
-      font-size: 0.87rem;
-      line-height: 1.6;
-    }
-    .card-arrow {
-      margin-top: 18px;
-      color: var(--teal2);
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
+    /* SPLIT */
+    .split { padding:72px 24px; }
+    .split.bg-light { background:var(--light); }
+    .split.bg-white { background:var(--white); }
+    .split-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .split-inner.reverse { direction:rtl; }
+    .split-inner.reverse > * { direction:ltr; }
+    .split-img { border-radius:4px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,.12); }
+    .split-img img { width:100%; display:block; height:420px; object-fit:cover; }
+    .split-text h2 { font-family:'Merriweather',serif; font-size:1.6rem; color:var(--navy); margin-bottom:18px; line-height:1.35; }
+    .split-text p { color:var(--muted); margin-bottom:14px; font-size:.97rem; }
+    .split-text ul { list-style:none; margin:16px 0 28px; }
+    .split-text ul li { padding:6px 0 6px 24px; position:relative; color:var(--muted); font-size:.95rem; border-bottom:1px solid var(--border); }
+    .split-text ul li:last-child { border-bottom:none; }
+    .split-text ul li::before { content:'▸'; position:absolute; left:0; color:var(--teal); top:7px; font-size:.85rem; }
+    .link-arrow { color:var(--navy); font-weight:700; font-size:.9rem; text-decoration:none; border-bottom:2px solid var(--teal); padding-bottom:2px; }
+    .link-arrow:hover { color:var(--teal); }
 
-    /* ─── FASER ─── */
-    .process { background: var(--white); padding: 80px 24px; }
-    .process-inner { max-width: 1200px; margin: 0 auto; }
-    .process h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.8rem;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-    .process > .process-inner > p {
-      color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 48px;
-    }
-    .phases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2px;
-    }
-    .phase {
-      background: var(--light);
-      padding: 28px 24px;
-      border-left: 4px solid var(--teal);
-      position: relative;
-    }
-    .phase:nth-child(2) { border-color: var(--teal2); }
-    .phase:nth-child(3) { border-color: var(--navy); }
-    .phase:nth-child(4) { border-color: var(--navy2); }
-    .phase-num {
-      font-family: 'Merriweather', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .phase h3 {
-      font-size: 1.05rem;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-    .phase-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .phase p { color: var(--muted); font-size: 0.88rem; margin-top: 6px; }
+    /* YDELSER */
+    .services { background:var(--navy); padding:80px 24px; }
+    .services-inner { max-width:1200px; margin:0 auto; }
+    .services h2 { font-family:'Merriweather',serif; font-size:1.8rem; color:#fff; margin-bottom:14px; }
+    .services .lead { color:rgba(255,255,255,.7); max-width:620px; margin-bottom:56px; font-size:.97rem; }
+    .services .section-eyebrow { color:var(--teal2); }
 
-    /* ─── QUOTE / TESTIMONIAL ─── */
-    .quote-section {
-      background: var(--light);
-      padding: 72px 24px;
-      border-top: 1px solid var(--border);
+    .service-group { margin-bottom:52px; }
+    .service-group-title {
+      font-size:.73rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+      color:var(--teal2); border-bottom:1px solid rgba(255,255,255,.12);
+      padding-bottom:10px; margin-bottom:20px;
     }
-    .quote-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .quote-mark {
-      font-size: 5rem;
-      line-height: 0.5;
-      color: var(--teal);
-      font-family: 'Merriweather', serif;
-      margin-bottom: 24px;
-      display: block;
-    }
-    blockquote {
-      font-family: 'Merriweather', serif;
-      font-size: 1.2rem;
-      color: var(--navy);
-      font-style: italic;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .quote-author {
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-weight: 700;
-    }
+    .service-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+    .service-cards.two { grid-template-columns:repeat(2,1fr); }
+    .service-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); padding:28px 26px 24px; text-decoration:none; display:block; transition:background .2s, transform .2s; }
+    .service-card:hover { background:rgba(255,255,255,.1); transform:translateY(-2px); }
+    .service-card h3 { font-family:'Merriweather',serif; font-size:.98rem; color:#fff; margin-bottom:10px; line-height:1.4; }
+    .service-card p { color:rgba(255,255,255,.6); font-size:.86rem; line-height:1.65; }
+    .service-card .card-link { margin-top:16px; color:var(--teal2); font-weight:700; font-size:.82rem; display:inline-block; }
 
-    /* ─── CTA BANNER ─── */
-    .cta-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
-      padding: 72px 24px;
-      text-align: center;
-    }
-    .cta-banner h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 2rem;
-      color: #fff;
-      margin-bottom: 14px;
-    }
-    .cta-banner p {
-      color: rgba(255,255,255,0.75);
-      max-width: 520px;
-      margin: 0 auto 32px;
-    }
+    /* PROCESS */
+    .process { background:var(--white); padding:80px 24px; }
+    .process-inner { max-width:1200px; margin:0 auto; }
+    .phases { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:48px; }
+    .phase { background:var(--light); padding:32px 24px; border-left:4px solid var(--teal); }
+    .phase:nth-child(2){border-color:var(--teal2);}
+    .phase:nth-child(3){border-color:var(--navy);}
+    .phase:nth-child(4){border-color:var(--navy2);}
+    .phase-num { font-family:'Merriweather',serif; font-size:1.4rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+    .phase h3 { font-size:1rem; color:var(--navy); margin-bottom:8px; }
+    .phase-label { font-size:.73rem; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px; }
+    .phase p { color:var(--muted); font-size:.87rem; margin-top:8px; }
 
-    /* ─── FOOTER ─── */
-    footer {
-      background: #111c2d;
-      color: rgba(255,255,255,0.6);
-      padding: 56px 24px 32px;
-    }
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-brand .logo { font-size: 1rem; }
-    .footer-brand p {
-      margin-top: 14px;
-      font-size: 0.85rem;
-      line-height: 1.7;
-      max-width: 260px;
-    }
-    .footer-col h4 {
-      color: #fff;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 9px; }
-    .footer-col ul li a {
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.88rem;
-    }
-    .footer-col ul li a:hover { color: #fff; }
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-    }
+    /* QUOTE */
+    .quote-section { background:var(--light); padding:72px 24px; border-top:1px solid var(--border); }
+    .quote-inner { max-width:760px; margin:0 auto; text-align:center; }
+    .quote-mark { font-size:5rem; line-height:.5; color:var(--teal); font-family:'Merriweather',serif; margin-bottom:24px; display:block; }
+    blockquote { font-family:'Merriweather',serif; font-size:1.18rem; color:var(--navy); font-style:italic; line-height:1.7; margin-bottom:20px; }
+    .quote-author { font-size:.85rem; color:var(--muted); font-weight:700; }
 
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      .split-inner { grid-template-columns: 1fr; gap: 32px; }
-      .split-inner.reverse { direction: ltr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .nav-links { display: none; }
+    /* CTA */
+    .cta-banner { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); padding:72px 24px; text-align:center; }
+    .cta-banner h2 { font-family:'Merriweather',serif; font-size:2rem; color:#fff; margin-bottom:16px; }
+    .cta-banner p { color:rgba(255,255,255,.75); max-width:520px; margin:0 auto 36px; }
+
+    /* FOOTER */
+    footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px; }
+    .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+    .footer-brand p { margin-top:14px; font-size:.85rem; line-height:1.7; max-width:260px; }
+    .footer-col h4 { color:#fff; font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
+    .footer-col ul { list-style:none; }
+    .footer-col ul li { margin-bottom:9px; }
+    .footer-col ul li a { color:rgba(255,255,255,.6); text-decoration:none; font-size:.86rem; }
+    .footer-col ul li a:hover { color:#fff; }
+    .footer-bottom { max-width:1200px; margin:0 auto; border-top:1px solid rgba(255,255,255,.1); padding-top:24px; display:flex; justify-content:space-between; font-size:.8rem; }
+
+    @media(max-width:960px){
+      .split-inner{grid-template-columns:1fr;gap:32px;}
+      .split-inner.reverse{direction:ltr;}
+      .phases{grid-template-columns:1fr 1fr;}
+      .service-cards{grid-template-columns:1fr 1fr!important;}
+      .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+      .nav-links{display:none;}
     }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.8rem; }
-      .footer-inner { grid-template-columns: 1fr; }
+    @media(max-width:600px){
+      .hero h1{font-size:1.75rem;}
+      .phases{grid-template-columns:1fr;}
+      .service-cards{grid-template-columns:1fr!important;}
+      .footer-inner{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -502,22 +173,21 @@
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <a href="mailto:tk@feldballe-friskole.dk">tk@feldballe-friskole.dk</a>
-    <a href="#kontakt">Kontakt os</a>
-    <a href="#">Nyhedsbrev</a>
+    <a href="tel:+4561657365">61 65 73 65</a>
+    <a href="mailto:thomas@strategiskskole.dk">thomas@strategiskskole.dk</a>
+    <a href="kontakt.html">Kontakt os</a>
   </div>
 </div>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Strategisk<span>skole</span>.dk</a>
     <ul class="nav-links">
-      <li><a href="#ydelser">Ydelser</a></li>
-      <li><a href="#tilgang">Tilgang</a></li>
-      <li><a href="#om">Om os</a></li>
-      <li><a href="#referencer">Referencer</a></li>
-      <li><a href="#kontakt" class="nav-cta">Kontakt os</a></li>
+      <li><a href="ydelser.html">Ydelser</a></li>
+      <li><a href="skoleleder.html">Skolelederens ståsted</a></li>
+      <li><a href="om-os.html">Om os</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Kontakt os</a></li>
     </ul>
   </div>
 </nav>
@@ -527,128 +197,165 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Skoleudvikling · Ledelse · Governance</div>
     <h1>Strategi, der kan mærkes i praksis</h1>
-    <p>Vi hjælper frie grundskoler, efterskoler og friskoler med at skabe klar retning, stærk ledelse og bæredygtige organisationer – fra beslutning til tirsdag kl. 10.</p>
-    <a href="#ydelser" class="btn btn-primary">Se vores ydelser</a>
-    <a href="#kontakt" class="btn btn-outline">Kontakt os</a>
+    <p>Vi hjælper frie grundskoler, efterskoler og friskoler med at skabe klar retning, stærk ledelse og bæredygtige organisationer — fra beslutning til tirsdag kl. 10.</p>
+    <a href="ydelser.html" class="btn btn-primary">Se vores ydelser</a>
+    <a href="kontakt.html" class="btn btn-outline">Kontakt os</a>
   </div>
 </section>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
-  <div class="breadcrumb-inner">
-    <a href="index.html">Forside</a> / Konsulentydelser
-  </div>
+  <div class="breadcrumb-inner">Forside</div>
 </div>
 
 <!-- INTRO -->
 <section class="intro">
   <div class="intro-inner">
     <h2>Skoleudvikling, der virker i hverdagen</h2>
-    <p>Strategiskskole.dk arbejder i spændingsfeltet mellem drift og udvikling. Vi skaber retning i kompleksitet, styrker beslutningskraft og kobler strategi direkte til praksis – for frie grundskoler, efterskoler og friskoler.</p>
+    <p>Strategiskskole.dk hjælper skoler med at omsætte strategi til tydelig organisering, stærkere koordinering, bevidste mødekulturer og bæredygtige arbejdsformer — så retning, arbejdsmiljø og beslutningskraft hænger sammen i praksis.</p>
+    <p>Vi arbejder i spændingsfeltet mellem drift og udvikling. Vi skaber retning i kompleksitet, styrker beslutningskraft og kobler strategi direkte til praksis — for frie grundskoler, efterskoler og friskoler.</p>
   </div>
 </section>
 
-<!-- LOGOS -->
+<!-- MÅLGRUPPE STRIP -->
 <div class="logos">
   <div class="logos-inner">
-    <div class="logos-label">Skoler og organisationer, vi har samarbejdet med</div>
+    <div class="logos-label">Vi arbejder primært med</div>
     <div class="logos-grid">
-      <span class="logo-item">Friskolen</span>
-      <span class="logo-item">Efterskolen</span>
-      <span class="logo-item">Frie Skolers Lærerforening</span>
-      <span class="logo-item">Grundskolerne</span>
-      <span class="logo-item">Lederforeningen</span>
-      <span class="logo-item">Skolebestyrelsen</span>
+      <span class="logo-item">Frie grundskoler</span>
+      <span class="logo-item">Efterskoler</span>
+      <span class="logo-item">Friskoler</span>
+      <span class="logo-item">Skolebestyrelser</span>
+      <span class="logo-item">Skoleledelser</span>
     </div>
   </div>
 </div>
 
 <!-- SPLIT: HVAD VI GØR -->
-<section class="split bg-white" id="tilgang">
+<section class="split bg-white">
   <div class="split-inner">
     <div class="split-img">
-      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Ledelsesmøde på skole"/>
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Skoleledelse i dialog"/>
     </div>
     <div class="split-text">
       <h2>Sådan kan vi hjælpe jer med ledelse og skoleudvikling</h2>
-      <p>Vi tror på, at strategi kun er værdifuld, hvis den kan mærkes i praksis. Hos Strategiskskole.dk kan I konkret få hjælp til:</p>
+      <p>Mange skoler har strategier, visioner og ambitioner — men oplever, at de ikke for alvor sætter sig spor i hverdagen. Strategien findes i dokumenter og bestyrelsesrum, men ikke nødvendigvis i møderne, kalenderen og den måde, arbejdet faktisk organiseres på.</p>
+      <p>Vi hjælper jer med at oversætte strategi til praksis. Ikke gennem flere ord, men gennem tydelige greb i hverdagen.</p>
       <ul>
-        <li><strong>Bestyrelsesudvikling</strong> – rolle- og ansvarsafklaring, årshjul og governance-modeller</li>
-        <li><strong>Ledelseskraft</strong> – prioritering, opgavefordeling og udviklingsledelse</li>
-        <li><strong>Strategioversættelse</strong> – fra vision til konkret praksis tirsdag kl. 10</li>
-        <li><strong>Kultur og samarbejde</strong> – håndtering af relationelle og organisatoriske spændinger</li>
-        <li><strong>Robusthed under pres</strong> – ledelse, kommunikation og prioritering i svære situationer</li>
+        <li>Oversættelse af strategi til konkrete arbejdsgange og prioriteringer</li>
+        <li>Stærkere mødekultur og bevidste samarbejdsrum</li>
+        <li>Tydelig organisering af work domains og opgaveejerskab</li>
+        <li>Ledelse som design af rammer — ikke kun reaktion</li>
+        <li>Arbejdsmiljø og trivsel gennem organisatorisk klarhed</li>
       </ul>
-      <a href="#ydelser" class="btn-text">Se alle ydelser →</a>
+      <a href="ydelser.html" class="link-arrow">Se alle ydelser →</a>
     </div>
   </div>
 </section>
 
-<!-- YDELSER GRID -->
+<!-- YDELSER -->
 <section class="services" id="ydelser">
   <div class="services-inner">
-    <div class="section-eyebrow">Vores kerneydelser</div>
-    <h2>Konsulentpakker til skolens ledelse</h2>
-    <p>Alle ydelser er tilpasset den travle skolehverdag og leveres med konkrete, handlingsanvisende outputs.</p>
-    <div class="cards">
-      <a href="bestyrelse.html" class="card">
-        <div class="card-icon">🏛️</div>
-        <h3>Bestyrelse &amp; Governance</h3>
-        <p>Professionel og strategisk stærk bestyrelse med tydelig rolle- og ansvarsafklaring.</p>
-        <div class="card-arrow">Læs mere →</div>
-      </a>
-      <a href="ledelse.html" class="card">
-        <div class="card-icon">🎯</div>
-        <h3>Ledelse &amp; Organisationskraft</h3>
-        <p>Styrk ledelsens evne til at skabe retning, prioritere og implementere i hverdagen.</p>
-        <div class="card-arrow">Læs mere →</div>
-      </a>
-      <a href="strategi.html" class="card">
-        <div class="card-icon">🗺️</div>
-        <h3>Strategi &amp; Skoleudvikling</h3>
-        <p>Tydelig retning, der kan mærkes – fra strategihus til konkret udviklingsportefølje.</p>
-        <div class="card-arrow">Læs mere →</div>
-      </a>
-      <a href="kultur.html" class="card">
-        <div class="card-icon">🤝</div>
-        <h3>Kultur &amp; Samarbejde</h3>
-        <p>Håndter relationelle spændinger og skab samarbejde med tydelige forventninger.</p>
-        <div class="card-arrow">Læs mere →</div>
-      </a>
-      <a href="robusthed.html" class="card">
-        <div class="card-icon">🔥</div>
-        <h3>Robusthed &amp; Kriseledelse</h3>
-        <p>Skab organisationer, der kan stå i pres – prioritering, beredskab og kommunikation.</p>
-        <div class="card-arrow">Læs mere →</div>
-      </a>
+    <span class="section-eyebrow">Vores tematiske ydelser</span>
+    <h2>Konsulentydelser til skolens ledelse</h2>
+    <p class="lead">Alle ydelser er tilpasset den travle skolehverdag og leveres med konkrete, handlingsanvisende outputs — ikke løse idéer, men færdige greb og modeller, der kan bruges direkte.</p>
+
+    <div class="service-group">
+      <div class="service-group-title">Strategi og ledelse</div>
+      <div class="service-cards">
+        <a href="strategi-i-hverdagspraksis.html" class="service-card">
+          <h3>Strategi i hverdagspraksis</h3>
+          <p>Mange skoler har strategier, der ikke sætter sig spor i hverdagen. Vi oversætter strategi til konkrete greb, der gør retningen synlig i møder, prioriteringer og dagligt arbejde.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+        <a href="ledelse-som-design.html" class="service-card">
+          <h3>Ledelse som design af rammer</h3>
+          <p>Ledelse handler ikke kun om at motivere og beslutte. Det handler om at designe de rammer, arbejdet foregår i. Vi styrker lederens blik for rammesætning som aktiv disciplin.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+        <a href="smaa-greb.html" class="service-card">
+          <h3>Små greb med stor strategisk effekt</h3>
+          <p>Store forandringer begynder ofte i det nære. Vi identificerer de små, højeffektive greb der skaber reel bevægelse — uden at overbelaste organisationen med for mange initiativer.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+      </div>
     </div>
+
+    <div class="service-group">
+      <div class="service-group-title">Organisering og arbejdskraft</div>
+      <div class="service-cards">
+        <a href="work-domains.html" class="service-card">
+          <h3>Organisering af work domains og opgaveejerskab</h3>
+          <p>Når arbejdet forstås som enkeltopgaver, bliver organiseringen sårbar og tilfældig. Vi hjælper med at skabe tydelige arbejdsflader og bæredygtigt ejerskab på tværs af funktioner.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+        <a href="koordinering.html" class="service-card">
+          <h3>Koordinering som strategisk disciplin</h3>
+          <p>Koordinering er ikke lavpraktisk — det er en strategisk kapacitet. Evnen til at binde drift, beslutninger, overblik og udvikling sammen på tværs af organisationen.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+        <a href="arbejdsmiljoe.html" class="service-card">
+          <h3>Arbejdsmiljø gennem tydelig organisering</h3>
+          <p>Et godt arbejdsmiljø opstår ikke kun gennem gode relationer. Det opstår også gennem klar organisering. Uklare roller og forventninger er en af de største kilder til mistrivsel.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <div class="service-group-title">Samarbejde og processer</div>
+      <div class="service-cards two">
+        <a href="moedekultur.html" class="service-card">
+          <h3>Mødekultur og samarbejdsrum</h3>
+          <p>Møder er ikke neutrale — de former kultur, beslutningskraft og samarbejde. Vi hjælper med at skabe en bevidst mødearkitektur, hvor møder har klart formål, deltagere og output.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+        <a href="individuel-afklaring.html" class="service-card">
+          <h3>Individuel afklaring som vej til stærkere fælles processer</h3>
+          <p>Stærke fælles processer opstår sjældent, hvis man springer direkte til fælles løsninger. Individuel afklaring er fundamentet for bedre og mere præcise fælles beslutninger.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <div class="service-group-title">Særlig ydelse</div>
+      <div class="service-cards two">
+        <a href="skoleleder.html" class="service-card">
+          <h3>Skolelederens strategiske ståsted</h3>
+          <p>Når kompleksiteten vokser, må lederens ståsted blive tydeligere. En særlig ydelse til skoleledere, der søger at styrke deres strategiske og personlige ledelsesidentitet i en krævende hverdag.</p>
+          <span class="card-link">Læs mere →</span>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- PROCESS / FASER -->
+<!-- PROCESS -->
 <section class="process">
   <div class="process-inner">
-    <div class="section-eyebrow">Sådan arbejder vi</div>
-    <h2>Fire faser til konkret forandring</h2>
-    <p>Uanset om I står over for strategisk nyformulering, ledelsesudvikling eller organisatorisk forandring, arbejder vi i en fleksibel proces tilpasset jeres skole.</p>
+    <span class="section-eyebrow">Sådan arbejder vi</span>
+    <h2 class="section-h2">Fire faser til konkret forandring</h2>
+    <p class="section-lead">Uanset om I står over for strategisk nyformulering, ledelsesudvikling eller organisatorisk forandring, arbejder vi i en fleksibel proces tilpasset jeres skoles virkelighed. Fælles for alle faser er, at vi tænker udvikling og eksekvering sammen.</p>
     <div class="phases">
       <div class="phase">
         <div class="phase-num">1.</div>
         <h3>Analyse</h3>
         <div class="phase-label">Fokus: Fælles billede</div>
-        <p>Vi skaber et klart billede af skolens situation, udfordringer og potentiale – som der kan vælges retning ud fra.</p>
+        <p>Vi skaber et klart billede af skolens situation — udfordringer, mønstre og potentiale — som der kan vælges retning ud fra.</p>
       </div>
       <div class="phase">
         <div class="phase-num">2.</div>
         <h3>Udvikling</h3>
         <div class="phase-label">Fokus: Retning og mål</div>
-        <p>Valg af retning, mål og overordnede indsatser. Leverance: En tydelig beskrivelse af strategi med fokusområder.</p>
+        <p>Valg af retning, mål og overordnede indsatser. Leverance: en tydelig beskrivelse af strategi med fokusområder.</p>
       </div>
       <div class="phase">
         <div class="phase-num">3.</div>
         <h3>Planlægning</h3>
         <div class="phase-label">Fokus: Prioritering</div>
-        <p>Konkret eksekveringsplan med indsatser, ansvarlige og tydelig organisering – klar til implementering.</p>
+        <p>Konkret eksekveringsplan med indsatser, ansvarlige og tydelig organisering — klar til implementering i hverdagen.</p>
       </div>
       <div class="phase">
         <div class="phase-num">4.</div>
@@ -661,41 +368,41 @@
 </section>
 
 <!-- SPLIT: OM OS -->
-<section class="split bg-light" id="om">
+<section class="split bg-light">
   <div class="split-inner reverse">
     <div class="split-img">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Konsulent i dialog"/>
+      <img src="images/thomas-kjerstein.jpg" alt="Thomas Kjerstein, Strategiskskole.dk" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80'"/>
     </div>
     <div class="split-text">
-      <div class="section-eyebrow" style="color:var(--teal)">Om Strategiskskole.dk</div>
+      <span class="section-eyebrow">Om Strategiskskole.dk</span>
       <h2>Ikke en klassisk konsulentvirksomhed</h2>
-      <p>Strategiskskole.dk er kendetegnet ved at arbejde i spændingsfeltet mellem drift og udvikling. Vi tør adressere det, der er svært – ledelsesrum, konflikter, uklarhed – og vi kobler altid strategi direkte til praksis.</p>
-      <p>Vores tilgang er <strong>praksisnær, relationel og analytisk skarp</strong>. Vi er konfronterende på en konstruktiv måde, fordi vi ved, at uklarhed er en af de største kilder til mistrivsel.</p>
+      <p>Strategiskskole.dk er kendetegnet ved at arbejde i spændingsfeltet mellem drift og udvikling. Vi tør adressere det, der er svært — ledelsesrum, konflikter, uklarhed — og vi kobler altid strategi direkte til praksis.</p>
+      <p>Vores tilgang er praksisnær, relationel og analytisk skarp. Vi er konfronterende på en konstruktiv måde, fordi uklarhed er en af de største kilder til mistrivsel i en skoleorganisation.</p>
       <ul>
         <li>Primær målgruppe: Frie grundskoler, efterskoler og friskoler</li>
         <li>Outputs er altid konkrete og handlingsanvisende</li>
         <li>Vi arbejder med fokus på implementerbarhed</li>
       </ul>
-      <a href="#kontakt" class="btn btn-primary" style="margin-top:8px">Book en samtale</a>
+      <a href="om-os.html" class="link-arrow">Læs mere om os →</a>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIAL -->
-<section class="quote-section" id="referencer">
+<section class="quote-section">
   <div class="quote-inner">
     <span class="quote-mark">"</span>
-    <blockquote>Strategiskskole.dk hjalp os med at skabe et fælles ledelsesrum, hvor vi endelig turde tage de svære samtaler. Strategien var ikke ny – men nu kan vi mærke den i hverdagen.</blockquote>
+    <blockquote>Strategiskskole.dk hjalp os med at skabe et fælles ledelsesrum, hvor vi endelig turde tage de svære samtaler. Strategien var ikke ny — men nu kan vi mærke den i hverdagen.</blockquote>
     <div class="quote-author">Skoleleder, fri grundskole · Midtjylland</div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="cta-banner" id="kontakt">
+<!-- CTA -->
+<section class="cta-banner">
   <h2>Er jeres skole klar til næste skridt?</h2>
-  <p>Book en uforpligtende samtale og find ud af, hvordan vi kan hjælpe jer med at skabe retning og beslutning.</p>
-  <a href="mailto:tk@feldballe-friskole.dk" class="btn btn-primary">Skriv til os</a>
-  <a href="tel:+4500000000" class="btn btn-outline">Ring til os</a>
+  <p>Book en uforpligtende samtale med Thomas Kjerstein og find ud af, hvordan vi konkret kan hjælpe jer med at skabe retning og beslutning.</p>
+  <a href="mailto:thomas@strategiskskole.dk" class="btn btn-primary">Skriv til os</a>
+  <a href="kontakt.html" class="btn btn-outline">Se kontaktoplysninger</a>
 </section>
 
 <!-- FOOTER -->
@@ -703,38 +410,39 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="logo">Strategisk<span>skole</span>.dk</a>
-      <p>Konsulentydelser inden for skoleudvikling, ledelse og governance – for frie grundskoler, efterskoler og friskoler.</p>
+      <p>Thomas Kjerstein<br>Munkebakken 17, 8400 Ebeltoft<br>thomas@strategiskskole.dk<br>61 65 73 65</p>
     </div>
     <div class="footer-col">
-      <h4>Ydelser</h4>
+      <h4>Strategi og ledelse</h4>
       <ul>
-        <li><a href="bestyrelse.html">Bestyrelse &amp; Governance</a></li>
-        <li><a href="ledelse.html">Ledelse &amp; Organisationskraft</a></li>
-        <li><a href="strategi.html">Strategi &amp; Skoleudvikling</a></li>
-        <li><a href="kultur.html">Kultur &amp; Samarbejde</a></li>
-        <li><a href="robusthed.html">Robusthed &amp; Kriseledelse</a></li>
+        <li><a href="strategi-i-hverdagspraksis.html">Strategi i hverdagspraksis</a></li>
+        <li><a href="ledelse-som-design.html">Ledelse som design af rammer</a></li>
+        <li><a href="smaa-greb.html">Små greb med stor effekt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Organisering</h4>
+      <ul>
+        <li><a href="work-domains.html">Work domains</a></li>
+        <li><a href="koordinering.html">Koordinering</a></li>
+        <li><a href="arbejdsmiljoe.html">Arbejdsmiljø</a></li>
+        <li><a href="moedekultur.html">Mødekultur</a></li>
+        <li><a href="individuel-afklaring.html">Individuel afklaring</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Om os</h4>
       <ul>
-        <li><a href="#om">Vores tilgang</a></li>
-        <li><a href="#referencer">Referencer</a></li>
-        <li><a href="#">Artikler</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="mailto:tk@feldballe-friskole.dk">tk@feldballe-friskole.dk</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Nyhedsbrev</a></li>
+        <li><a href="om-os.html">Om Strategiskskole.dk</a></li>
+        <li><a href="skoleleder.html">Skolelederens ståsted</a></li>
+        <li><a href="ydelser.html">Alle ydelser</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2025 Strategiskskole.dk · CVR: XXXXXXXX</span>
-    <span><a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;">Privatlivspolitik</a></span>
+    <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;">Privatlivspolitik</a>
   </div>
 </footer>
 
