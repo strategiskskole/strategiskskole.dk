@@ -21,15 +21,120 @@ body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.
 .topbar a:hover { color:#fff; }
 
 /* NAV */
-nav { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,.25); }
+nav { background:var(--navy); position:sticky; top:0; z-index:200; box-shadow:0 2px 8px rgba(0,0,0,.25); }
 .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
 .logo { font-family:'Merriweather',serif; font-size:1.1rem; color:#fff; text-decoration:none; }
 .logo span { color:var(--teal2); }
-.nav-links { display:flex; gap:4px; list-style:none; }
-.nav-links a { color:rgba(255,255,255,.85); text-decoration:none; font-size:.87rem; font-weight:600; padding:8px 13px; border-radius:4px; transition:.2s; }
+.nav-links { display:flex; gap:4px; list-style:none; align-items:center; }
+.nav-links > li { position:relative; }
+.nav-links a { color:rgba(255,255,255,.85); text-decoration:none; font-size:.87rem; font-weight:600; padding:8px 13px; border-radius:4px; transition:.2s; display:flex; align-items:center; gap:5px; }
 .nav-links a:hover, .nav-links a.active { background:rgba(255,255,255,.1); color:#fff; }
 .nav-cta { background:var(--teal)!important; color:#fff!important; }
 .nav-cta:hover { background:var(--teal2)!important; }
+
+/* Dropdown arrow */
+.nav-links .has-dropdown > a::after {
+  content: '';
+  display: inline-block;
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid rgba(255,255,255,.65);
+  margin-left: 2px;
+  transition: transform .2s;
+}
+.nav-links .has-dropdown:hover > a::after { transform: rotate(180deg); border-top-color:#fff; }
+
+/* DROPDOWN MENU */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.35);
+  min-width: 280px;
+  padding: 8px 0;
+  z-index: 300;
+}
+.has-dropdown:hover .dropdown { display:block; }
+
+.dropdown-group { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.dropdown-group:last-child { border-bottom: none; }
+.dropdown-group-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--teal2);
+  padding: 6px 18px 4px;
+}
+.dropdown a {
+  display: block;
+  padding: 8px 18px;
+  color: rgba(255,255,255,.78);
+  font-size: .85rem;
+  font-weight: 400;
+  border-radius: 0;
+  white-space: nowrap;
+  transition: .15s;
+}
+.dropdown a:hover { background: rgba(255,255,255,.08); color: #fff; padding-left: 22px; }
+
+/* Hamburger (mobile) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none; border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block; height: 2px;
+  background: rgba(255,255,255,.85);
+  border-radius: 2px;
+  transition: .25s;
+}
+
+/* Mobile nav panel */
+.mobile-nav {
+  display: none;
+  background: var(--navy2);
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 12px 0 20px;
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a {
+  display: block;
+  padding: 9px 24px;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.mobile-nav a:hover { color: #fff; background: rgba(255,255,255,.06); }
+.mobile-nav .mobile-group-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--teal2);
+  padding: 14px 24px 4px;
+}
+.mobile-nav .mobile-sub a {
+  padding-left: 36px;
+  font-weight: 400;
+  font-size: .87rem;
+  color: rgba(255,255,255,.65);
+}
+.mobile-nav .mobile-sub a:hover { color: rgba(255,255,255,.9); }
 
 /* PAGE HERO */
 .page-hero {
@@ -227,6 +332,7 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .felter-grid { grid-template-columns:1fr 1fr; }
   .focus-grid { grid-template-columns:1fr; }
   .nav-links { display:none; }
+  .nav-hamburger { display:flex; }
 }
 @media(max-width:600px){
   .related-grid { grid-template-columns:1fr; }
