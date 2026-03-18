@@ -139,7 +139,7 @@ nav { background:var(--navy); position:sticky; top:0; z-index:200; box-shadow:0 
 /* PAGE HERO */
 .page-hero {
   background: linear-gradient(to right, rgba(15,30,50,.9) 50%, rgba(15,30,50,.5) 100%),
-    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80') center/cover no-repeat;
+    url('images/udvalgsmøde.jpg') center/cover no-repeat;
   padding: 64px 24px 56px;
 }
 .page-hero-content { max-width:1200px; margin:0 auto; }
