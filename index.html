@@ -515,7 +515,7 @@
         #mc_embed_signup input.email { border:2px solid rgba(255,255,255,.25); background:rgba(255,255,255,.08); color:#fff; border-radius:6px; padding:12px 16px; font-size:.97rem; width:100%; }
         #mc_embed_signup input.email::placeholder { color:rgba(255,255,255,.45); }
         #mc_embed_signup input.email:focus { outline:none; border-color:var(--teal2); }
-        #mc_embed_signup .button { background:var(--teal2); border:none; border-radius:6px; color:#fff; font-size:.97rem; font-weight:700; padding:12px 28px; cursor:pointer; width:100%; margin-top:12px; transition:.2s; }
+        #mc_embed_signup .button { background:var(--teal2); border:none; border-radius:6px; color:#fff; font-size:.9rem; font-weight:700; padding:13px 20px; cursor:pointer; width:100%; margin-top:12px; transition:.2s; letter-spacing:.3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         #mc_embed_signup .button:hover { background:#2e7d8c; }
         #mc_embed_signup h2 { display:none; }
         #mc_embed_signup .indicates-required { display:none; }
@@ -541,13 +541,43 @@
               <input type="text" name="b_b83ee377e1cd61229b4df41bb_9bdd608cfb" tabindex="-1" value="">
             </div>
             <div class="clear">
-              <input type="submit" value="Send mig guiden gratis →" name="subscribe" id="mc-embedded-subscribe" class="button">
+              <input type="submit" value="Hent min gratis guide" name="subscribe" id="mc-embedded-subscribe" class="button">
             </div>
           </div>
         </form>
       </div>
       <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
       <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <script type="text/javascript">
+      // Oversæt Mailchimp-beskeder til dansk
+      (function() {
+        var danskBeskeder = {
+          "Thank you for subscribing!": "Tak! Guiden er på vej til din indbakke.",
+          "You're already subscribed, your profile has been updated. Thank you!": "Du er allerede tilmeldt — tjek din indbakke for guiden.",
+          "Too many subscribe attempts for this email address. Please try again in about 5 minutes.": "For mange forsøg. Vent venligst 5 minutter og prøv igen.",
+          "This email cannot be added to this list. Please enter a different email address.": "Denne e-mail kan desværre ikke tilmeldes. Prøv en anden adresse.",
+          "An email address must contain a single @": "Indtast venligst en gyldig e-mailadresse.",
+          "The domain portion of the email address is invalid (the portion after the @: )": "E-mailens domæne er ugyldigt.",
+          "Please enter a value": "Udfyld venligst feltet.",
+          "An email address must contain at least one letter before the @.": "Indtast venligst en gyldig e-mailadresse."
+        };
+        function oversat(el) {
+          if (!el) return;
+          var txt = el.innerHTML;
+          Object.keys(danskBeskeder).forEach(function(en) {
+            if (txt.indexOf(en) !== -1) el.innerHTML = txt.replace(en, danskBeskeder[en]);
+          });
+        }
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(m) {
+            oversat(document.getElementById('mce-success-response'));
+            oversat(document.getElementById('mce-error-response'));
+          });
+        });
+        var target = document.getElementById('mce-responses');
+        if (target) observer.observe(target, { childList: true, subtree: true, characterData: true, attributes: true });
+      })();
+      </script>
     </div>
     <!-- End Mailchimp Embedded Subscribe Form -->
 
