@@ -279,11 +279,11 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
 
 /* OM OS PAGE */
 .om-os-hero-text {
-  max-width:760px; margin:0 auto;
+  max-width:1200px; margin:0 auto;
   padding:56px 24px 48px;
 }
-.om-os-hero-text h2 { font-family:'Merriweather',serif; font-size:1.65rem; color:var(--navy); margin-bottom:18px; }
-.om-os-hero-text p { color:var(--muted); margin-bottom:16px; font-size:1rem; }
+.om-os-hero-text h2 { font-family:'Merriweather',serif; font-size:1.65rem; color:var(--navy); margin-bottom:18px; max-width:760px; }
+.om-os-hero-text p { color:var(--muted); margin-bottom:16px; font-size:1rem; max-width:760px; }
 .om-os-values { background:var(--navy); padding:64px 24px; }
 .om-os-values-inner { max-width:1200px; margin:0 auto; }
 .om-os-values h2 { font-family:'Merriweather',serif; font-size:1.6rem; color:#fff; margin-bottom:12px; }
