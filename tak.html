@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strategiskskole.dk – Tak for din tilmelding</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script>
+    // Åbn PDF i ny fane straks siden loader
+    window.addEventListener('load', function() {
+      window.open('https://strategiskskole.dk/5-greb-strategisk-skoleledelse.pdf', '_blank');
+    });
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f4f7f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(26,46,74,0.10);
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+    }
+    .card-top {
+      background: #1a2e4a;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.02em;
+    }
+    .logo span { color: #3a9db0; }
+    .checkmark {
+      width: 64px;
+      height: 64px;
+      background: #1a7a6e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .checkmark svg { width: 32px; height: 32px; fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .card-top h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .card-body {
+      padding: 2rem;
+    }
+    .card-body p {
+      color: #4a5a6a;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .pdf-link {
+      display: inline-block;
+      background: #1a7a6e;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .pdf-link:hover { background: #15695e; }
+    .footer-note {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: #8a9aaa;
+    }
+    .site-link {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8eef3;
+    }
+    .site-link a {
+      color: #1a7a6e;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .site-link a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-top">
+      <div class="logo">Strategisk<span>skole</span>.dk</div>
+      <div class="checkmark">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>Tak for din tilmelding!</h1>
+    </div>
+    <div class="card-body">
+      <p>Din guide <strong>"De 5 vigtigste greb i strategisk skoleledelse"</strong> åbner nu i en ny fane.</p>
+      <p>Hvis den ikke åbnede automatisk, kan du hente den her:</p>
+      <a class="pdf-link" href="5-greb-strategisk-skoleledelse.pdf" target="_blank">
+        ↓ &nbsp;Åbn PDF-guiden
+      </a>
+      <p class="footer-note">
+        Guiden er gratis og kan frit deles med kolleger og bestyrelsen.
+      </p>
+      <div class="site-link">
+        <a href="https://strategiskskole.dk">← Tilbage til Strategiskskole.dk</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
