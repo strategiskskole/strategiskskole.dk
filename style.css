@@ -284,12 +284,18 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
 .intro-inner p { color:var(--muted); margin-bottom:16px; font-size:1rem; max-width:760px; }
 
 /* OM OS PAGE */
-.om-os-hero-text {
-  max-width:1200px; margin:0 auto;
-  padding:56px 24px 48px;
-}
-.om-os-hero-text h2 { font-family:'Merriweather',serif; font-size:1.65rem; color:var(--navy); margin-bottom:18px; max-width:760px; }
-.om-os-hero-text p { color:var(--muted); margin-bottom:16px; font-size:1rem; max-width:760px; }
+.om-os-hero-text { max-width:1200px; margin:0 auto; padding:56px 24px 48px; }
+.om-os-intro-grid { display:grid; grid-template-columns:1fr 360px; gap:48px; align-items:start; }
+.om-os-intro-text h2 { font-family:'Merriweather',serif; font-size:1.65rem; color:var(--navy); margin-bottom:18px; }
+.om-os-intro-text p { color:var(--muted); margin-bottom:16px; font-size:1rem; }
+.om-os-kerne-box { background:var(--teal); border-radius:8px; padding:32px 28px; }
+.kerne-label { font-size:.65rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:8px; }
+.om-os-kerne-box h3 { font-family:'Merriweather',serif; font-size:1.2rem; color:#fff; margin-bottom:6px; }
+.kerne-sub { font-style:italic; font-size:.88rem; color:rgba(255,255,255,.8); margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.25); }
+.om-os-kerne-box p { font-size:.92rem; color:rgba(255,255,255,.92); line-height:1.7; margin-bottom:14px; }
+.om-os-kerne-box strong { color:#fff; }
+.kerne-link { display:inline-block; color:#fff; font-weight:700; font-size:.85rem; text-decoration:none; border-bottom:2px solid rgba(255,255,255,.5); padding-bottom:2px; margin-top:4px; transition:border-color .2s; }
+.kerne-link:hover { border-color:#fff; }
 .om-os-values { background:var(--navy); padding:64px 24px; }
 .om-os-values-inner { max-width:1200px; margin:0 auto; }
 .om-os-values h2 { font-family:'Merriweather',serif; font-size:1.6rem; color:#fff; margin-bottom:12px; }
@@ -334,6 +340,7 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .footer-inner { grid-template-columns:1fr 1fr; gap:32px; }
   .kontakt-inner { grid-template-columns:1fr; }
   .om-os-thomas-inner { grid-template-columns:1fr; }
+  .om-os-intro-grid { grid-template-columns:1fr; }
   .values-grid { grid-template-columns:1fr 1fr; }
   .felter-grid { grid-template-columns:1fr 1fr; }
   .focus-grid { grid-template-columns:1fr; }
