@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tirsdag kl. 10-modellen® for lederteamet – Fælles retning og strategisk arbejde | Strategiskskole.dk</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="description" content="Sådan bruger lederteamet Tirsdag kl. 10-modellen® til at arbejde strategisk og samlet — med fælles sprog, klare prioriteringer og en retning alle kan handle ud fra."/>
+  <meta name="keywords" content="lederteam strategi, skolens lederteam, strategisk ledelsesteam, skole ledergruppe, Tirsdag kl. 10 lederteam, Strategiskskole.dk"/>
+  <link rel="canonical" href="https://strategiskskole.dk/tirsdag-kl10-lederteam"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://strategiskskole.dk/tirsdag-kl10-lederteam"/>
+  <meta property="og:title" content="Tirsdag kl. 10-modellen® for lederteamet – Strategiskskole.dk"/>
+  <meta property="og:description" content="Fælles sprog, klare prioriteringer og en retning alle kan handle ud fra. Sådan bruges modellen i lederteamet."/>
+  <meta property="og:image" content="https://strategiskskole.dk/images/ledelsesudvikling.jpg"/>
+  <meta property="og:locale" content="da_DK"/>
+  <meta property="og:site_name" content="Strategiskskole.dk"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .page-hero {
+      background: linear-gradient(to right, rgba(15,30,50,.92) 45%, rgba(15,30,50,.65) 100%),
+        url('images/ledelsesudvikling.jpg') center/cover no-repeat;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 72px 24px 52px;
+    }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
+    .model-subnav { background: var(--navy2); padding: 0 24px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .model-subnav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
+    .model-subnav a { display: block; padding: 12px 18px; color: rgba(255,255,255,.65); text-decoration: none; font-size: .83rem; font-weight: 600; white-space: nowrap; border-bottom: 3px solid transparent; transition: .2s; }
+    .model-subnav a:hover { color: #fff; }
+    .model-subnav a.active { color: #fff; border-bottom-color: var(--teal2); }
+    .content-section { padding: 64px 24px; }
+    .content-inner { max-width: 860px; margin: 0 auto; }
+    .content-wide { max-width: 1100px; margin: 0 auto; }
+    .step-list { margin-top: 2.4rem; }
+    .step-item { display: grid; grid-template-columns: 80px 1fr; gap: 1.6rem; align-items: start; padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
+    .step-item:last-child { border-bottom: none; }
+    .step-item-num { background: var(--navy); color: #fff; border-radius: 8px; padding: .9rem .8rem; text-align: center; font-family: 'Merriweather',serif; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+    .step-item-num.hl { background: var(--teal); }
+    .step-item-num span { display: block; font-size: .58rem; font-weight: 700; letter-spacing: 1.5px; color: #3a9db0; text-transform: uppercase; margin-bottom: .15rem; }
+    .step-item-num.hl span { color: #a8e0d8; }
+    .step-item-content h3 { font-family: 'Merriweather',serif; font-size: 1.05rem; color: var(--navy); margin-bottom: .4rem; }
+    .step-item-content .model-q { font-size: .88rem; color: var(--teal); font-style: italic; font-weight: 600; margin-bottom: .7rem; }
+    .step-item-content .team-q { font-size: .88rem; color: var(--muted); margin-bottom: .5rem; }
+    .step-item-content .team-q strong { color: var(--navy); }
+    .step-item-content p { font-size: .9rem; color: var(--muted); margin: 0; }
+    @media(max-width:560px){ .step-item { grid-template-columns: 60px 1fr; gap: 1rem; } }
+    .highlight-box { background: var(--navy); border-radius: 12px; padding: 2rem; color: #fff; margin: 2.8rem 0; }
+    .highlight-box h3 { font-family: 'Merriweather',serif; color: #fff; font-size: 1.1rem; margin-bottom: .8rem; }
+    .highlight-box p { color: rgba(255,255,255,.78); font-size: .92rem; margin-bottom: .6rem; }
+    .highlight-box p:last-child { margin: 0; }
+    .team-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; margin-top: 2rem; }
+    .tool-card { background: var(--light); border-radius: 8px; padding: 1.3rem; border-top: 3px solid var(--teal); }
+    .tool-card h4 { font-family: 'Merriweather',serif; font-size: .92rem; color: var(--navy); margin-bottom: .5rem; }
+    .tool-card p { font-size: .85rem; color: var(--muted); margin: 0; }
+    .warning-box { background: #fff3cd; border-left: 4px solid #e0a800; border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem; margin-top: 2rem; }
+    .warning-box p { font-size: .9rem; color: #856404; margin: 0; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="tel:+4561657365">61 65 73 65</a>
+    <a href="mailto:thomas@strategiskskole.dk">thomas@strategiskskole.dk</a>
+    <a href="kontakt.html">Kontakt os</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Strategisk<span>skole</span>.dk</a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="ydelser.html">Ydelser</a>
+        <div class="dropdown">
+          <div class="dropdown-group">
+            <span class="dropdown-group-label">Strategi og ledelse</span>
+            <a href="strategi-i-hverdagspraksis.html">Strategi i hverdagspraksis</a>
+            <a href="ledelse-som-design.html">Ledelse som design af rammer</a>
+            <a href="smaa-greb.html">Små greb med stor effekt</a>
+          </div>
+          <div class="dropdown-group">
+            <span class="dropdown-group-label">Organisering</span>
+            <a href="work-domains.html">Work domains</a>
+            <a href="koordinering.html">Koordinering</a>
+            <a href="arbejdsmiljoe.html">Arbejdsmiljø</a>
+            <a href="moedekultur.html">Mødekultur</a>
+            <a href="individuel-afklaring.html">Individuel afklaring</a>
+          </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="tirsdag-kl10-modellen.html">Modellen</a>
+        <div class="dropdown">
+          <div class="dropdown-group">
+            <span class="dropdown-group-label">Tirsdag kl. 10-modellen®</span>
+            <a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a>
+            <a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a>
+            <a href="tirsdag-kl10-skoleleder.html">For skolelederen</a>
+            <a href="tirsdag-kl10-lederteam.html">For lederteamet</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="skoleleder.html">Skolelederens ståsted</a></li>
+      <li><a href="skolegovernance.html">Skolegovernance</a></li>
+      <li><a href="om-os.html">Om os</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Kontakt os</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-sub">
+      <span class="mobile-group-label">Tirsdag kl. 10-modellen®</span>
+      <a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a>
+      <a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a>
+      <a href="tirsdag-kl10-skoleleder.html">For skolelederen</a>
+      <a href="tirsdag-kl10-lederteam.html">For lederteamet</a>
+    </div>
+    <a href="ydelser.html">Ydelser</a>
+    <a href="skoleleder.html">Skolelederens ståsted</a>
+    <a href="skolegovernance.html">Skolegovernance</a>
+    <a href="om-os.html">Om os</a>
+    <a href="kontakt.html" style="color:var(--teal2);">Kontakt os</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Tirsdag kl. 10-modellen® · For lederteamet</div>
+    <h1 style="font-family:'Merriweather',serif;font-size:clamp(1.7rem,3.2vw,2.5rem);color:#fff;line-height:1.2;max-width:680px;margin-bottom:16px;">Et fælles sprog for strategisk arbejde i lederteamet</h1>
+    <p style="font-size:1rem;color:rgba(255,255,255,.82);max-width:520px;">Modellen giver lederteamet en fælles ramme til at arbejde strategisk og samlet — med klare prioriteringer og en retning alle kan handle ud fra.</p>
+  </div>
+</div>
+
+<!-- Sub-navigation -->
+<div class="model-subnav">
+  <div class="model-subnav-inner">
+    <a href="tirsdag-kl10-modellen.html">Oversigt</a>
+    <a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a>
+    <a href="tirsdag-kl10-skoleleder.html">For skolelederen</a>
+    <a href="tirsdag-kl10-lederteam.html" class="active">For lederteamet</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner"><a href="index.html">Forside</a> / <a href="tirsdag-kl10-modellen.html">Tirsdag kl. 10-modellen®</a> / For lederteamet</div>
+</div>
+
+<!-- INTRO -->
+<section class="content-section" style="background:#fff;">
+  <div class="content-inner">
+    <span class="section-eyebrow">Lederteamets brug af modellen</span>
+    <h2 class="section-h2">Fælles retning kræver fælles sprog</h2>
+    <p>Mange lederteams arbejder hårdt — men ikke nødvendigvis strategisk og samlet. Der afholdes møder, tages beslutninger og sættes initiativer i gang. Men er der en rød tråd? Er der enighed om, hvad der vigtigst? Og kan alle i teamet svare konsistent på, hvad skolen er i gang med og hvorfor?</p>
+    <p>Tirsdag kl. 10-modellen® giver lederteamet et fælles redskab og et fælles sprog. Modellen strukturerer arbejdet fra at forstå situationen i fællesskab til at forankre retningen i de konkrete hverdagshandlinger, som alle i teamet kan bidrage til.</p>
+
+    <div class="highlight-box">
+      <h3>Lederteamets fælles prøvespørgsmål</h3>
+      <p>Kan vi — som lederteam — svare konsistent på: Hvad er vores strategi, og kan vi se den i det, der foregår tirsdag kl. 10?</p>
+      <p>Hvis teammedlemmerne giver meget forskellige svar, er der et arbejde at gøre. Ikke om formuleringer — men om fælles forståelse og fælles handling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS FOR TEAM -->
+<section class="content-section" style="background:var(--light);">
+  <div class="content-wide" style="padding:0 24px;">
+    <span class="section-eyebrow">Modellens trin for lederteamet</span>
+    <h2 class="section-h2">Seks fælles arbejdsspørgsmål</h2>
+    <p class="section-lead" style="max-width:680px;">Hvert trin i modellen kan bruges som struktur for et konkret lederteamarbejde. Her er de seks trin — og det fælles arbejde, de lægger op til.</p>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-item-num"><span>Trin</span>01</div>
+        <div class="step-item-content">
+          <h3>Spejling</h3>
+          <p class="model-q">"Hvad er det, vi egentlig står i?"</p>
+          <p class="team-q"><strong>Teamets arbejde:</strong> Skab et fælles og ærligt billede af skolens aktuelle situation — på tværs af de perspektiver, teamets medlemmer repræsenterer.</p>
+          <p>Spejling i et team kræver, at alle bidrager ærligt — og at der er rum til at sige noget andet end det officielle. Det er lederens opgave at skabe det rum.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-item-num"><span>Trin</span>02</div>
+        <div class="step-item-content">
+          <h3>Klarhed</h3>
+          <p class="model-q">"Hvad er problemet bag problemet?"</p>
+          <p class="team-q"><strong>Teamets arbejde:</strong> Analyser mønstrene på tværs af teamets erfaringer og find de underliggende drivere — ikke blot symptomerne.</p>
+          <p>Et lederteam har samlet et bredt erfaringsgrundlag. Brugt rigtigt, kan det give en dybere problemforståelse end lederen kan nå alene.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-item-num"><span>Trin</span>03</div>
+        <div class="step-item-content">
+          <h3>Valg</h3>
+          <p class="model-q">"Hvad vælger vi — og hvad vælger vi fra?"</p>
+          <p class="team-q"><strong>Teamets arbejde:</strong> Træf fælles, eksplicitte prioriteringer — og vær villige til at nedprioritere noget, selvom det er svært.</p>
+          <p>Fravalg er sværest i et team, fordi alle har "deres" fokusområder. Et stærkt lederteam kan diskutere fravalg med respekt og derefter handle samlet.</p>
+          <div class="warning-box" style="margin-top:1rem;">
+            <p><strong>Fælde at undgå:</strong> At sige ja til alt for at undgå konflikter i teamet. Det er ikke enighed — det er undgåelse.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-item-num"><span>Trin</span>04</div>
+        <div class="step-item-content">
+          <h3>Struktur</h3>
+          <p class="model-q">"Hvordan organiserer vi os?"</p>
+          <p class="team-q"><strong>Teamets arbejde:</strong> Definer tydelige roller, mødestrukturer og ansvarsfordelinger, der understøtter de valg, der er truffet — og fjern det, der ikke gør.</p>
+          <p>Mange lederteams har strukturer, der modarbejder deres egne beslutninger. Strukturen er ikke neutral — den sender signaler om, hvad der er vigtigt.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-item-num hl"><span>Trin</span>05</div>
+        <div class="step-item-content">
+          <h3>Tirsdag kl. 10 — Kernen</h3>
+          <p class="model-q">"Kan vi se vores strategi i det, der sker tirsdag kl. 10?"</p>
+          <p class="team-q"><strong>Teamets fælles prøve:</strong> Kan hvert teammedlem se strategien i det, de selv gør og det, der foregår i deres del af skolen?</p>
+          <p>Det er teamets ultimative tjek. Ikke om strategien er kommunikeret — men om den er synlig og mærkbar i hverdagen for dem, der er tættest på den.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-item-num"><span>Trin</span>06</div>
+        <div class="step-item-content">
+          <h3>Forankring</h3>
+          <p class="model-q">"Hvordan holder vi det levende?"</p>
+          <p class="team-q"><strong>Teamets arbejde:</strong> Design de fælles rutiner, feedbackstrukturer og opfølgningspunkter, der holder strategien i live på tværs af teamet.</p>
+          <p>Forankring i et team kræver mere end god vilje. Det kræver konkrete strukturer: hvem gør hvad, hvornår tjekker vi op, og hvad gør vi, når noget drifter?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM TOOLS -->
+<section class="content-section" style="background:#fff;">
+  <div class="content-inner">
+    <span class="section-eyebrow">Konkrete greb</span>
+    <h2 class="section-h2">Hvad kan et lederteam konkret gøre?</h2>
+    <p>Her er fire konkrete måder, et lederteam kan begynde at arbejde med modellen på — uden at det kræver et langt forløb.</p>
+    <div class="team-tools">
+      <div class="tool-card">
+        <h4>Brug modellen som mødestruktur</h4>
+        <p>Planlæg et strategimøde, der følger modellens seks trin. Ét trin per møde er rigeligt — det giver dybde og fokus.</p>
+      </div>
+      <div class="tool-card">
+        <h4>Stil "tirsdag kl. 10"-spørgsmålet fast</h4>
+        <p>Gør det til et fast punkt i teamets møder: Kan vi se strategien i hverdagen? Et konkret eksempel per møde er nok.</p>
+      </div>
+      <div class="tool-card">
+        <h4>Lav en fælles prioriteringsliste</h4>
+        <p>Skriv de tre vigtigste fokusområder ned. Og de tre ting I har valgt fra. Vis begge lister til hinanden og diskutér, om I er enige.</p>
+      </div>
+      <div class="tool-card">
+        <h4>Design et årshjul for strategisk forankring</h4>
+        <p>Sæt to-tre punkter i årshjulet, der handler om strategisk opfølgning — ikke driftevaluering, men strategisk læring og justering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Vil I styrke lederteamets strategiske arbejde?</h2>
+  <p>Strategiskskole.dk tilbyder forløb for lederteams, der vil arbejde strategisk og samlet med Tirsdag kl. 10-modellen® som fælles ramme.</p>
+  <a href="kontakt.html" class="btn btn-primary">Kontakt os</a>
+  <a href="tirsdag-kl10-modellen.html" class="btn btn-outline">Se hele modellen</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Strategisk<span>skole</span>.dk</a>
+      <p>Thomas Kjerstein<br>Munkebakken 17, 8400 Ebeltoft<br>thomas@strategiskskole.dk<br><span style="color:#fff;font-weight:600;">61 65 73 65</span></p>
+    </div>
+    <div class="footer-col">
+      <h4>Strategi og ledelse</h4>
+      <ul>
+        <li><a href="strategi-i-hverdagspraksis.html">Strategi i hverdagspraksis</a></li>
+        <li><a href="ledelse-som-design.html">Ledelse som design af rammer</a></li>
+        <li><a href="smaa-greb.html">Små greb med stor effekt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Tirsdag kl. 10-modellen®</h4>
+      <ul>
+        <li><a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a></li>
+        <li><a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a></li>
+        <li><a href="tirsdag-kl10-skoleleder.html">For skolelederen</a></li>
+        <li><a href="tirsdag-kl10-lederteam.html">For lederteamet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Om os</h4>
+      <ul>
+        <li><a href="om-os.html">Om Strategiskskole.dk</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Strategiskskole.dk · CVR: XXXXXXXX</span>
+    <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;">Privatlivspolitik</a>
+  </div>
+</footer>
+
+</body>
+</html>

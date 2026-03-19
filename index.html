@@ -189,6 +189,67 @@
     .footer-col ul li a:hover { color:#fff; }
     .footer-bottom { max-width:1200px; margin:0 auto; border-top:1px solid rgba(255,255,255,.1); padding-top:24px; display:flex; justify-content:space-between; font-size:.8rem; }
 
+    /* SIGNATURMODEL */
+    .model-section { background:var(--light); padding:72px 24px; }
+    .model-section-inner { max-width:1100px; margin:0 auto; }
+    .model-card {
+      background:#f0f4f8;
+      border-radius:16px;
+      padding:2.4rem 2rem 2rem;
+      box-shadow:0 6px 32px rgba(26,46,74,0.10);
+      margin-top:40px;
+    }
+    .model-card-brand { font-size:.68rem; font-weight:700; letter-spacing:2.5px; color:#3a9db0; text-transform:uppercase; text-align:center; margin-bottom:.4rem; }
+    .model-card-title { font-family:'Merriweather',serif; font-size:clamp(1.2rem,2.5vw,1.65rem); color:var(--navy); text-align:center; margin-bottom:.35rem; }
+    .model-card-tagline { font-size:.9rem; color:var(--teal); font-style:italic; font-weight:600; text-align:center; margin-bottom:.4rem; }
+    .model-card-tagline-line { width:100px; height:2px; background:var(--teal); margin:0 auto 1.8rem; }
+    /* chevrons */
+    .model-steps { display:flex; align-items:stretch; gap:0; margin-bottom:.7rem; }
+    .m-step {
+      flex:1; background:var(--navy); color:#fff;
+      padding:1.2rem .9rem 1.1rem 1.3rem;
+      position:relative;
+      clip-path:polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%);
+      margin-left:-8px;
+    }
+    .m-step:first-child { clip-path:polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%); margin-left:0; border-radius:4px 0 0 4px; }
+    .m-step:last-child  { clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 15px 50%); border-radius:0 4px 4px 0; }
+    .m-step.hl { background:var(--teal); flex:1.3; z-index:2; box-shadow:0 3px 18px rgba(26,122,110,.25); }
+    .m-step-num { font-size:.56rem; font-weight:700; letter-spacing:1.8px; color:#3a9db0; text-transform:uppercase; margin-bottom:.25rem; }
+    .m-step.hl .m-step-num { color:#a8e0d8; }
+    .m-step-name { font-weight:700; font-size:.82rem; color:#fff; line-height:1.2; margin-bottom:.3rem; }
+    .m-step.hl .m-step-name { font-size:.9rem; }
+    .m-step-q { font-size:.62rem; color:#8ab0c4; font-style:italic; line-height:1.35; }
+    .m-step.hl .m-step-q { color:#b8e2d8; }
+    /* loop */
+    .model-loop { display:flex; align-items:center; margin:.5rem 0 0; }
+    .ml-arr-l { width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:7px solid #3a9db0;opacity:.5;flex-shrink:0; }
+    .ml-line { flex:1;height:1.5px;background:linear-gradient(90deg,#3a9db0 0%,rgba(58,157,176,.1) 50%,#3a9db0 100%);opacity:.5; }
+    .ml-lbl { font-size:.62rem;color:#3a9db0;font-style:italic;padding:0 .55rem;opacity:.75;white-space:nowrap; }
+    .ml-arr-r { width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid #3a9db0;opacity:.5;flex-shrink:0; }
+    /* principles */
+    .model-divider { border:none;border-top:1px solid var(--border);margin:1.6rem 0 1.2rem; }
+    .model-pri-lbl { font-size:.6rem;font-weight:700;letter-spacing:2px;color:#8a9aaa;text-transform:uppercase;margin-bottom:.65rem; }
+    .model-pris { display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem; }
+    .model-pri { background:#fff;border-left:3px solid var(--teal);border-radius:0 4px 4px 0;padding:.5rem .6rem;font-size:.64rem;color:var(--navy);line-height:1.4; }
+    .model-cta-row { text-align:center;margin-top:2rem; }
+    .model-cta-row a { color:var(--navy);font-weight:700;font-size:.88rem;text-decoration:none;border-bottom:2px solid var(--teal);padding-bottom:2px; }
+    .model-cta-row a:hover { color:var(--teal); }
+    /* mobile steps */
+    .m-steps-mob { display:none;margin-bottom:.7rem; }
+    .m-step-mob { background:var(--navy);border-radius:6px;padding:.85rem 1rem;margin-bottom:.4rem;display:flex;gap:.85rem;align-items:flex-start; }
+    .m-step-mob.hl { background:var(--teal); }
+    .m-step-mob-n { font-size:.55rem;font-weight:700;letter-spacing:1.5px;color:#3a9db0;padding-top:2px;white-space:nowrap; }
+    .m-step-mob.hl .m-step-mob-n { color:#a8e0d8; }
+    .m-step-mob-name { font-weight:700;font-size:.85rem;color:#fff;margin-bottom:.18rem; }
+    .m-step-mob-q { font-size:.7rem;color:#8ab0c4;font-style:italic; }
+    .m-step-mob.hl .m-step-mob-q { color:#b8e2d8; }
+    @media(max-width:700px){
+      .model-steps { display:none; }
+      .m-steps-mob { display:block; }
+      .model-pris { grid-template-columns:1fr 1fr; }
+    }
+
     @media(max-width:960px){
       .split-inner{grid-template-columns:1fr;gap:32px;}
       .split-inner.reverse{direction:ltr;}
@@ -289,6 +350,18 @@
           </div>
         </div>
       </li>
+      <li class="has-dropdown">
+        <a href="tirsdag-kl10-modellen.html">Modellen</a>
+        <div class="dropdown">
+          <div class="dropdown-group">
+            <span class="dropdown-group-label">Tirsdag kl. 10-modellen®</span>
+            <a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a>
+            <a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a>
+            <a href="tirsdag-kl10-skoleleder.html">For skolelederen</a>
+            <a href="tirsdag-kl10-lederteam.html">For lederteamet</a>
+          </div>
+        </div>
+      </li>
       <li><a href="skoleleder.html">Skolelederens ståsted</a></li>
       <li><a href="skolegovernance.html">Skolegovernance</a></li>
       <li><a href="om-os.html">Om os</a></li>
@@ -312,6 +385,13 @@
       <a href="arbejdsmiljoe.html">Arbejdsmiljø</a>
       <a href="moedekultur.html">Mødekultur</a>
       <a href="individuel-afklaring.html">Individuel afklaring</a>
+    </div>
+    <div class="mobile-sub">
+      <span class="mobile-group-label">Tirsdag kl. 10-modellen®</span>
+      <a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a>
+      <a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a>
+      <a href="tirsdag-kl10-skoleleder.html">For skolelederen</a>
+      <a href="tirsdag-kl10-lederteam.html">For lederteamet</a>
     </div>
     <a href="skoleleder.html">Skolelederens ståsted</a>
     <a href="skolegovernance.html">Skolegovernance</a>
@@ -481,6 +561,90 @@
   </div>
 </section>
 
+<!-- SIGNATURMODEL -->
+<section class="model-section">
+  <div class="model-section-inner">
+    <span class="section-eyebrow">Signaturmodel</span>
+    <h2 class="section-h2">Tirsdag kl. 10-modellen<sup style="font-size:.55em;vertical-align:super;">®</sup></h2>
+    <p class="section-lead">Modellen er omdrejningspunktet for vores arbejde med strategisk skoleledelse. Seks trin fra spejling til forankring — med ét konkret prøvespørgsmål: Kan vi se strategien i det, der sker tirsdag kl. 10?</p>
+
+    <div class="model-card">
+      <div class="model-card-brand">Strategiskskole.dk &nbsp;·&nbsp; Signaturmodel</div>
+      <div class="model-card-title">Tirsdag kl. 10-modellen<sup style="font-size:.5em;vertical-align:super;">®</sup></div>
+      <div class="model-card-tagline">Strategi, der kan mærkes i praksis</div>
+      <div class="model-card-tagline-line"></div>
+
+      <!-- Desktop chevrons -->
+      <div class="model-steps">
+        <div class="m-step">
+          <div class="m-step-num">01</div>
+          <div class="m-step-name">Spejling</div>
+          <div class="m-step-q">Hvad er det, vi egentlig står i?</div>
+        </div>
+        <div class="m-step">
+          <div class="m-step-num">02</div>
+          <div class="m-step-name">Klarhed</div>
+          <div class="m-step-q">Hvad er problemet bag problemet?</div>
+        </div>
+        <div class="m-step">
+          <div class="m-step-num">03</div>
+          <div class="m-step-name">Valg</div>
+          <div class="m-step-q">Hvad vælger vi — og hvad vælger vi fra?</div>
+        </div>
+        <div class="m-step">
+          <div class="m-step-num">04</div>
+          <div class="m-step-name">Struktur</div>
+          <div class="m-step-q">Hvordan organiserer vi os?</div>
+        </div>
+        <div class="m-step hl">
+          <div class="m-step-num">05 &nbsp;·&nbsp; Kernen</div>
+          <div class="m-step-name">Tirsdag kl. 10</div>
+          <div class="m-step-q">Kan vi se det i praksis — i møder, roller og hverdagen?</div>
+        </div>
+        <div class="m-step">
+          <div class="m-step-num">06</div>
+          <div class="m-step-name">Forankring</div>
+          <div class="m-step-q">Hvordan holder vi det levende?</div>
+        </div>
+      </div>
+
+      <!-- Mobile steps -->
+      <div class="m-steps-mob">
+        <div class="m-step-mob"><div class="m-step-mob-n">01</div><div><div class="m-step-mob-name">Spejling</div><div class="m-step-mob-q">Hvad er det, vi egentlig står i?</div></div></div>
+        <div class="m-step-mob"><div class="m-step-mob-n">02</div><div><div class="m-step-mob-name">Klarhed</div><div class="m-step-mob-q">Hvad er problemet bag problemet?</div></div></div>
+        <div class="m-step-mob"><div class="m-step-mob-n">03</div><div><div class="m-step-mob-name">Valg</div><div class="m-step-mob-q">Hvad vælger vi — og hvad vælger vi fra?</div></div></div>
+        <div class="m-step-mob"><div class="m-step-mob-n">04</div><div><div class="m-step-mob-name">Struktur</div><div class="m-step-mob-q">Hvordan organiserer vi os?</div></div></div>
+        <div class="m-step-mob hl"><div class="m-step-mob-n">05 · Kernen</div><div><div class="m-step-mob-name">Tirsdag kl. 10</div><div class="m-step-mob-q">Kan vi se det i praksis — i møder, roller og hverdagen?</div></div></div>
+        <div class="m-step-mob"><div class="m-step-mob-n">06</div><div><div class="m-step-mob-name">Forankring</div><div class="m-step-mob-q">Hvordan holder vi det levende?</div></div></div>
+      </div>
+
+      <!-- Loop arrow -->
+      <div class="model-loop">
+        <div class="ml-arr-l"></div>
+        <div class="ml-line"></div>
+        <div class="ml-lbl">Løbende læring og justering</div>
+        <div class="ml-line"></div>
+        <div class="ml-arr-r"></div>
+      </div>
+
+      <!-- Divider + Principles -->
+      <hr class="model-divider"/>
+      <div class="model-pri-lbl">Fem principper</div>
+      <div class="model-pris">
+        <div class="model-pri">Strategi er først reel, når den kan mærkes i praksis</div>
+        <div class="model-pri">Uklarhed er den største kilde til mistrivsel</div>
+        <div class="model-pri">Ledelse er design af rammer — ikke kun relationer</div>
+        <div class="model-pri">Valg er vigtigere end flere initiativer</div>
+        <div class="model-pri">Små, præcise greb slår store planer</div>
+      </div>
+    </div>
+
+    <div class="model-cta-row">
+      <a href="strategi-i-hverdagspraksis.html">Læs mere om modellen og vores arbejde →</a>
+    </div>
+  </div>
+</section>
+
 <!-- SPLIT: OM OS -->
 <section class="split bg-light">
   <div class="split-inner reverse">
@@ -627,12 +791,12 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Om os</h4>
+      <h4>Tirsdag kl. 10-modellen®</h4>
       <ul>
-        <li><a href="om-os.html">Om Strategiskskole.dk</a></li>
-        <li><a href="skoleleder.html">Skolelederens ståsted</a></li>
-        <li><a href="ydelser.html">Alle ydelser</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="tirsdag-kl10-modellen.html">Oversigt over modellen</a></li>
+        <li><a href="tirsdag-kl10-bestyrelsen.html">For bestyrelsen</a></li>
+        <li><a href="tirsdag-kl10-skoleleder.html">For skolelederen</a></li>
+        <li><a href="tirsdag-kl10-lederteam.html">For lederteamet</a></li>
       </ul>
     </div>
   </div>
