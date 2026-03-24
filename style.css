@@ -387,6 +387,7 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .focus-grid { grid-template-columns:1fr; }
   .nav-links { display:none; }
   .nav-hamburger { display:flex; }
+  .forlob-grid { grid-template-columns:1fr; }
 }
 @media(max-width:600px){
   .related-grid { grid-template-columns:1fr; }
@@ -397,4 +398,49 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .page-hero-subtitle { font-size:.95rem; }
   .focus-grid { grid-template-columns:1fr; }
   .ydelse-list { grid-template-columns:1fr; }
+  .forlob-grid { grid-template-columns:1fr; }
 }
+
+/* ─── FORLØB CARDS ─── */
+.forlob-section { background:var(--light); padding:80px 24px; }
+.forlob-inner { max-width:1100px; margin:0 auto; }
+.forlob-section-header { text-align:center; max-width:640px; margin:0 auto 56px; }
+.forlob-section-header h2 { font-family:'Merriweather',serif; font-size:1.9rem; color:var(--navy); margin-bottom:14px; }
+.forlob-section-header p { color:var(--muted); font-size:.97rem; line-height:1.7; }
+.forlob-audience { margin-bottom:52px; }
+.forlob-audience:last-child { margin-bottom:0; }
+.forlob-audience-label {
+  display:inline-block;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--teal);
+  background:rgba(46,125,140,.1);
+  border:1px solid rgba(46,125,140,.25);
+  border-radius:20px;
+  padding:5px 16px;
+  margin-bottom:24px;
+}
+.forlob-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+.forlob-card {
+  background:#fff;
+  border-radius:8px;
+  border-top:3px solid var(--teal);
+  padding:32px 28px 28px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 2px 12px rgba(26,46,74,.07);
+  transition: transform .2s, box-shadow .2s;
+}
+.forlob-card:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(26,46,74,.13); }
+.forlob-eyebrow {
+  display:none; /* Shown via audience label above the grid */
+}
+.forlob-card h3 { font-family:'Merriweather',serif; font-size:1.15rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
+.forlob-pain { color:var(--muted); font-size:.93rem; font-style:italic; margin-bottom:18px; line-height:1.65; border-left:3px solid var(--teal2); padding-left:14px; }
+.forlob-steps { list-style:none; padding:0; margin:0 0 24px; flex:1; }
+.forlob-steps li { padding:6px 0 6px 22px; position:relative; font-size:.88rem; color:var(--text); border-bottom:1px solid var(--border); line-height:1.5; }
+.forlob-steps li:last-child { border-bottom:none; }
+.forlob-steps li::before { content:'→'; position:absolute; left:0; color:var(--teal); font-weight:700; }
+.forlob-cta { align-self:flex-start; margin-top:auto; }
