@@ -114,7 +114,15 @@
   <div class="nav-inner">
     <a href="index.html" class="logo">Strategisk<span>skole</span>.dk</a>
     <ul class="nav-links">
-      <li><a href="ydelser.html">Forløb</a></li>
+      <li class="has-dropdown">
+        <a href="ydelser.html">Forløb</a>
+        <div class="dropdown">
+          <a href="ydelser.html#ny-i-rollen">Ny i rollen — de første 100 dage</a>
+          <a href="ydelser.html#strategi-i-hverdagen">Strategi der kan mærkes</a>
+          <a href="ydelser.html#bestyrelsen-strategisk">Bestyrelsen som strategisk aktiv</a>
+          <a href="ydelser.html#lederskifte">Lederskifte — tryghed og kontinuitet</a>
+        </div>
+      </li>
       <li><a href="skoleleder.html">For skolelederen</a></li>
       <li><a href="skolegovernance.html">For bestyrelsen</a></li>
       <li class="has-dropdown">
@@ -134,7 +142,13 @@
     </button>
   </div>
   <div class="mobile-nav" id="mobile-nav">
-    <a href="ydelser.html">Forløb</a>
+    <div class="mobile-sub">
+      <span class="mobile-group-label">Forløb</span>
+      <a href="ydelser.html#ny-i-rollen">Ny i rollen — de første 100 dage</a>
+      <a href="ydelser.html#strategi-i-hverdagen">Strategi der kan mærkes</a>
+      <a href="ydelser.html#bestyrelsen-strategisk">Bestyrelsen som strategisk aktiv</a>
+      <a href="ydelser.html#lederskifte">Lederskifte — tryghed og kontinuitet</a>
+    </div>
     <a href="skoleleder.html">For skolelederen</a>
     <a href="skolegovernance.html">For bestyrelsen</a>
     <div class="mobile-sub">
@@ -239,7 +253,7 @@
       <div class="forlob-audience-label">For skolelederen</div>
       <div class="forlob-grid">
 
-        <div class="forlob-card">
+        <div class="forlob-card" id="ny-i-rollen">
           <h3>Ny i rollen — de første 100 dage</h3>
           <p class="forlob-pain">Du er ny som skoleleder og skal både håndtere en travl hverdag og sætte en klar retning. Du mangler et trygt sted at tænke højt og en struktureret ramme for det vigtigste første.</p>
           <ul class="forlob-steps">
@@ -251,7 +265,7 @@
           <a href="kontakt.html" class="btn btn-primary forlob-cta">Book en samtale</a>
         </div>
 
-        <div class="forlob-card">
+        <div class="forlob-card" id="strategi-i-hverdagen">
           <h3>Strategi der kan mærkes — tirsdag kl. 10</h3>
           <p class="forlob-pain">I har en strategi. Men til næste personalemøde taler I stadig om de samme ting. Strategien bor i dokumentet — ikke i hverdagen. Du leder på trods af strukturen, ikke med den.</p>
           <ul class="forlob-steps">
@@ -271,7 +285,7 @@
       <div class="forlob-audience-label">For bestyrelsen</div>
       <div class="forlob-grid">
 
-        <div class="forlob-card">
+        <div class="forlob-card" id="bestyrelsen-strategisk">
           <h3>Bestyrelsen som strategisk aktiv</h3>
           <p class="forlob-pain">Bestyrelsesmøderne er domineret af orientering og administration. Bestyrelse og ledelse taler ikke samme sprog om skolens retning — og det skaber usikkerhed begge steder.</p>
           <ul class="forlob-steps">
@@ -283,7 +297,7 @@
           <a href="kontakt.html" class="btn btn-primary forlob-cta">Book en samtale</a>
         </div>
 
-        <div class="forlob-card">
+        <div class="forlob-card" id="lederskifte">
           <h3>Lederskifte — tryghed og kontinuitet</h3>
           <p class="forlob-pain">Skolen skal skifte leder. Det er en af de mest sårbare faser en skole kan gennemgå. Kultur kan gå tabt. Den nye leder kan gå i stå. Bestyrelsen ved ikke, hvad den skal gøre.</p>
           <ul class="forlob-steps">
