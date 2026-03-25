@@ -12,7 +12,7 @@
   <!-- Primære sider -->
   <url>
     <loc>https://strategiskskole.dk/ydelser.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://strategiskskole.dk/skoleleder.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -101,6 +101,12 @@
 
   <!-- SEO Landingpages -->
   <url>
+    <loc>https://strategiskskole.dk/lp-intro-workshop.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://strategiskskole.dk/lp-skoleledelse.html</loc>
     <lastmod>2026-03-19</lastmod>
     <priority>0.9</priority>
@@ -144,7 +150,7 @@
   </url>
   <url>
     <loc>https://strategiskskole.dk/lp-ny-skoleleder.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -164,7 +170,7 @@
   <!-- Ydelse: Ny skoleleder -->
   <url>
     <loc>https://strategiskskole.dk/ny-leder.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
