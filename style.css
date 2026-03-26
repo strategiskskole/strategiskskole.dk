@@ -24,7 +24,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.
 nav { background:var(--navy); position:sticky; top:0; z-index:200; box-shadow:0 2px 8px rgba(0,0,0,.25); }
 .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
 .logo { font-family:'Merriweather',serif; font-size:1.1rem; color:#fff; text-decoration:none; }
-.logo span { color:var(--teal2); }
+.logo span { color:#4ebbd0; }
 .nav-links { display:flex; gap:4px; list-style:none; align-items:center; }
 .nav-links > li { position:relative; }
 .nav-links a { color:rgba(255,255,255,.85); text-decoration:none; font-size:.87rem; font-weight:600; padding:8px 13px; border-radius:4px; transition:.2s; display:flex; align-items:center; gap:5px; }
@@ -256,7 +256,7 @@ nav { background:var(--navy); position:sticky; top:0; z-index:200; box-shadow:0 
 footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px; }
 .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
 .footer-brand p { margin-top:14px; font-size:.85rem; line-height:1.8; max-width:260px; }
-.footer-col h4 { color:#fff; font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
+.footer-col h3 { color:#fff; font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
 .footer-col ul { list-style:none; }
 .footer-col ul li { margin-bottom:9px; }
 .footer-col ul li a { color:rgba(255,255,255,.6); text-decoration:none; font-size:.86rem; }
@@ -415,9 +415,9 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   font-weight:700;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--teal);
+  color:var(--navy);
   background:rgba(46,125,140,.1);
-  border:1px solid rgba(46,125,140,.25);
+  border:1px solid rgba(46,125,140,.35);
   border-radius:20px;
   padding:5px 16px;
   margin-bottom:24px;
