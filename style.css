@@ -374,6 +374,7 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
 
 /* RESPONSIVE */
 @media(max-width:960px){
+  .fl-feature-inner { grid-template-columns:1fr; }
   .two-col { grid-template-columns:1fr; }
   .sidebar { position:static; }
   .related-grid { grid-template-columns:1fr 1fr; }
@@ -400,6 +401,24 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .ydelse-list { grid-template-columns:1fr; }
   .forlob-grid { grid-template-columns:1fr !important; }
 }
+
+/* ─── FORANDRINGSLEDELSE FEATURE STRIP ─── */
+.fl-feature-strip { background:var(--navy); padding:56px 24px; border-top:3px solid var(--teal); }
+.fl-feature-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.1); border-radius:8px; overflow:hidden; }
+.fl-feature-item { background:var(--navy); padding:36px 32px; transition:background .15s; }
+.fl-feature-item:hover { background:rgba(255,255,255,.04); }
+.fl-feature-num { display:block; font-family:'Merriweather',serif; font-size:2.4rem; font-weight:700; color:var(--teal2); line-height:1; margin-bottom:16px; }
+.fl-feature-title { display:block; font-family:'Merriweather',serif; font-size:1rem; color:#fff; margin-bottom:12px; font-weight:700; line-height:1.4; }
+.fl-feature-item p { color:rgba(255,255,255,.62); font-size:.9rem; line-height:1.7; margin:0; }
+
+/* ─── FAQ SEKTION ─── */
+.faq-section { background:var(--light); padding:72px 24px; }
+.faq-inner { max-width:800px; margin:0 auto; }
+.faq-inner > h2 { font-family:'Merriweather',serif; font-size:1.5rem; color:var(--navy); margin-bottom:40px; text-align:center; }
+.faq-item { border-top:1px solid var(--border); padding:28px 0; }
+.faq-item:last-child { border-bottom:1px solid var(--border); }
+.faq-item h3 { font-family:'Merriweather',serif; font-size:.97rem; color:var(--navy); margin:0 0 14px; line-height:1.5; }
+.faq-item p { color:var(--muted); font-size:.93rem; line-height:1.75; margin:0; }
 
 /* ─── FORLØB CARDS ─── */
 .forlob-section { background:var(--light); padding:80px 24px; }
