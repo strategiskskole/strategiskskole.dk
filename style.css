@@ -16,9 +16,12 @@ body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.
 
 /* TOP BAR */
 .topbar { background: var(--navy2); color: rgba(255,255,255,.75); font-size:.78rem; padding:6px 0; }
-.topbar-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; justify-content:flex-end; gap:24px; }
+.topbar-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; justify-content:flex-end; align-items:center; gap:24px; }
 .topbar a { color:rgba(255,255,255,.75); text-decoration:none; }
 .topbar a:hover { color:#fff; }
+.topbar-login { display:flex; align-items:center; gap:5px; color:#3a9db0 !important; border-left:1px solid rgba(255,255,255,.15); padding-left:24px; transition:opacity .2s; letter-spacing:.01em; font-weight:600; }
+.topbar-login:hover { opacity:.8; color:#fff !important; }
+.topbar-login svg { flex-shrink:0; }
 
 /* NAV */
 nav { background:var(--navy); position:sticky; top:0; z-index:200; box-shadow:0 2px 8px rgba(0,0,0,.25); }
@@ -389,6 +392,9 @@ footer { background:#111c2d; color:rgba(255,255,255,.6); padding:56px 24px 32px;
   .nav-links { display:none; }
   .nav-hamburger { display:flex; }
   .forlob-grid { grid-template-columns:1fr !important; }
+  /* Topbar: skjul telefon/email/kontakt — behold kun login */
+  .topbar a:not(.topbar-login) { display:none; }
+  .topbar-login { border-left:none; padding-left:0; }
 }
 @media(max-width:600px){
   .related-grid { grid-template-columns:1fr; }

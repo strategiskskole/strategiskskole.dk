@@ -237,7 +237,9 @@
     .dp-btn-outline:hover { border-color:rgba(255,255,255,.7); color:#fff; }
     @media(max-width:680px){
       .dp-kort-grid { grid-template-columns:1fr; }
-      .dp-cta-row { flex-direction:column; gap:10px; }
+      .dp-cta-row { flex-direction:column; gap:10px; align-items:stretch; }
+      .dp-btn-primary, .dp-btn-outline { text-align:center; width:100%; box-sizing:border-box; }
+      .digital-promo { padding:56px 20px; }
     }
     .cta-banner { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); padding:72px 24px; text-align:center; }
     .cta-banner h2 { font-family:'Merriweather',serif; font-size:2rem; color:#fff; margin-bottom:16px; }
@@ -325,6 +327,9 @@
     @media(max-width:768px){
       .nav-links{display:none;}
       .nav-hamburger{display:flex;}
+      /* Topbar: skjul telefon/email/kontakt — behold kun login */
+      .topbar a:not(.topbar-login){display:none;}
+      .topbar-login{border-left:none!important;padding-left:0!important;}
     }
     @media(max-width:600px){
       .hero h1{font-size:1.75rem;}

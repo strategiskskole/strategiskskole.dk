@@ -180,23 +180,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 @media(max-width:640px){
   .login-card{padding:32px 22px}
+  .login-card h1{font-size:1.2rem}
   .profil-topbar{padding:14px 18px}
   .profil-hero{padding:32px 18px 40px}
   .profil-content{padding:28px 18px 48px}
   .profil-roles{grid-template-columns:1fr;gap:10px}
   .profil-trin{grid-template-columns:1fr 1fr}
-  .forloeb-topbar{padding:0 16px}
-  .model-strip{padding:14px 16px}
-  .ms-label{font-size:.55rem}
+  /* Forløb topbar: skjul profilnavn på smal skærm */
+  .forloeb-topbar{padding:0 14px;min-height:52px}
+  .forloeb-topbar-profile{display:none}
+  .model-strip{padding:12px 14px}
+  .ms-label{font-size:.52rem;max-width:54px}
   .ms-kern{display:none}
-  .forloeb-body{padding:18px 14px 10px}
-  .cf-front,.cf-back{padding:24px 20px 20px}
-  .cf-num{font-size:2rem}
-  .forloeb-nav{padding:8px 14px 16px;gap:8px}
-  .btn-nav{padding:10px 14px;font-size:.8rem}
+  .model-step{min-width:58px}
+  /* Card body */
+  .forloeb-body{padding:14px 10px 8px}
+  .card-scene{max-width:100%}
+  .cf-front,.cf-back{padding:22px 18px 18px}
+  .cf-num{font-size:1.85rem}
+  .cf-question{font-size:.95rem}
+  .cf-back-section li{font-size:.82rem}
+  .cf-erkendelse-text{font-size:.8rem}
+  .cf-handling-text{font-size:.79rem}
+  /* Nav buttons */
+  .forloeb-nav{padding:6px 10px 14px;gap:6px;max-width:100%}
+  .btn-nav{padding:10px 12px;font-size:.78rem;gap:5px}
 }
 @media(max-width:380px){
   .profil-trin{grid-template-columns:1fr}
+  .btn-nav span{display:none}
+  .btn-nav.primary span{display:inline}
+  .forloeb-progress{font-size:.7rem}
 }
 </style>
 </head>
