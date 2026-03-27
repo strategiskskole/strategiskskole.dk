@@ -1090,6 +1090,8 @@ document.getElementById('btn-logout').addEventListener('click', doLogout);
 document.getElementById('btn-back').addEventListener('click', ()=>showScreen('s-profil'));
 document.getElementById('btn-prev').addEventListener('click', ()=>navCard(-1));
 document.getElementById('btn-next').addEventListener('click', ()=>navCard(1));
+document.getElementById('the-card').addEventListener('click', flipCard);
+document.getElementById('flip-hint').addEventListener('click', flipCard);
 document.querySelectorAll('[data-profile]').forEach(el=>{
   el.addEventListener('click',()=>chooseProfile(el.dataset.profile));
 });
