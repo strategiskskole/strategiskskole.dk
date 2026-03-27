@@ -1117,8 +1117,8 @@ document.querySelectorAll('[data-profile]').forEach(el=>{
   el.addEventListener('click',()=>chooseProfile(el.dataset.profile));
 });
 
-// Auto-login if session active
-if(sessionStorage.getItem('tkloggedin')==='1') showScreen('s-profil');
+// Ryd session ved sideindlæsning — kunden skal altid starte med koden
+sessionStorage.removeItem('tkloggedin');
 </script>
 </body>
 </html>
