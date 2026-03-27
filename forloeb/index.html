@@ -127,11 +127,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .flip-hint.flipped{opacity:.4}
 
 /* Card */
-.card-scene{width:100%;max-width:520px;perspective:1400px}
+.card-scene{width:100%;max-width:520px;perspective:1400px;position:relative;z-index:5}
 .card{width:100%;position:relative;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1);cursor:pointer}
 .card.flipped{transform:rotateY(180deg)}
-.card-face{width:100%;border-radius:var(--radius);overflow:hidden auto;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.card-face--back{position:absolute;top:0;left:0;transform:rotateY(180deg)}
+.card-face{width:100%;position:absolute;top:0;left:0;border-radius:var(--radius);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.card-face--back{transform:rotateY(180deg)}
 
 /* Front */
 .cf-front{background:var(--navy);border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow-lg);padding:36px 32px 28px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
@@ -1040,6 +1040,27 @@ function renderCard() {
       <div class="cf-handling-label">HANDLING</div>
       <div class="cf-handling-text">${card.handling}</div>
     </div>`;
+  // Sæt kortets højde til den højeste af de to sider
+  requestAnimationFrame(syncCardHeight);
+}
+
+/* ══ KORT HØJDE (tilpas til indhold) ══ */
+function syncCardHeight(){
+  const card = document.getElementById('the-card');
+  const front = document.getElementById('cf-front');
+  const back  = document.getElementById('cf-back');
+  // Mål begge sider ved at fjerne transform midlertidigt
+  const prevT = back.style.transform;
+  back.style.transform = 'none';
+  back.style.visibility = 'hidden';
+  const fH = front.scrollHeight;
+  const bH = back.scrollHeight;
+  back.style.transform = prevT;
+  back.style.visibility = '';
+  const h = Math.max(fH, bH, 280);
+  card.style.height = h + 'px';
+  front.style.height = h + 'px';
+  back.style.minHeight = h + 'px';
 }
 
 /* ══ FLIP ══ */
