@@ -198,6 +198,47 @@
     .quote-author { font-size:.85rem; color:rgba(255,255,255,.5); font-weight:700; }
 
     /* CTA */
+    /* Digital forløb promo section */
+    .digital-promo { background:var(--navy); padding:80px 24px; border-top:3px solid rgba(58,157,176,.25); }
+    .digital-promo-inner { max-width:1100px; margin:0 auto; }
+    .digital-promo-header { text-align:center; max-width:640px; margin:0 auto 52px; }
+    .digital-promo-header .section-eyebrow { color:var(--teal2); }
+    .digital-promo-header h2 { font-family:'Merriweather',serif; font-size:clamp(1.3rem,2.5vw,1.75rem); color:#fff; margin-bottom:14px; line-height:1.35; }
+    .digital-promo-header p { color:rgba(255,255,255,.62); font-size:.97rem; line-height:1.7; }
+    .dp-niveau-pills { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:20px; }
+    .dp-pill { display:inline-block; border-radius:20px; padding:5px 14px; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .dp-pill.sl { background:rgba(46,125,140,.18); border:1px solid rgba(46,125,140,.45); color:#3a9db0; }
+    .dp-pill.lt { background:rgba(58,157,176,.14); border:1px solid rgba(58,157,176,.4); color:#5bc0d8; }
+    .dp-pill.b  { background:rgba(126,90,155,.15); border:1px solid rgba(126,90,155,.4); color:#a07ac0; }
+    /* mini cards */
+    .dp-kort-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:44px; }
+    .dp-mini-card { border-radius:10px; padding:26px 22px 20px; min-height:210px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 8px 32px rgba(0,0,0,.28); }
+    .dp-mini-card.navy { background:#1a2e4a; border:1px solid rgba(255,255,255,.1); }
+    .dp-mini-card.lt   { background:#162838; border:1px solid rgba(58,157,176,.22); }
+    .dp-mini-card.hum  { background:#1e1a2e; border:1px solid rgba(126,90,155,.3); }
+    .dp-mc-top { display:flex; justify-content:space-between; align-items:flex-start; }
+    .dp-mc-num { font-family:'Merriweather',serif; font-size:2.1rem; font-weight:700; color:#3a9db0; line-height:1; }
+    .dp-mini-card.lt .dp-mc-num { color:#5bc0d8; }
+    .dp-mini-card.hum .dp-mc-num { color:#7e5a9b; }
+    .dp-mc-badge { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:3px 10px; font-size:.63rem; font-weight:700; color:rgba(255,255,255,.7); text-transform:uppercase; letter-spacing:.09em; }
+    .dp-mc-mid { flex:1; padding:14px 0 12px; }
+    .dp-mc-trin { font-family:'Merriweather',serif; font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:#3a9db0; margin-bottom:9px; }
+    .dp-mini-card.lt .dp-mc-trin { color:#5bc0d8; }
+    .dp-mini-card.hum .dp-mc-trin { color:rgba(126,90,155,.9); }
+    .dp-mc-q { font-family:'Merriweather',serif; font-size:.87rem; font-style:italic; color:#fff; line-height:1.5; }
+    .dp-mc-bot { display:flex; justify-content:space-between; align-items:flex-end; }
+    .dp-mc-logo { font-family:'Merriweather',serif; font-size:.6rem; color:rgba(255,255,255,.22); }
+    .dp-caption { text-align:center; margin-top:10px; font-size:.75rem; color:rgba(255,255,255,.38); font-style:italic; }
+    /* CTA row */
+    .dp-cta-row { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:8px; }
+    .dp-btn-primary { display:inline-block; background:var(--teal); color:#fff; font-family:'Open Sans',sans-serif; font-size:.9rem; font-weight:700; padding:13px 28px; border-radius:6px; text-decoration:none; letter-spacing:.3px; transition:background .2s; }
+    .dp-btn-primary:hover { background:var(--teal2); }
+    .dp-btn-outline { display:inline-block; border:1px solid rgba(255,255,255,.3); color:rgba(255,255,255,.75); font-family:'Open Sans',sans-serif; font-size:.88rem; font-weight:600; padding:11px 24px; border-radius:6px; text-decoration:none; transition:.2s; }
+    .dp-btn-outline:hover { border-color:rgba(255,255,255,.7); color:#fff; }
+    @media(max-width:680px){
+      .dp-kort-grid { grid-template-columns:1fr; }
+      .dp-cta-row { flex-direction:column; gap:10px; }
+    }
     .cta-banner { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); padding:72px 24px; text-align:center; }
     .cta-banner h2 { font-family:'Merriweather',serif; font-size:2rem; color:#fff; margin-bottom:16px; }
     .cta-banner p { color:rgba(255,255,255,.75); max-width:520px; margin:0 auto 36px; }
@@ -442,6 +483,7 @@
           <a href="ydelser.html#strategi-i-hverdagen">Strategi der kan mærkes</a>
           <a href="ydelser.html#bestyrelsen-strategisk">Bestyrelsen som strategisk aktiv</a>
           <a href="ydelser.html#lederskifte">Lederskifte — tryghed og kontinuitet</a>
+          <a href="digitalt-forloeb.html" style="color:var(--teal2);font-weight:700;">&#x1F510; Det digitale proceskortforl&oslash;b</a>
         </div>
       </li>
       <li><a href="skoleleder.html">For skolelederen</a></li>
@@ -471,6 +513,7 @@
       <a href="ydelser.html#strategi-i-hverdagen">Strategi der kan mærkes</a>
       <a href="ydelser.html#bestyrelsen-strategisk">Bestyrelsen som strategisk aktiv</a>
       <a href="ydelser.html#lederskifte">Lederskifte — tryghed og kontinuitet</a>
+      <a href="digitalt-forloeb.html" style="color:var(--teal2);font-weight:700;">Det digitale proceskortforl&oslash;b</a>
     </div>
     <a href="skoleleder.html">For skolelederen</a>
     <a href="skolegovernance.html">For bestyrelsen</a>
@@ -795,6 +838,86 @@
           Hent beskrivelsen som PDF
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIGITALT FORLØB PROMO -->
+<section class="digital-promo">
+  <div class="digital-promo-inner">
+    <div class="digital-promo-header">
+      <span class="section-eyebrow">Tirsdag kl. 10-modellen&reg; &mdash; digitalt</span>
+      <h2>Kortene er nu tilg&aelig;ngelige online</h2>
+      <p>Som en del af et r&aring;dgivnings- eller procesfaciliteringsforl&oslash;b f&aring;r I adgang til alle proceskortene digitalt &mdash; til skoleleder, ledelsesteam og bestyrelse i &eacute;t samlet forl&oslash;b.</p>
+      <div class="dp-niveau-pills">
+        <span class="dp-pill sl">Skoleleder</span>
+        <span class="dp-pill lt">Ledelsesteam</span>
+        <span class="dp-pill b">Bestyrelse</span>
+      </div>
+    </div>
+
+    <div class="dp-kort-grid">
+      <!-- Trin 01 · Skoleleder -->
+      <div>
+        <div class="dp-mini-card navy">
+          <div class="dp-mc-top">
+            <div class="dp-mc-num">01</div>
+            <div class="dp-mc-badge">Skoleleder</div>
+          </div>
+          <div class="dp-mc-mid">
+            <div class="dp-mc-trin">Spejling</div>
+            <div class="dp-mc-q">Hvad er det, jeg faktisk st&aring;r i som skoleleder?</div>
+          </div>
+          <div class="dp-mc-bot">
+            <div class="dp-mc-logo">Strategiskskole.dk</div>
+          </div>
+        </div>
+        <div class="dp-caption">Trinkort &middot; Trin 01 &middot; Skolelederen</div>
+      </div>
+
+      <!-- Trin 03 · Ledelsesteam -->
+      <div>
+        <div class="dp-mini-card lt">
+          <div class="dp-mc-top">
+            <div class="dp-mc-num">03</div>
+            <div class="dp-mc-badge">Ledelsesteam</div>
+          </div>
+          <div class="dp-mc-mid">
+            <div class="dp-mc-trin">Valg</div>
+            <div class="dp-mc-q">Hvad prioriterer vi f&aelig;lles &mdash; og hvad holder vi op med?</div>
+          </div>
+          <div class="dp-mc-bot">
+            <div class="dp-mc-logo">Strategiskskole.dk</div>
+          </div>
+        </div>
+        <div class="dp-caption">Trinkort &middot; Trin 03 &middot; Ledelsesteamet</div>
+      </div>
+
+      <!-- Humant · Trin 04 · Tillid -->
+      <div>
+        <div class="dp-mini-card hum">
+          <div class="dp-mc-top">
+            <div class="dp-mc-num">04</div>
+            <div class="dp-mc-badge">Det menneskelige rum</div>
+          </div>
+          <div class="dp-mc-mid">
+            <div class="dp-mc-trin">Tillid</div>
+            <div class="dp-mc-q">Hvad bygger vi rammerne p&aring; &mdash; kontrol eller tillid?</div>
+          </div>
+          <div class="dp-mc-bot">
+            <div class="dp-mc-logo">Strategiskskole.dk</div>
+          </div>
+        </div>
+        <div class="dp-caption">Menneskekort &middot; Trin 04 &middot; Alle niveauer</div>
+      </div>
+    </div>
+
+    <div class="dp-cta-row">
+      <a href="digitalt-forloeb.html" class="dp-btn-primary">L&aelig;s om det digitale forl&oslash;b</a>
+      <a href="forloeb/" class="dp-btn-outline">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Login til kundeforl&oslash;b
+      </a>
     </div>
   </div>
 </section>
