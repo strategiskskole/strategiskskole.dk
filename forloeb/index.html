@@ -891,6 +891,16 @@ async function doLogin() {
   if(!val){err.textContent='Indtast venligst din adgangskode';return;}
   const h = await hashString(val);
   if(VALID_HASHES.has(h)){
+    fetch('https://formsubmit.co/ajax/thomas@strategiskskole.dk',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'Login til Strategiskskole – nyt besøg',
+        _template:'table',
+        Kode: val.toUpperCase().trim(),
+        Tidspunkt: new Date().toLocaleString('da-DK',{dateStyle:'full',timeStyle:'short'})
+      })
+    }).catch(()=>{});
     sessionStorage.setItem('tkloggedin','1');
     showScreen('s-profil');
   } else {

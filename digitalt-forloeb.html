@@ -302,17 +302,17 @@
       border-color: #3a9db0; color: #fff;
     }
 
+    @media(max-width:960px) {
+      .niveau-grid { grid-template-columns: 1fr 1fr; }
+      .kort-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr; gap: 0; }
+    }
     @media(max-width:760px) {
       .niveau-grid { grid-template-columns: 1fr; }
       .kort-grid { grid-template-columns: 1fr; gap: 14px; }
       .process-grid { grid-template-columns: 1fr; gap: 0; }
       .process-connector { display: none; }
       .login-cta-box { flex-direction: column; align-items: flex-start; }
-    }
-    @media(max-width:960px) {
-      .niveau-grid { grid-template-columns: 1fr 1fr; }
-      .kort-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
