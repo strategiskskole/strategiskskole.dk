@@ -81,7 +81,9 @@
     #ssk-window {
       position: fixed; bottom: 96px; right: 24px; z-index: 9998;
       width: 360px; max-width: calc(100vw - 32px);
-      height: 500px; max-height: calc(100vh - 120px);
+      height: 500px;
+      max-height: calc(100vh - 120px);
+      max-height: calc(100dvh - 120px);
       border-radius: 16px; overflow: hidden;
       background: #fff;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
@@ -184,9 +186,14 @@
     /* Fejlbesked */
     .ssk-error { color: #c0392b; font-style: italic; font-size: 13px; }
 
-    @media (max-width: 400px) {
-      #ssk-window { right: 8px; bottom: 80px; width: calc(100vw - 16px); }
-      #ssk-bubble { right: 12px; bottom: 16px; }
+    @media (max-width: 480px) {
+      #ssk-window {
+        right: 8px; left: 8px; bottom: 76px;
+        width: auto; max-width: none;
+        max-height: calc(100vh - 96px);
+        max-height: calc(100dvh - 96px);
+      }
+      #ssk-bubble { right: 12px; bottom: 12px; }
     }
   `;
   document.head.appendChild(style);
