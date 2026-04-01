@@ -14,7 +14,7 @@
   "use strict";
 
   // ─── Konfiguration ───────────────────────────────────────────────────────────
-  const WORKER_URL = "https://DIN-WORKER.DIT-NAVN.workers.dev"; // ← skift dette!
+  const WORKER_URL = "https://strategi-chat.strategiskskole.workers.dev";
   const BRAND_COLOR = "#1a3a5c";      // Mørkeblå — tilpas til din branding
   const ACCENT_COLOR = "#2a6496";     // Lysere blå til hover og links
   const WELCOME_MSG  =
