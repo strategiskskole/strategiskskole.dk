@@ -292,7 +292,10 @@
     const div = el("div", { class: "ssk-msg ssk-msg-bot" });
     div.innerHTML = formatText(text);
     messages.appendChild(div);
-    scrollBottom();
+    // Scroll så toppen af bot-beskeden er synlig — brugeren scroller selv ned
+    requestAnimationFrame(() => {
+      div.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
   }
 
   function addUserMessage(text) {
