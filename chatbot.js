@@ -56,9 +56,19 @@
   style.textContent = `
     #ssk-chat-root * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
 
+    /* Root-container: dækker hele skærmen og fanger al overflow
+       — forhindrer chat-elementerne i at udvide siden */
+    #ssk-chat-root {
+      position: fixed; inset: 0;
+      pointer-events: none;
+      z-index: 9997;
+      overflow: hidden;
+    }
+
     /* Boble-knap */
     #ssk-bubble {
-      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      position: absolute; bottom: 24px; right: 24px;
+      pointer-events: auto;
       width: 58px; height: 58px; border-radius: 50%;
       background: ${BRAND_COLOR}; color: #fff;
       border: none; cursor: pointer;
@@ -79,11 +89,11 @@
 
     /* Chat-vindue */
     #ssk-window {
-      position: fixed; bottom: 96px; right: 24px; z-index: 9998;
-      width: 360px; max-width: calc(100vw - 32px);
+      position: absolute; bottom: 96px; right: 24px;
+      pointer-events: auto;
+      width: 360px; max-width: calc(100% - 32px);
       height: 500px;
-      max-height: calc(100vh - 120px);
-      max-height: calc(100dvh - 120px);
+      max-height: calc(100% - 120px);
       border-radius: 16px; overflow: hidden;
       background: #fff;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
@@ -190,8 +200,8 @@
       #ssk-window {
         right: 8px; left: 8px; bottom: 76px;
         width: auto; max-width: none;
-        max-height: calc(100vh - 96px);
-        max-height: calc(100dvh - 96px);
+        height: auto;
+        max-height: calc(100% - 96px);
       }
       #ssk-bubble { right: 12px; bottom: 12px; }
     }
