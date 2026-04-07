@@ -372,7 +372,7 @@
       const data = await res.json();
 
       if (data.error) throw new Error(data.error);
-      const reply = data.reply || "Beklager, jeg kunne ikke generere et svar.";
+      const reply = data.answer || data.reply || "Beklager, jeg kunne ikke generere et svar.";
 
       history.push({ role: "assistant", content: reply });
       addBotMessage(reply);
