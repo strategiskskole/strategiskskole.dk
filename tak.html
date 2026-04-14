@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G141P75SPZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G141P75SPZ');
+</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strategiskskole.dk</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="canonical" href="https://strategiskskole.dk/tak.html"/>
+  <meta name="robots" content="noindex, follow"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #0e1c2e;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: #1a2e4a;
+      border-bottom: 3px solid #1a7a6e;
+      padding: 0 1.5rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .logo span { color: #3a9db0; }
+
+    .confirm {
+      font-size: 0.82rem;
+      color: #8fb8c8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .confirm .check {
+      background: #1a7a6e;
+      border-radius: 50%;
+      width: 20px; height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .confirm .check svg { width: 11px; height: 11px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    .dl-btn {
+      background: #1a7a6e;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .dl-btn:hover { background: #15695e; }
+
+    /* ── PDF iframe ── */
+    .pdf-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ── Mobile fallback (shown when iframe is not practical) ── */
+    .mobile-fallback {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      gap: 1.2rem;
+      background: #f4f7f9;
+    }
+    .mobile-fallback p {
+      color: #4a5a6a;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 340px;
+    }
+    .mobile-fallback .open-btn {
+      background: #1a2e4a;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      iframe         { display: none; }
+      .mobile-fallback { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">Strategisk<span>skole</span>.dk</div>
+    <div class="confirm">
+      <span class="check">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </span>
+      Tak for tilmeldingen — din guide er klar
+    </div>
+    <a class="dl-btn" href="5-greb-strategisk-skoleledelse.pdf" download>
+      ↓ Download PDF
+    </a>
+  </div>
+
+  <div class="pdf-wrap">
+    <iframe
+      src="5-greb-strategisk-skoleledelse.pdf"
+      title="De 5 vigtigste greb i strategisk skoleledelse">
+    </iframe>
+
+    <div class="mobile-fallback">
+      <p><strong>Din guide er klar!</strong><br/>
+         "De 5 vigtigste greb i strategisk skoleledelse"</p>
+      <a class="open-btn" href="5-greb-strategisk-skoleledelse.pdf">
+        Åbn PDF-guiden
+      </a>
+      <p style="font-size:0.82rem; color:#8a9aaa;">
+        Guiden er gratis og må frit deles.
+      </p>
+      <a href="https://strategiskskole.dk" style="color:#1a7a6e; font-size:0.9rem; font-weight:600; text-decoration:none;">
+        ← Tilbage til Strategiskskole.dk
+      </a>
+    </div>
+  </div>
+
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

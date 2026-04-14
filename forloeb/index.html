@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G141P75SPZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G141P75SPZ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tirsdag kl. 10 — Proceskort | Strategiskskole.dk</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1a2e4a;--navy2:#142440;--teal:#2e7d8c;--teal2:#3a9db0;
+  --teal-light:rgba(46,125,140,.12);--light:#f4f7f9;--white:#ffffff;
+  --muted:#5a6a7a;--border:#dde2e8;--gold:#c9982a;--human:#7e5a9b;
+  --radius:12px;--shadow:0 4px 24px rgba(26,46,74,.13);
+  --shadow-lg:0 8px 40px rgba(26,46,74,.18);
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--navy);color:var(--white);min-height:100vh;overflow-x:hidden}
+.screen{display:none;min-height:100vh;flex-direction:column}
+.screen.active{display:flex}
+
+/* ── LOGIN ── */
+#s-login{align-items:center;justify-content:center;background:var(--navy);position:relative;overflow:hidden;padding:24px}
+.login-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.login-deco span{position:absolute;font-family:'Merriweather',serif;font-size:clamp(80px,15vw,180px);font-weight:700;color:rgba(58,157,176,.07);line-height:1;user-select:none}
+.login-deco span:nth-child(1){top:-2%;left:-1%}
+.login-deco span:nth-child(2){top:10%;right:2%}
+.login-deco span:nth-child(3){bottom:15%;left:5%}
+.login-deco span:nth-child(4){bottom:-3%;right:8%}
+.login-inner{position:relative;z-index:1;width:100%;max-width:420px;text-align:center}
+.login-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:40px;text-decoration:none}
+.login-logo-mark{width:38px;height:38px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Merriweather',serif;font-size:.9rem;font-weight:700;color:#fff;letter-spacing:-.5px}
+.login-logo-text{font-family:'Merriweather',serif;font-size:.85rem;color:rgba(255,255,255,.6);letter-spacing:.02em}
+.login-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:48px 40px;backdrop-filter:blur(8px)}
+.login-card h1{font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:10px}
+.login-card p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:36px}
+.login-field{margin-bottom:14px}
+.login-field input{width:100%;padding:14px 18px;border:1.5px solid rgba(255,255,255,.15);border-radius:8px;background:rgba(255,255,255,.07);color:var(--white);font-size:1.1rem;font-family:'Merriweather',serif;letter-spacing:.12em;text-transform:uppercase;text-align:center;outline:none;transition:border-color .2s,background .2s}
+.login-field input::placeholder{color:rgba(255,255,255,.3);letter-spacing:normal;text-transform:none;font-family:-apple-system,sans-serif;font-size:.9rem}
+.login-field input:focus{border-color:var(--teal2);background:rgba(255,255,255,.1)}
+.login-error{font-size:.82rem;color:#ff8a8a;margin-bottom:12px;min-height:18px;text-align:left}
+.btn-primary{width:100%;padding:14px 28px;background:var(--teal);color:#fff;border:none;border-radius:8px;font-size:1rem;font-family:'Merriweather',serif;font-weight:700;cursor:pointer;transition:background .2s,transform .1s;letter-spacing:.01em}
+.btn-primary:hover{background:var(--teal2)}
+.btn-primary:active{transform:scale(.98)}
+.login-help{margin-top:28px;font-size:.8rem;color:rgba(255,255,255,.35)}
+.login-help a{color:rgba(58,157,176,.8);text-decoration:none}
+.login-help a:hover{color:var(--teal2)}
+
+/* ── PROFIL ── */
+#s-profil{background:var(--light)}
+.profil-topbar{background:var(--navy);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.profil-topbar-logo{font-family:'Merriweather',serif;font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none}
+.profil-topbar-logo strong{color:var(--teal2)}
+.btn-logout{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);padding:6px 14px;border-radius:6px;font-size:.78rem;cursor:pointer;transition:all .2s}
+.btn-logout:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.profil-hero{background:var(--navy);padding:48px 32px 56px;text-align:center;flex-shrink:0}
+.profil-hero h1{font-family:'Merriweather',serif;font-size:clamp(1.3rem,3vw,1.9rem);color:var(--white);margin-bottom:12px}
+.profil-hero p{font-size:.92rem;color:rgba(255,255,255,.6);max-width:500px;margin:0 auto;line-height:1.65}
+.profil-content{flex:1;padding:48px 32px 64px;max-width:900px;margin:0 auto;width:100%}
+.profil-section-title{font-family:'Merriweather',serif;font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px}
+.profil-roles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.profil-tile{background:var(--white);border:2px solid var(--border);border-radius:var(--radius);padding:32px 24px 28px;cursor:pointer;transition:all .2s;text-align:center;position:relative;overflow:hidden}
+.profil-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--teal);opacity:0;transition:opacity .2s}
+.profil-tile:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.profil-tile:hover::before{opacity:1}
+.profil-tile:active{transform:scale(.98)}
+.profil-tile-icon{width:56px;height:56px;background:var(--teal-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem}
+.profil-tile-label{font-family:'Merriweather',serif;font-size:.7rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.profil-tile-title{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.3}
+.profil-tile-desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+.profil-trin{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.profil-trin-tile{background:var(--white);border:2px solid var(--border);border-radius:10px;padding:20px 18px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:14px}
+.profil-trin-tile:hover{border-color:var(--navy);background:var(--navy)}
+.profil-trin-tile:hover .ptt-num{color:var(--teal2)}
+.profil-trin-tile:hover .ptt-name{color:#fff}
+.profil-trin-tile:hover .ptt-sub{color:rgba(255,255,255,.5)}
+.profil-trin-tile:active{transform:scale(.98)}
+.ptt-num{font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--teal);line-height:1;min-width:36px}
+.ptt-name{font-family:'Merriweather',serif;font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.2}
+.ptt-sub{font-size:.75rem;color:var(--muted);margin-top:2px}
+
+/* ── FORLOEB ── */
+#s-forloeb{background:var(--light)}
+.forloeb-topbar{background:var(--navy);padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0}
+.btn-back{display:flex;align-items:center;gap:8px;background:transparent;border:none;color:rgba(255,255,255,.7);font-size:.85rem;cursor:pointer;transition:color .2s;padding:0;font-family:inherit}
+.btn-back:hover{color:#fff}
+.forloeb-topbar-profile{font-family:'Merriweather',serif;font-size:.82rem;color:rgba(255,255,255,.5)}
+.forloeb-topbar-profile strong{color:var(--teal2)}
+.forloeb-progress{font-size:.78rem;color:rgba(255,255,255,.4);white-space:nowrap}
+
+/* Model strip */
+.model-strip{background:var(--navy2);border-bottom:1px solid rgba(255,255,255,.07);padding:18px 32px;overflow-x:auto;scrollbar-width:none;flex-shrink:0}
+.model-strip::-webkit-scrollbar{display:none}
+.model-inner{display:flex;align-items:flex-start;max-width:800px;margin:0 auto;position:relative}
+.model-inner::before{content:'';position:absolute;top:13px;left:20px;right:20px;height:2px;background:rgba(255,255,255,.1);z-index:0}
+.model-step{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;position:relative;z-index:1;transition:opacity .2s;min-width:72px;padding:0 2px}
+.model-step.no-click{cursor:default;pointer-events:none}
+.model-step:not(.no-click):hover .ms-circle{background:var(--teal2);border-color:var(--teal2);color:#fff}
+.ms-circle{width:26px;height:26px;border-radius:50%;border:2px solid rgba(255,255,255,.18);background:var(--navy2);display:flex;align-items:center;justify-content:center;font-family:'Merriweather',serif;font-size:.65rem;font-weight:700;color:rgba(255,255,255,.35);transition:all .25s;position:relative;flex-shrink:0}
+.ms-circle.done{border-color:rgba(58,157,176,.4);background:rgba(58,157,176,.12);color:var(--teal2)}
+.ms-circle.active{background:var(--teal);border-color:var(--teal2);color:#fff;box-shadow:0 0 0 4px rgba(58,157,176,.2);transform:scale(1.18)}
+.ms-label{font-family:'Merriweather',serif;font-size:.6rem;color:rgba(255,255,255,.3);text-align:center;line-height:1.3;transition:color .2s;max-width:70px}
+.model-step.ms-active .ms-label{color:var(--teal2);font-weight:700}
+.model-step.ms-done .ms-label{color:rgba(58,157,176,.55)}
+.ms-kern{font-size:.52rem;color:rgba(255,255,255,.2);text-align:center;max-width:70px;line-height:1.3;margin-top:1px}
+.model-step.ms-active .ms-kern{color:rgba(58,157,176,.6)}
+
+/* proc dots */
+.ms-proc{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;position:relative;z-index:1;padding:0 4px;cursor:pointer}
+.ms-proc .ms-circle{width:20px;height:20px;font-size:.5rem;margin-top:3px;border-color:rgba(255,255,255,.1)}
+.ms-proc.ms-active .ms-circle{background:var(--gold);border-color:var(--gold);color:#fff;box-shadow:0 0 0 3px rgba(201,152,42,.2)}
+.ms-proc .ms-label{font-size:.55rem;max-width:52px}
+.ms-proc.ms-active .ms-label{color:rgba(201,152,42,.9)}
+.ms-proc.ms-done .ms-circle{border-color:rgba(201,152,42,.4);background:rgba(201,152,42,.1);color:var(--gold)}
+
+/* Card area */
+.forloeb-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px 12px}
+.kort-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kort-badge{padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.kort-badge.trin{background:rgba(46,125,140,.15);color:var(--teal)}
+.kort-badge.humant{background:rgba(126,90,155,.12);color:var(--human)}
+.kort-badge.proces{background:rgba(201,152,42,.12);color:var(--gold)}
+.flip-hint{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:6px;transition:opacity .3s}
+.flip-hint.flipped{opacity:.4}
+
+/* Card */
+.card-scene{width:100%;max-width:520px;perspective:1400px;position:relative;z-index:5}
+.card{width:100%;position:relative;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.card-face{width:100%;position:absolute;top:0;left:0;border-radius:var(--radius);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.card-face--back{transform:rotateY(180deg)}
+
+/* Front */
+.cf-front{background:var(--navy);border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow-lg);padding:36px 32px 28px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+.cf-front.type-humant{background:#1e1a2e;border-color:rgba(126,90,155,.3)}
+.cf-front.type-proces{background:#1c1a10;border-color:rgba(201,152,42,.25)}
+.cf-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+.cf-num{font-family:'Merriweather',serif;font-size:2.6rem;font-weight:700;color:var(--teal2);line-height:1}
+.cf-front.type-humant .cf-num{color:var(--human)}
+.cf-front.type-proces .cf-num{color:var(--gold)}
+.cf-role-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 14px;font-size:.7rem;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.1em}
+.cf-middle{flex:1;display:flex;flex-direction:column;justify-content:center;margin-bottom:24px}
+.cf-trin-name{font-family:'Merriweather',serif;font-size:.68rem;font-weight:700;color:var(--teal2);text-transform:uppercase;letter-spacing:.15em;margin-bottom:12px}
+.cf-front.type-humant .cf-trin-name{color:rgba(126,90,155,.9)}
+.cf-front.type-proces .cf-trin-name{color:rgba(201,152,42,.9)}
+.cf-question{font-family:'Merriweather',serif;font-size:clamp(.98rem,2.5vw,1.2rem);font-style:italic;color:var(--white);line-height:1.55}
+.cf-bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.cf-logo{font-family:'Merriweather',serif;font-size:.68rem;color:rgba(255,255,255,.25);letter-spacing:.04em}
+.cf-flip-ind{font-size:.68rem;color:rgba(255,255,255,.25);display:flex;align-items:center;gap:5px}
+
+/* Back */
+.cf-back{background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow-lg);padding:28px 32px 24px;min-height:300px;display:flex;flex-direction:column}
+.cf-back-question{font-family:'Merriweather',serif;font-size:.88rem;font-style:italic;color:var(--navy);line-height:1.55;padding-bottom:18px;margin-bottom:18px;border-bottom:2px solid var(--border)}
+.cf-back-section{margin-bottom:14px}
+.cf-back-section-title{font-family:'Merriweather',serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);margin-bottom:7px}
+.cf-back.type-humant .cf-back-section-title{color:var(--human)}
+.cf-back.type-proces .cf-back-section-title{color:var(--gold)}
+.cf-back-section ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.cf-back-section li{font-size:.85rem;color:var(--muted);line-height:1.6;padding-left:14px;position:relative}
+.cf-back-section li::before{content:'—';position:absolute;left:0;color:var(--border)}
+.cf-erkendelse{background:var(--light);border-radius:8px;padding:13px 15px;margin-top:4px;margin-bottom:12px}
+.cf-erkendelse-label{font-family:'Merriweather',serif;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);margin-bottom:4px}
+.cf-back.type-humant .cf-erkendelse-label{color:var(--human)}
+.cf-back.type-proces .cf-erkendelse-label{color:var(--gold)}
+.cf-erkendelse-text{font-family:'Merriweather',serif;font-size:.83rem;color:var(--navy);line-height:1.55}
+.cf-handling{border-top:1px solid var(--border);padding-top:12px;display:flex;align-items:flex-start;gap:10px}
+.cf-handling-label{font-family:'Merriweather',serif;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--navy);flex-shrink:0;padding-top:2px}
+.cf-handling-text{font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.5}
+
+/* Nav */
+.forloeb-nav{padding:10px 24px 20px;display:flex;align-items:center;justify-content:center;gap:12px;max-width:540px;margin:0 auto;width:100%;flex-shrink:0}
+.btn-nav{display:flex;align-items:center;gap:7px;padding:11px 22px;border:1.5px solid var(--border);border-radius:8px;background:var(--white);color:var(--navy);font-size:.86rem;font-family:'Merriweather',serif;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-nav:hover{border-color:var(--teal);color:var(--teal)}
+.btn-nav:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+.btn-nav.primary{background:var(--navy);color:#fff;border-color:var(--navy);flex:1;justify-content:center}
+.btn-nav.primary:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+
+@media(max-width:640px){
+  .login-card{padding:32px 22px}
+  .login-card h1{font-size:1.2rem}
+  .profil-topbar{padding:14px 18px}
+  .profil-hero{padding:32px 18px 40px}
+  .profil-content{padding:28px 18px 48px}
+  .profil-roles{grid-template-columns:1fr;gap:10px}
+  .profil-trin{grid-template-columns:1fr 1fr}
+  /* Forløb topbar: skjul profilnavn på smal skærm */
+  .forloeb-topbar{padding:0 14px;min-height:52px}
+  .forloeb-topbar-profile{display:none}
+  .model-strip{padding:12px 14px}
+  .ms-label{font-size:.52rem;max-width:54px}
+  .ms-kern{display:none}
+  .model-step{min-width:58px}
+  /* Card body */
+  .forloeb-body{padding:14px 10px 8px}
+  .card-scene{max-width:100%}
+  .cf-front,.cf-back{padding:22px 18px 18px}
+  .cf-num{font-size:1.85rem}
+  .cf-question{font-size:.95rem}
+  .cf-back-section li{font-size:.82rem}
+  .cf-erkendelse-text{font-size:.8rem}
+  .cf-handling-text{font-size:.79rem}
+  /* Nav buttons */
+  .forloeb-nav{padding:6px 10px 14px;gap:6px;max-width:100%}
+  .btn-nav{padding:10px 12px;font-size:.78rem;gap:5px}
+}
+@media(max-width:380px){
+  .profil-trin{grid-template-columns:1fr}
+  .btn-nav span{display:none}
+  .btn-nav.primary span{display:inline}
+  .forloeb-progress{font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ SCREEN 1: LOGIN ═══ -->
+<section id="s-login" class="screen active">
+  <div class="login-deco" aria-hidden="true">
+    <span>01</span><span>05</span><span>03</span><span>06</span>
+  </div>
+  <div class="login-inner">
+    <a href="../" class="login-logo">
+      <div class="login-logo-mark">Ss</div>
+      <span class="login-logo-text">Strategiskskole.dk</span>
+    </a>
+    <div class="login-card">
+      <h1>Tirsdag kl. 10<br>— Proceskort</h1>
+      <p>Indtast din adgangskode for at tilgå kortene til Tirsdag kl. 10-modellen&#174;</p>
+      <div class="login-field">
+        <input type="text" id="code-input" placeholder="Din adgangskode" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="12">
+      </div>
+      <div class="login-error" id="login-error" aria-live="polite"></div>
+      <button class="btn-primary" id="login-btn">Kom i gang &rarr;</button>
+    </div>
+    <p class="login-help">Har du ikke en kode? <a href="mailto:tk@feldballe-friskole.dk">Kontakt os</a></p>
+  </div>
+</section>
+
+<!-- ═══ SCREEN 2: PROFIL ═══ -->
+<section id="s-profil" class="screen">
+  <div class="profil-topbar">
+    <a href="../" class="profil-topbar-logo">Strategisk<strong>skole</strong>.dk</a>
+    <button class="btn-logout" id="btn-logout">Log ud</button>
+  </div>
+  <div class="profil-hero">
+    <h1>Tirsdag kl. 10 — Proceskort</h1>
+    <p>Vælg din profil for at se de relevante kort — eller spring direkte til et bestemt trin i modellen</p>
+  </div>
+  <div class="profil-content">
+    <p class="profil-section-title">Vælg din rolle</p>
+    <div class="profil-roles">
+      <div class="profil-tile" data-profile="skoleleder">
+        <div class="profil-tile-icon">&#x1F3EB;</div>
+        <div class="profil-tile-label">Rolle</div>
+        <div class="profil-tile-title">Skoleleder</div>
+        <div class="profil-tile-desc">Dit perspektiv som skoleleder — kortene guider dig gennem alle 6 trin</div>
+      </div>
+      <div class="profil-tile" data-profile="ledelsesteam">
+        <div class="profil-tile-icon">&#x1F465;</div>
+        <div class="profil-tile-label">Rolle</div>
+        <div class="profil-tile-title">Ledelsesteam</div>
+        <div class="profil-tile-desc">Fælles perspektiv og opgaver for det samlede ledelsesteam</div>
+      </div>
+      <div class="profil-tile" data-profile="bestyrelse">
+        <div class="profil-tile-icon">&#x1F3DB;&#xFE0F;</div>
+        <div class="profil-tile-label">Rolle</div>
+        <div class="profil-tile-title">Bestyrelse</div>
+        <div class="profil-tile-desc">Bestyrelsens ansvar, spørgsmål og opfølgning through alle 6 trin</div>
+      </div>
+    </div>
+    <p class="profil-section-title">&#8212; eller gå direkte til et trin</p>
+    <div class="profil-trin">
+      <div class="profil-trin-tile" data-profile="trin-01"><div class="ptt-num">01</div><div><div class="ptt-name">Spejling</div><div class="ptt-sub">Hvad er det, vi egentlig st&#229;r i?</div></div></div>
+      <div class="profil-trin-tile" data-profile="trin-02"><div class="ptt-num">02</div><div><div class="ptt-name">Klarhed</div><div class="ptt-sub">Hvad er problemet bag problemet?</div></div></div>
+      <div class="profil-trin-tile" data-profile="trin-03"><div class="ptt-num">03</div><div><div class="ptt-name">Valg</div><div class="ptt-sub">Hvad v&#230;lger vi &#8212; og hvad fra?</div></div></div>
+      <div class="profil-trin-tile" data-profile="trin-04"><div class="ptt-num">04</div><div><div class="ptt-name">Struktur</div><div class="ptt-sub">Hvordan organiserer vi os?</div></div></div>
+      <div class="profil-trin-tile" data-profile="trin-05"><div class="ptt-num">05</div><div><div class="ptt-name">Tirsdag kl.&#160;10</div><div class="ptt-sub">Kan vi se strategien i hverdagen?</div></div></div>
+      <div class="profil-trin-tile" data-profile="trin-06"><div class="ptt-num">06</div><div><div class="ptt-name">Forankring</div><div class="ptt-sub">Hvordan holder vi det levende?</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCREEN 3: FORLØB ═══ -->
+<section id="s-forloeb" class="screen">
+  <div class="forloeb-topbar">
+    <button class="btn-back" id="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Tilbage
+    </button>
+    <div class="forloeb-topbar-profile" id="tp-profile"></div>
+    <div class="forloeb-progress" id="tp-progress"></div>
+  </div>
+  <div class="model-strip">
+    <div class="model-inner" id="model-inner"></div>
+  </div>
+  <div class="forloeb-body">
+    <div class="kort-meta">
+      <span class="kort-badge" id="kort-badge">Trinkort</span>
+      <span class="flip-hint" id="flip-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.34"/></svg>
+        Klik for at vende kortet
+      </span>
+    </div>
+    <div class="card-scene">
+      <div class="card" id="the-card">
+        <div class="card-face card-face--front" id="cf-front"></div>
+        <div class="card-face card-face--back" id="cf-back"></div>
+      </div>
+    </div>
+  </div>
+  <div class="forloeb-nav">
+    <button class="btn-nav" id="btn-prev">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Forrige
+    </button>
+    <button class="btn-nav primary" id="btn-next">
+      N&#230;ste
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</section>
+
+<script>
+/* ══ VALID HASHES ══ */
+const VALID_HASHES = new Set([
+  "0f51eb6aff091f24e46893d3da18ad7c73de1321ed00f7b721197f2ead7f888c",
+  "6df8780cab0bf51901cf0c8422e214a6681dc46b412730b5fe9afa4865a4d5c9",
+  "76b0c7de5954af37212b385e304f28927464d874cea70907ceb3df73f937ec12",
+  "0af8346ccace5e99c9d3f928bec1cd460b3d066b544dd393b8f629a7ad686bb6",
+  "6d0aafaf11d745fa1cf8f77eb11aaef93d752b422c09109d222ab5f2e01be4cc",
+  "45f6b59aa16d64b1cd195572bda3746e484cf702047a990523cc96e6e01acb5b",
+  "86cf1e0b8c905c33f426d7edd12145c2649470d7bc0e329c6e065e40c2929208",
+  "6b547fa231919e678bcbb17e406af8bccb307368d97eae2a813fd86e7b114502",
+  "72edbb3e753833674856d75bd5981a2c0a6b9c6e6b8ac97c776f918ccd7ed52b",
+  "6193163994f00910be5f7e6f35db6a4497e31052c3df25e24849f28fcd812c28",
+  "e77be94838a3c2dfc4348e4dc059ce23f1d83c10e6482591b87322aa65fb0bc9",
+  "beea8544234dd6b7212b0c6cac5b0cae2e17980cee2a212c410eb7de572fecea",
+  "ab9063f878326e49ad72ff82b79501304b4ca2219df662084a98762e8575f777",
+  "e56e91c3f5050ba0a9e7f458c972732a9877ecaef95774cc83cf2a5ae2f3e114",
+  "492936c2bdadd322ff363842a1c271dee9650e7302f49c52bbcc3f811f09e2ab",
+  "479923004a46844f888b3bf49f5de8f8e15322ea28562d9879d3739de246554d",
+  "4a4c919bcc250ec1c79e473810a804c28555bce24fe8f3e6e4d727dff8016b46",
+  "e88799ecb18c404191219b213bcb3fffdec63dcefa4db4bc3ab254395bc6258e",
+  "f9d02c763f926836d9924e2bcae2884c80bbadc5bd63dbd8daf5d822ed70c61f",
+  "708a6609a6b1a2c96a7cdb4f9d5946b520037bb45884ffd300b21b15a9ecdfca",
+  "a32fbfcf7ebe5a5b9eac51c4b0ffe95a4892878471a928514a531da4f24d2039",
+  "31db07c11f4edf3bff72527ee03e9c7a3c572382cd6537857f4f8c404c3d1e97",
+  "37ea976083d80946d9e8cc5820e1571877c234621247a444ee708a8b123720cc",
+  "1040355eb8314021d045bf23a51bfb2ccf9fff131dc2e2a433f7c8b93a827043",
+  "42c194f72902191f9175d28aeac3c6dfa6b2a8b55999327c39d7137096311cc0",
+  "3e77f719bf249d204f09a2cd7bacf2da780bbd54f2c4ce7a23dce26da393fe37",
+  "1e7b82f052c924c63a655dbd2e913b70b91f92a9f5531f7f1124524895fd20ff",
+  "9998b2638b5ec4af58014386ae8075d4a095b2c7f02ea38feaeb79a2f86eac42",
+  "edc543e5d30ba99adc615f62e79ddefcec260b755e4240bb8dabc81b2bab32f8",
+  "85910756fa7510aae2b902e8493be5e21623edb06fbf1e02a5e65d4611e60a0a",
+  "78e4cefd35206645bccc5d9d1bcab30481f560ac06811b05be057aa476030503",
+  "034a5f71e6c336d0edc86848f2737881d3eceb8bf797c751be63345f7603019c",
+  "d2727a3611feb41e4c4219a1c2b8a24d566bdf73a9d8e7b6c074b837df76da57",
+  "93855d6048c1fbb26bc5d79326234a61dbd7632607e559d36f28154f4c897d65",
+  "e3c2338896cfc80448a5600c7a9319d65e33fa6e89c512c341f2bc0bfdacb52a",
+  "e2be50bfd611b984a2be7c2e3dde776e9c3d5c0218ffe139124b484b86eae2a2",
+  "e2298b917b75e8bf4ef13a700e2ca37ff07a5cbcaa46ff264fbb940841f01f66",
+  "717b9a8d14707fa731d33b0aa8a9cda7815662bff6e45b12b9ca740e7eed6d6c",
+  "2a59142c491110d5465600dc9932d7e2777c41c295fd2c57b7c532390572c9ff",
+  "0376c7ee6cdf4b2217dfca9cbf5ff0eed0c792440ae8e768e93330e252df66a9",
+  "70daae12788169aeb252d4b5896a1edb44094dd1540f3b4988bf1ecb8e5303cf",
+  "1b104c294df80fb180735bcf0e952962de2a3ae629c7b4a6a18c8154cab26a9d",
+  "26bb0186106b0c734e16668c09dab18e08a9e2f06d15b7207d7c36645889af9d",
+  "b13357132d3097ffdef50547063edbdbb3e4b7eca51cbdb13bcda1233bfbf6d2",
+  "074f2ce09813a14f354240f8f3749bb0219dc588ee7501388f910dbcb28e4838",
+  "ef6dff6609f21a09ae90a86b7c5481d14cdf5180306e13a94ae036478aeffd15",
+  "047a30905c58e8025516b1e8a5bcea1aeea34d01592e3358c7dca7ff531d030b",
+  "f474b63af018e27840045b944352f42d73120d66063761d58d03190bd1681919",
+  "be78d0ce179592491421271ff8c0840c3508037db6c3698c6974a81f01c44dbd",
+  "23cf8f3d06ab2479f6db2f15bd2556d5d6897da049669cb86b279ce9f6b5af41",
+  "21a8b0ec954e6d418995d7dc9910d65be10fa490569ac79026ac8dd96c594bb3",
+  "7cf67261766fbe41cc2c8c60326b152253ee4c348d8bdf7c996200caf6857383",
+  "e1fd4475d002299096d7be3ca0f7281a31951ebf73afce06f6ad79d57296fadb",
+  "af39ba0dede76d864e9ee0a4c19e0be8f0a0ad7bfad673d2f3d4e434510e424b",
+  "ea335e1bef4b14ff73d0e54bf2ac446ffbb918e6b9f431100a2e6ffd2ffd979b",
+  "8accb1ecd6320dc2e687e4b4b8bc30fd89697c8c95ab268f874779503717375b",
+  "a2a28c9eb81d037d749353fef24300fe461ec68257561ab04f4f4dbdc3bd0081",
+  "1d76bcf449a46f70c4e7e3cef1d43bc589dbf5d6b1da074b037c15cfcb8812f3",
+  "7c55956b977ea3869806926d7f6f1a8015b7c9ae404b21e7283963438845766b",
+  "524bf4eb715ba5f4fc01b95c8ccc2acd1b6b7ca765c6343dab34b5b0f0cb98c5",
+  "57fc8821eaffeedc8c64e6bef58a4da499a0f576a1a78299289d7fd9a2b73063",
+  "2faf2360532b551fc47f6b6473ed8d5ca85c749493053bee0cd5287c536db295",
+  "cee1a5ab1cb720f69a109e06b1a0458623887ca13936b1b01768761a7dcfaee0",
+  "ed65734bf628d8403ecebfdb63c03cb303353d6175202165f6a489f6bd517f63",
+  "f39de2da4825fa4ced69c5e03778d47c504268018334d0b80c82b8c441d29e71",
+  "11fc37420c871f36820c7f2265cb66dee6c113b9558be2f3f42fb603263d666b",
+  "7779d95e2b1923123e2f90c111e71f0270ee990f58a1a3622a9a357d45170037",
+  "b1958dadd52ed8b5f0597d8174cdba848686796e937c8bcb2e9621efafdbede9",
+  "c7a190535ec2add9e60e79a463887ae2f4fb166f282a658a0e61cec02bf0f8ce",
+  "6552c931d29bd1457296fc2418e784ca2c5dc65faa78664b23c15629c69d90a5",
+  "fd230865e8b7c009548b0aeb3538a5e84736e0bad7a0603adbc0463c8aae92ee",
+  "9265c8aadc11eedc7bfe5604c5c8846a85f6a09309c596da99804e0476013e07",
+  "7912a576b4fbeb7dbc77fb013aee1e6b1b90e6da3089e7b3a8a276e300d85459",
+  "b44627ce7cd7e6b538a211350823d7df84a6c3811dfc1479c0c8fa9138f9c40f",
+  "71436d1a57d7435c24b20f2ca4279f67777541d03c2fd523115bc5c2faf57cb5",
+  "fd0d62dd72105555a2319aa7b26a5efb3e432eac0370636202aae7dd4c332a97",
+  "dc32da43c9b1460da305d764208c5a5b92a63398cf66e87a59a91bd3fb447ac4",
+  "8b77c4618c91f39a7ee435ab64fcb37c6ecb8760e6b132349d21d4278bbfa3b0",
+  "d6df42f850c90e2319865f97f1d48d7a155af14995c773e8c0216ffafb3ce220",
+  "2051d4a622a9954deb218a3cf61b88751f226e7dedc09fd3efda789384c06246",
+  "aacfa6e228e323303f00b09e37c359c4dbd994d20df1b35eca62ad9e06220ded",
+  "0ee3b942c4430d5222a05eb3b527f591cdfab8eb7e79214bb95d0cd4cdcb51cb",
+  "c636831e89eb70e72b5576bfa4159cd4c938d3ed4d601f2e596a698f963c23c8",
+  "55da8e914b30bf51f475a1cf1289986ce7d1f79fc0d9ea9de373b49e36576aee",
+  "9eaf4082f082e380a76e24e8842f4f630cf0819f86fe533f6bd6e9e1e3294e6a",
+  "cc777e675b3e3165c02a5f8c8a50785d0152590389a880cf8e014423f28704c6",
+  "a2da60362593021efcf35fb4403aa9f625d314e443da5aa55685bfbad2d58ffd",
+  "b83a6851f9bde210d772a0c8ed40e48b71010f43f5ae8738ca3b9540df1979f2",
+  "6f5c8e525189e0a8dddd94b2702ce5b0524e7fcebd6dd50c194df4f43e2295da",
+  "7386a8d95ac9fdc698cdd776ab79066a8c18b357a8fa55e46daf7b1aee8e90b9",
+  "e663b9797f2ab40e0df2a8c99a8683804e837873decb662a3dc83fb019b93945",
+  "56d0ea7e90900e29649b8778b04df11ba8afc4eb59a590a81ca64110e35ea300",
+  "ab55cdac05602a1a25c3656fc5fcd29388fea7efeb41130fcbe9157deca21a95",
+  "85944f516732482208f03cf9862640eb98db0dd6a66a52638e5fdea94be64d76",
+  "d0def2b45fc23f12b1de9d6da8adf2c1d294503411ca835d541740d2648cafa0",
+  "b906063dc694f0117ed4ff26923e261c20e6a84f38967f6ac53a163341c890a4",
+  "ecc35c866c03c8a28fdbe5236e707c60bf0afe47035fc645cd60d6c21bfedc1c",
+  "0a52519f86b889b12dbeef1e1159e0b6808402869c446f748504a5e7268e7811",
+  "aba4b603f4cfa27d9d040dbeb2d97568fc54a7a6fddc54e457f4e0cc79e2360c",
+  "bdf8701021c516ed081927cb2037628490fdf2dbe1e31d473c4ef6e836c6690b",
+  "fecab0fdfe71321648f242bdd48676d1c253281c9e21d20e745a60ad831d2f73",
+  "13ce854a9be037e2a40c81338da9e0ca6efe7f5093c36d7c4a2618f060668325",
+  "cb02c27a5b9c437a229343e93c7cc10aa79e99bd2dfc1275b5f71b127658298c",
+  "5d99748d3e3b8808ccfa7433a8583cbc87c4e626b1deeedd6ea0ad775db45355",
+  "9ab77075d139d8485f34a6a61d27c0d74e20b831a98ee1d4fa6e752d1abbc8e2",
+  "85739f6daac993404fc11aa8c0c6a7bce2d0d9f0bb35d785e8fcd9788562036c",
+  "4c9f4f35131edebb6e707bf867f0c29b9a81008d45d00a4a9b88e40bef32c546",
+  "3564d490a1c1ad4bc9ca8686abdf08872f131bb537db6182d5c7c116002d66b0",
+  "1469fc57dd53a218010f00c963c70fdef1d0fee2816139197a9a30b95f1c1c58",
+  "48c81986af2967b03a8cedd41798a363637c2cf9097aeb453da0226ddd9db82d",
+  "c1a59d217ebf75d95c2e1306e82e2d91c14a7763f688530ffb872d79869e1a4b",
+  "032d8e723d7d1681626420c592dd974e3135f52a9bfea77f11a3fc7e03d979ec",
+  "81c53d0a73b03957fd0baf76a7f01661611b6ae71ce71a8d331417ffc2a9f59b",
+  "fd035e7db72ca95cfedd679dc45df334cca24b3a42df2f4e5dfffe7b873e144b",
+  "a72ac0f3ce4dbed7619a89a2763c05230f08656cbb0d614d8aa4201caa8989a1",
+  "5029d5a6d8cab8086a9ee359f3055194f07dd89f1d883c1a23c5463b81ef2f0d",
+  "9d65774b14d5a89040e164b31706b44335865f5996d9c08c4aa30c8f91620ca5",
+  "05d922f8125f421d5b3500ac8d6b4c1cdac919ad4e479b434bbb4b17c3a7e2b1",
+  "ad3fe6d932fd865a2d9f845fd3e3aac7483285824f0b601861343a8048d7961f",
+  "202710f4ea7c141796ce36057a97aa7ffcda9391ba45720ed5cd2c591386a8fb",
+  "24d28eaf59e4a6c5974635553e69e08b3051369bfb58f4d583c527f89a933934",
+  "c3eff9cfae315eb953e8763ca9469a2cb548adc9496a2f4496973e679116f5ad",
+  "333263f0af4f8b429278847db0280e07a28fa064c9d78012e345b6746510a740",
+  "060bd08ae935ce2b0e51120202319ddc9c16a628e6f9c2427fca9e4fc8811a08",
+  "812a13b9081f87c0099518c4e24c2b17decf5901ec44c49f2763bf530041a60b",
+  "c4a01853fd9e102dfc24483292c5840a3bc3fb5a4d2a8148a7b0b65cd98ca180",
+  "eab54f491cb35844fe2e84d85c183618b334b29d7a22f0e4b8a60c8786450032",
+  "775ae21eb5709dc34f03f8d9a251bf6f9114a1719b3305f73291f2aeb233a74e",
+  "171b574acf1f7d265196751ddc7af539b4241ec62e688c3b156a5f623e5f886b",
+  "a15d4926ba0154446f7733a575c072eb8190dd47677c866c110c08a505130dd5",
+  "438f78af272eb5b5603d985648e7453c6f09033697a47fe1064ae6c730e27b8a",
+  "8a7724626a4cab1d3aee3fbe0a59456fa5842f36c6083c9a52768b16b1de607c",
+  "db5a25954fd1c89b31baa54b397be90b078762d0442e171e6711753d48a29c26",
+  "7091c0eca52523250a5a8402481914848adbefd5ae1819dffc8d931e5e9a0687",
+  "19167c09cd1738a5af798bc2acb9a03e148b702aed08bbe36b90079ef1535cad",
+  "58b39a06e805448892806649d268b088dcdc79ae05f94a87e9d9e45bd204b148",
+  "0feaa3a42ee3a390d4f43bae1948d196518dcb639bd4b848bf213ecaaf40579e",
+  "7c24a6b64cc632bb037cf595ab31a53c3961d74648f18da2b3cd0ebf4789c620",
+  "6c11e4fee369023e3db77eb14c8680a3970ff7a6c54177994e9c59b879d4f07f",
+  "69e6b32d486b348992e02bdf185d4f602d54a21d58e9b79727abb1fc44ff9130",
+  "89d5839e438869b65457012ab41f5c242f23294203e5c533b19fe52bf3a56613",
+  "a50a9f06cc3276518fc61f04f40a06f6f031a2b2136ab2294aa844c1c05ad4ff",
+  "7382d721a2ef9935a10578c76952608d52726e8f679a2faacc01c5a8d7f97ba8",
+  "611b1443400d57ce77095d82ea233c3735067b6e20f15420d1d1b87a0684f818",
+  "073c594f5f18807832a6517f52c8321b3e9f3d1eaed615eb9a50d35c6bbcfa7b",
+  "ea0a14da59f7dad915e7f79a8805fcdd05d19f00712588fa3654ca5d7a62c142",
+  "fcb2e4f5bbf2aa782f7593c8fd775863cb0d880a9dd62a8fd2e34b9dc0b1a45c",
+  "d7bc2d5dd80e20037cce6a06ba9decb8132fceab15bf8c1d32526efa2d672d25",
+  "c0f4205851459d798e91e705daafef0ca95fc703bf3ca184f4a43598b760aaa1",
+  "d097e079743261f9c58d249e1a16585b1a0e6d9ed76af9b293f32aa3ef6670b7",
+  "e685622819bf53d43ce9008433d9da611cbeea5003bf8ad8e6642b1e1e4b5e76",
+  "4ebdc2d41dcd681d0d7b4e12890ea6923ca035bc233423146071c21f1698704d",
+  "2ad929ffbae3f4c976879c303b5eea57aba164dfc49eb73a233bd4d0cb6b30ee",
+  "ff7372e8d9ea4c83fa02f67c022a0976a7dc174d4d85e8feadbf500e5afdb73f",
+  "d0c8838eabca5cdbb174376650217ad555c84089ec0319b68f3a1a55ea212a12",
+  "5d0ba4a4a4f98e1c1441275651e74ae5c7ff89acac7f146738758c357b91060d",
+  "06f986fea97006707d615c17c50bf9dd8630e82a46df09b86c3fdde542879876",
+  "39bea4c659878751ee3403cb10e9412ce00f5d8ef3ade854160501a15fb74ff1",
+  "a001ea1cb475f7fe52565a4bcc1b26b0f2502b6f0814a4efe753d2dadff99aba",
+  "7a8c6a66e5ad053ce534e273243e4fa3fda20d4129c01cb336c79c8d46fc0d4d",
+  "b1da19540f4bff5bf4e9862959f47e8b37f4074439c12a06e7d493840de11193",
+  "541dec14269a99216d7d845591e561d421a62a98d4b9f4c659d82d2a675e6485",
+  "0fb82fb9da0572cb900004399f22af4507e776e5492d5c3a739b66f3f854f7da",
+  "051e3a099521468171c8f77ed8f3f75352d5af6739947e7ab57cceca171cb400",
+  "b64b343229b390723e38c63e5ae4816de44fd6e9b0fda6554abe6b4c22b84dd8",
+  "c7980d1d87481b33198a440bddfa8753f41b56ce6f78ece3193aea1c314f4045",
+  "bbe73546e0fa3bbc55d29303eac8e4d14ecd430462e261d50e011856b422cbb9",
+  "110f9c69e8dbad54c7b8573904c532066f49e2d5bbf4941611861017e7892589",
+  "749a1547db97b70e4c5b9e66a6a6bc333d95f3a9857e1dfd396497ae59876814",
+  "6487a689272d54fd2247b85880b23c1fcdef7ed3833f57c79b3b127be2cf9857",
+  "b0023e8dd3544d912a818bb8d547eb9d9034f386a8c2b51da4643cbaafa55690",
+  "92bbfc02c570073e6d7f31cf9acd70f64e31b50c381bda12c8f491e5bd244ac1",
+  "2a74bd952788a3237cecce5ecb9de31f099b94bfadd1e189b5e821d8da2e87bb",
+  "e4a5e36e780ae18e0487cdbd13242cddda67df7fc5892cbc5fc279195619d314",
+  "63f42e82cc5fcf7b95a46b830d75b0554d4afd484bbe6c4c51de64a6cdbdd7b5",
+  "897a8bd459447f4d8973ec5e7306fe19699b5591086e90e82e5ccc0d47bea5ad",
+  "256d418d617090c6131382efcf17bc6e6da476e0f0688acbdc2243f7ef1fe740",
+  "b5e8774cbc39665ccd400b3105e9b6175b813132ae5b142c796ddcba0eb99ba8",
+  "4b00ef92a39df34acfc6f93c699b2360726c919e25f8eb8c60f326ae44d3d9e9",
+  "6725358b452a6627f96ad13e3ff697c180e6c4a700c6b4729c40a93501cfbef3",
+  "4697b40edcde90d324874a3b8a0ca73c4b1f57bd41fa3d2ad23e5892ebc41588",
+  "2d2f27811df9e27d73867798803c7bd5400d6d2ef67b13ebcab851b7162741f6",
+  "5c4b3d62c1a92fd52778f70483bb283b9f69955f572843b3902c6c76c61eaf5e",
+  "46cb68b63986cb9900ef248046aa5cea820ad8653cdb238dca1d220d05da33fc",
+  "cb79548d10e5443b94494c65b5304d904513d6739c49e0eb65a76d30526475ec",
+  "7e90660d933e4bb08ef67b05b9634a25185c23e0fe9aabd02a9b8675f6901992",
+  "3945668b1c0255eb233739c486823717089b0efb82809a2de26eb341326483e2",
+  "5fbf08332c41fbd2640d4ee179c86b8d8cfc6c3d06784ded516f613775e6a5d9",
+  "7be868897d7e4d0df65601fcca9ccadc36aa14cd7da13e3ab0fd3d7ed5b86a6f",
+  "395a882756c1e6f6807f4bff475f5f11736a4c3452947f07e68151465b37f4fd",
+  "9287b2c0368d7d3f2e45902fa03442b1b61f3a70c8044710632fcfa1da6423d5",
+  "2b3d4f6d5f1e32c1a91cb36cf149d7aaabe576e65c5561bd624e7beabadcfb47",
+  "07a9a6e4e8e4a971003ce3755f28bc161cad825ddb821e5fa7105366573974fe",
+  "836fee364a0cbf7203c954aa184c408c013320922ec909fc871e0e1f19157c96",
+  "20d65f9a7e937ee16feb19eaf70f5162d1ba6cfcfe5ce186a36cade89da26ac2",
+  "fbf103dd1b1512a6a195cd76ed146be811593d9800fa8fcaa9c5da5c13abf93b",
+  "e18df5fd43868443a8073b046b0f6c77482af2593b39bf5f987f4095fb89fe38",
+  "799e90a68c74392acfeb420034b0f348bca535ef2600cb56244b3472455a7195",
+  "96de4e69291329ed7846e7b21b45245c4f2178b497952a6b6985ea0fd9b72189",
+  "fd9143c18b2383dfe6d60e86a6c64944a05bfa1a850fcf28ffeafebceff32a92"
+]);
+
+/* ══ CARD DATA ══ */
+const TRIN_META = [
+  {n:'01',name:'Spejling',  kern:'Hvad st\u00e5r vi i?'},
+  {n:'02',name:'Klarhed',   kern:'Problemet bag problemet?'},
+  {n:'03',name:'Valg',      kern:'Hvad v\u00e6lger vi?'},
+  {n:'04',name:'Struktur',  kern:'Hvordan organiserer vi?'},
+  {n:'05',name:'Tirsdag kl.\u00a010', kern:'Lever strategien?'},
+  {n:'06',name:'Forankring',kern:'Hvordan holder vi fast?'}
+];
+
+const CARDS = {
+/* ── ÅBNING ── */
+'aabning':{id:'aabning',type:'proces',trin:0,
+  fNum:'',fRole:'PROCESKORT',fTrin:'&#197;BNING',
+  fQ:'F&#248;r vi begynder &#8212; hvad bringer I med ind i rummet?',
+  bQ:'F&#248;r vi begynder &#8212; hvad bringer I med ind i rummet?',
+  sections:[
+    {title:null,items:['Hvad fylder hos jer lige nu?','Hvad h&#229;ber I at g&#229; herfra med?','Hvad er den vigtigste ting, I har brug for at blive klogere p&#229; i dag?']},
+    {title:'RAMME',items:['Vi arbejder med virkelige situationer &#8212; ikke cases','Der er ingen rigtige svar &#8212; men der er skarpere sp&#248;rgsm&#229;l','Vi arbejder os gennem modellens trin &#8212; &#233;t ad gangen','Hvert trin har et output, der f&#248;rer videre til det n&#230;ste']}
+  ],
+  erkendelse:'Et f&#230;lles afs&#230;t: hvad er vi her for, og hvad vil vi arbejde med?',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 01 ── */
+'t01-skoleleder':{id:'t01-skoleleder',type:'trin',trin:1,
+  fNum:'01',fRole:'SKOLELEDER',fTrin:'SPEJLING',
+  fQ:'Hvad er det, jeg faktisk st&#229;r i som skoleleder?',
+  bQ:'Hvad er det, jeg faktisk st&#229;r i som skoleleder?',
+  sections:[
+    {title:null,items:['Hvad er det for en situation, jeg st&#229;r i lige nu?','Hvad kalder tydeligt p&#229; min opm&#230;rksomhed?','Hvor mister jeg retning eller overblik?']},
+    {title:'SK&#198;RPELSE',items:['Hvad g&#248;r jeg i dag &#8212; som ikke skaber den &#248;nskede retning?','Hvorn&#229;r bliver jeg uklar i min ledelse?','Hvad undg&#229;r jeg at tage fat p&#229;?']},
+    {title:'PERSPEKTIV',items:['Hvad kalder situationen p&#229; af ledelse?','Hvad er min opgave som skoleleder &#8212; og hvad er ikke min opgave?','Hvad g&#248;r jeg konkret anderledes fra i morgen?']}
+  ],
+  erkendelse:'Et klart billede af situationen og skolelederens opgave i den.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t01-ledelsesteam':{id:'t01-ledelsesteam',type:'trin',trin:1,
+  fNum:'01',fRole:'LEDELSESTEAM',fTrin:'SPEJLING',
+  fQ:'Hvad er det, vi faktisk st&#229;r i sammen som ledelsesteam?',
+  bQ:'Hvad er det, vi faktisk st&#229;r i sammen som ledelsesteam?',
+  sections:[
+    {title:null,items:['Hvad er den situation, vi befinder os i f&#230;lles &#8212; og er vi enige om det?','Hvorn&#229;r h&#229;ndterer vi situationer forskelligt?','Hvorn&#229;r overlader vi noget til hinanden &#8212; uden aftale?']},
+    {title:'SK&#198;RPELSE',items:['Hvad g&#248;r vi i dag, som ikke skaber klarhed?','Hvad undg&#229;r vi at tale om som team?','Hvorn&#229;r er vi for enige &#8212; eller for utydelige?']},
+    {title:'PERSPEKTIV',items:['Hvad kalder situationen p&#229; af f&#230;lles ledelse?','Hvad er vores f&#230;lles opgave &#8212; og hvem tager hvad?','Hvad aftaler vi at g&#248;re anderledes fra n&#230;ste uge?']}
+  ],
+  erkendelse:'Et klart billede af situationen og ledelsesteamets f&#230;lles opgave i den.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t01-bestyrelse':{id:'t01-bestyrelse',type:'trin',trin:1,
+  fNum:'01',fRole:'BESTYRELSEN',fTrin:'SPEJLING',
+  fQ:'Hvad er det, vi faktisk st&#229;r i som bestyrelse?',
+  bQ:'Hvad er det, vi faktisk st&#229;r i som bestyrelse?',
+  sections:[
+    {title:null,items:['Hvad h&#248;rer vi fra for&#230;ldre og omverden &#8212; og hvad g&#248;r vi ved det?','Hvorn&#229;r bliver vi usikre p&#229; vores rolle?','Hvad er vi i tvivl om i forholdet til ledelsen?']},
+    {title:'SK&#198;RPELSE',items:['Hvad g&#248;r vi i dag, som skaber uklarhed?','Hvad reagerer vi p&#229; &#8212; i stedet for at s&#230;tte retning?','Hvorn&#229;r er vi for detaljerede &#8212; eller for passive?']},
+    {title:'PERSPEKTIV',items:['Hvad kalder situationen p&#229; af bestyrelsesarbejde?','Hvad er vores opgave som bestyrelse &#8212; og hvad er det ikke?','Hvad tager bestyrelsen med herfra &#8212; og hvad g&#248;r vi ved det?']}
+  ],
+  erkendelse:'Et klart billede af situationen og bestyrelsens opgave i den.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t01-humant':{id:'t01-humant',type:'humant',trin:1,
+  fNum:'01',fRole:'DET MENNESKELIGE RUM',fTrin:'USIKKERHED',
+  fQ:'Hvad b&#230;rer du med dig &#8212; som du ikke siger h&#248;jt?',
+  bQ:'Hvad b&#230;rer du med dig &#8212; som du ikke siger h&#248;jt?',
+  sections:[
+    {title:null,items:['Hvor f&#248;ler du dig alene med ansvaret?','Hvad er du usikker p&#229; &#8212; men lader som om du har styr p&#229;?','Hvad ville du sige, hvis du turde?']},
+    {title:'SK&#198;RPELSE',items:['Hvad koster det dig at b&#230;re usikkerheden alene?','Hvorn&#229;r bliver du en anden leder, end du gerne vil v&#230;re?','Hvad sker der i rummet, n&#229;r usikkerheden ikke bliver sagt?']},
+    {title:'PERSPEKTIV',items:['Hvad ville &#230;ndre sig, hvis usikkerheden fik plads?','Hvad har du brug for &#8212; fra dem du arbejder med?','Hvad siger du h&#248;jt i dette rum &#8212; som du ikke har sagt f&#248;r?']}
+  ],
+  erkendelse:'&#197;benhed om det der fylder &#8212; som grundlag for &#230;rlig dialog.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 02 ── */
+'t02-skoleleder':{id:'t02-skoleleder',type:'trin',trin:2,
+  fNum:'02',fRole:'SKOLELEDER',fTrin:'KLARHED',
+  fQ:'Hvad er det egentlige sp&#248;rgsm&#229;l, jeg skal turde stille?',
+  bQ:'Hvad er det egentlige sp&#248;rgsm&#229;l, jeg skal turde stille?',
+  sections:[
+    {title:null,items:['Hvad er det m&#248;nster, jeg ser gentage sig?','Hvad ved jeg godt &#8212; men handler ikke p&#229;?','Hvad ville jeg se, hvis jeg tr&#229;dte et skridt tilbage?']},
+    {title:'SK&#198;RPELSE',items:['Hvilket sp&#248;rgsm&#229;l undg&#229;r jeg at stille mig selv?','Hvorn&#229;r v&#230;lger jeg den hurtige l&#248;sning &#8212; fordi den rigtige er sv&#230;rere?','Hvad har jeg v&#230;nnet mig til &#8212; som ikke burde v&#230;re normalt?']},
+    {title:'PERSPEKTIV',items:['Hvad er den egentlige ledelsesopgave i det, jeg ser?','Hvad handler det om &#8212; n&#229;r det ikke handler om det, det ligner?','Hvad g&#248;r jeg nu &#8212; som er anderledes end det, jeg plejer?']}
+  ],
+  erkendelse:'En &#230;rlig formulering af den egentlige opgave &#8212; ikke symptomet.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t02-ledelsesteam':{id:'t02-ledelsesteam',type:'trin',trin:2,
+  fNum:'02',fRole:'LEDELSESTEAM',fTrin:'KLARHED',
+  fQ:'Hvad er det, vi ikke f&#229;r talt om?',
+  bQ:'Hvad er det, vi ikke f&#229;r talt om?',
+  sections:[
+    {title:null,items:['Hvilke m&#248;nstre ser vi gentage sig i organisationen?','Hvad ligger bag den uro, vi m&#230;rker hos medarbejderne?','Hvad ser vi hver is&#230;r &#8212; som vi ikke har delt med hinanden?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r n&#248;jes vi med at h&#229;ndtere &#8212; i stedet for at forst&#229;?','Hvilken samtale har vi undg&#229;et som ledelsesteam?','Hvad ved vi godt &#8212; men har ikke gjort til en f&#230;lles erkendelse?']},
+    {title:'PERSPEKTIV',items:['Hvad er den f&#230;lles opgave, der viser sig, n&#229;r vi ser tydeligt?','Hvad kr&#230;ver det af os som team at handle p&#229; det, vi nu ser?','Hvad er den f&#248;rste f&#230;lles handling, vi forpligter os p&#229;?']}
+  ],
+  erkendelse:'En f&#230;lles erkendelse af den egentlige opgave &#8212; formuleret sammen.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t02-bestyrelse':{id:'t02-bestyrelse',type:'trin',trin:2,
+  fNum:'02',fRole:'BESTYRELSEN',fTrin:'KLARHED',
+  fQ:'Hvad ser vi ikke &#8212; som vi burde se?',
+  bQ:'Hvad ser vi ikke &#8212; som vi burde se?',
+  sections:[
+    {title:null,items:['Hvad fort&#230;ller de tal og resultater, vi f&#229;r forelagt, os egentlig?','Hvad ved vi for lidt om til at tr&#230;ffe gode beslutninger?','Hvad ville vi opdage, hvis vi kiggede bag referaterne?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r accepterer vi svar, der er for glatte?','Hvad sp&#248;rger vi aldrig om &#8212; og hvorfor?','Hvorn&#229;r er vi for langt v&#230;k fra virkeligheden til at have en mening?']},
+    {title:'PERSPEKTIV',items:['Hvad er bestyrelsens egentlige opgave i det, vi nu ser?','Hvad kr&#230;ver det af os at sp&#248;rge ind &#8212; uden at overtage?','Hvad sp&#248;rger vi ledelsen om &#8212; p&#229; vores n&#230;ste m&#248;de?']}
+  ],
+  erkendelse:'En skarpere forst&#229;else af skolens reelle situation &#8212; set fra bestyrelsens position.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t02-humant':{id:'t02-humant',type:'humant',trin:2,
+  fNum:'02',fRole:'DET MENNESKELIGE RUM',fTrin:'S&#197;RBARHED',
+  fQ:'Hvad koster det at se klart?',
+  bQ:'Hvad koster det at se klart?',
+  sections:[
+    {title:null,items:['Hvorn&#229;r er det lettere ikke at vide?','Hvad risikerer du ved at sige det, du ser?','Hvad sker der i relationen, n&#229;r nogen siger noget &#230;rligt?']},
+    {title:'SK&#198;RPELSE',items:['Hvem betaler prisen, n&#229;r vi ikke t&#248;r se klart?','Hvorn&#229;r bliver loyalitet en hindring for &#230;rlighed?','Hvad sker der over tid, n&#229;r vi undg&#229;r de rigtige sp&#248;rgsm&#229;l?']},
+    {title:'PERSPEKTIV',items:['Hvad ville det betyde for jeres samarbejde, hvis I turde se klart &#8212; sammen?','Hvorn&#229;r er s&#229;rbarhed en foruds&#230;tning for god ledelse?','Hvad har I brug for af hinanden for at kunne v&#230;re &#230;rlige?']}
+  ],
+  erkendelse:'Tillid til at sige det, vi ser &#8212; ogs&#229; n&#229;r det er sv&#230;rt.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 03 ── */
+'t03-skoleleder':{id:'t03-skoleleder',type:'trin',trin:3,
+  fNum:'03',fRole:'SKOLELEDER',fTrin:'VALG',
+  fQ:'Hvad skal jeg turde v&#230;lge &#8212; og hvad skal jeg slippe?',
+  bQ:'Hvad skal jeg turde v&#230;lge &#8212; og hvad skal jeg slippe?',
+  sections:[
+    {title:null,items:['Hvad er det vigtigste, jeg kan g&#248;re for skolen lige nu?','Hvad ville jeg stoppe med &#8212; hvis jeg turde?','Hvad siger jeg ja til &#8212; som egentlig er et nej til noget vigtigere?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r v&#230;lger jeg bredde &#8212; fordi det er tryggere end dybde?','Hvad er jeg bange for at miste, hvis jeg v&#230;lger tydeligt?','Hvad koster det skolen, at jeg ikke v&#230;lger?']},
+    {title:'PERSPEKTIV',items:['Hvad er det ene, der ville g&#248;re den st&#248;rste forskel?','Hvad kan jeg kun beslutte som skoleleder &#8212; og hvem skal det kommunikeres til?','Hvad g&#248;r jeg i denne uge for at tage valget fra intention til virkelighed?']}
+  ],
+  erkendelse:'Et tydeligt valg &#8212; og et bevidst fravalg. Formuleret, s&#229; det kan kommunikeres.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t03-ledelsesteam':{id:'t03-ledelsesteam',type:'trin',trin:3,
+  fNum:'03',fRole:'LEDELSESTEAM',fTrin:'VALG',
+  fQ:'Hvad prioriterer vi f&#230;lles &#8212; og hvad holder vi op med?',
+  bQ:'Hvad prioriterer vi f&#230;lles &#8212; og hvad holder vi op med?',
+  sections:[
+    {title:null,items:['Hvad er vores f&#230;lles topprioritet lige nu?','Hvad ville vi stoppe &#8212; hvis vi turde sige det til hinanden?','Hvad g&#248;r vi, fordi det forventes &#8212; ikke fordi det virker?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r lader vi alle k&#248;re deres eget &#8212; fordi det er nemmere end at prioritere f&#230;lles?','Hvad sker der, n&#229;r vi ikke er enige om retningen?','Hvad undg&#229;r vi at v&#230;lge fra &#8212; og hvad koster det?']},
+    {title:'PERSPEKTIV',items:['Hvad ville medarbejderne m&#230;rke, hvis vi valgte tydeligere?','Hvad kr&#230;ver det af os at st&#229; sammen om et fravalg?','Hvad kommunikerer vi til organisationen &#8212; og hvorn&#229;r g&#248;r vi det?']}
+  ],
+  erkendelse:'En f&#230;lles prioritering &#8212; og en f&#230;lles accept af det, vi holder op med.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t03-bestyrelse':{id:'t03-bestyrelse',type:'trin',trin:3,
+  fNum:'03',fRole:'BESTYRELSEN',fTrin:'VALG',
+  fQ:'Hvad beslutter vi &#8212; og hvad lader vi ligge?',
+  bQ:'Hvad beslutter vi &#8212; og hvad lader vi ligge?',
+  sections:[
+    {title:null,items:['Hvad er det vigtigste, bestyrelsen kan beslutte sig for lige nu?','Hvad beder vi ledelsen om &#8212; som reelt modarbejder deres fokus?','Hvad ville vi sige nej til, hvis vi tog vores rolle alvorligt?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r beslutter vi for meget &#8212; eller for lidt?','Hvad er vi bange for at overlade til ledelsen?','Hvad sker der, n&#229;r vi ikke bakker op om et sv&#230;rt valg?']},
+    {title:'PERSPEKTIV',items:['Hvad er bestyrelsens vigtigste strategiske beslutning lige nu?','Hvordan bakker vi op om ledelsens valg &#8212; uden at overtage?','Hvad beslutter bestyrelsen i dag &#8212; og hvem kommunikerer det til hvem?']}
+  ],
+  erkendelse:'En klar beslutning fra bestyrelsen &#8212; og en tydelig gr&#230;nse for, hvad der er ledelsens opgave.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t03-humant':{id:'t03-humant',type:'humant',trin:3,
+  fNum:'03',fRole:'DET MENNESKELIGE RUM',fTrin:'MOD',
+  fQ:'Hvad koster det at v&#230;lge &#8212; og hvad koster det ikke at g&#248;re det?',
+  bQ:'Hvad koster det at v&#230;lge &#8212; og hvad koster det ikke at g&#248;re det?',
+  sections:[
+    {title:null,items:['Hvem skuffer du, n&#229;r du v&#230;lger tydeligt?','Hvad er du bange for at tabe?','Hvad ville du v&#230;lge, hvis du vidste, du havde opbakning?']},
+    {title:'SK&#198;RPELSE',items:['Hvem betaler prisen for din manglende beslutning?','Hvorn&#229;r er "vi tager den til n&#230;ste gang" egentlig et fravalg i sig selv?','Hvad sker der med respekten for ledelsen, n&#229;r valget udebliver?']},
+    {title:'PERSPEKTIV',items:['Hvad g&#248;r modige valg ved et f&#230;llesskab?','Hvad er det valg, du har udsat &#8212; og hvad tager du med herfra?','Hvad har du brug for af de andre i dette rum, for at turde?']}
+  ],
+  erkendelse:'Erkendelse af hvad modet kr&#230;ver &#8212; og hvad det giver.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 04 ── */
+'t04-skoleleder':{id:'t04-skoleleder',type:'trin',trin:4,
+  fNum:'04',fRole:'SKOLELEDER',fTrin:'STRUKTUR',
+  fQ:'Hvordan designer jeg rammerne, s&#229; retningen holder?',
+  bQ:'Hvordan designer jeg rammerne, s&#229; retningen holder?',
+  sections:[
+    {title:null,items:['Hvilke strukturer underst&#248;tter det, vi har valgt?','Hvilke m&#248;der, rutiner eller roller modarbejder retningen?','Hvad g&#248;r jeg organisatorisk &#8212; som mest er af gammel vane?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r designer jeg rammer &#8212; og hvorn&#229;r lapper jeg?','Hvilken struktur ville jeg fjerne, hvis jeg startede forfra?','Hvorn&#229;r bliver mine strukturer en undskyldning for ikke at lede?']},
+    {title:'PERSPEKTIV',items:['Hvad ville medarbejderne m&#230;rke, hvis strukturerne var tydeligere?','Hvad er det f&#248;rste, du &#230;ndrer &#8212; en rutine, en rolle eller et m&#248;de?','Hvad er den enkleste struktur, der underst&#248;tter vores valg &#8212; og som du kan indf&#248;re fra n&#230;ste uge?']}
+  ],
+  erkendelse:'En konkret organisering &#8212; roller, rammer, rutiner &#8212; der underst&#248;tter det valgte.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t04-ledelsesteam':{id:'t04-ledelsesteam',type:'trin',trin:4,
+  fNum:'04',fRole:'LEDELSESTEAM',fTrin:'STRUKTUR',
+  fQ:'Hvordan organiserer vi os, s&#229; vi underst&#248;tter det, vi har valgt?',
+  bQ:'Hvordan organiserer vi os, s&#229; vi underst&#248;tter det, vi har valgt?',
+  sections:[
+    {title:null,items:['Hvordan fordeler vi ansvaret &#8212; og er det tydeligt for alle?','Hvilke af vores f&#230;lles rutiner underst&#248;tter retningen?','Hvad skal vores ledelses m&#248;der handle om &#8212; hvis de skal skabe klarhed?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r arbejder vi i hinandens felter &#8212; uden aftale?','Hvilken rutine ville vi droppe, hvis vi turde?','Hvad sker der, n&#229;r vores organisering ikke matcher vores ambition?']},
+    {title:'PERSPEKTIV',items:['Hvad ville medarbejderne m&#230;rke, hvis vores organisering var tydelig?','Hvilken konkret aftale laver vi i dag om roller eller rutiner?','Hvad er det f&#248;rste, I &#230;ndrer f&#230;lles &#8212; og hvem sikrer at det sker?']}
+  ],
+  erkendelse:'En f&#230;lles organisering af ledelsesteamets arbejde &#8212; med tydelige roller og rutiner.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t04-bestyrelse':{id:'t04-bestyrelse',type:'trin',trin:4,
+  fNum:'04',fRole:'BESTYRELSEN',fTrin:'STRUKTUR',
+  fQ:'Hvordan sikrer vi, at vores beslutninger f&#229;r organisatorisk form?',
+  bQ:'Hvordan sikrer vi, at vores beslutninger f&#229;r organisatorisk form?',
+  sections:[
+    {title:null,items:['Hvad beder vi om at f&#229; rapporteret &#8212; og er det det rigtige?','Hvad er vores m&#248;destruktur designet til &#8212; og er det det rigtige?','Hvilke rammer giver vi ledelsen at arbejde inden for &#8212; og er de klare nok?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r kontrollerer vi &#8212; i stedet for at s&#230;tte retning?','Hvad kr&#230;ver vi af ledelsen, som reelt er vores egen opgave at afklare?','Hvorn&#229;r forveksler vi struktur med dokumentation?']},
+    {title:'PERSPEKTIV',items:['Hvad ville &#230;ndre sig, hvis bestyrelsen designede sine egne rammer skarpere?','Hvad aftaler bestyrelsen om sin egen m&#248;depraksis &#8212; og hvad beder vi ledelsen om at strukturere?','Hvad er den f&#248;rste konkrete &#230;ndring I gennemf&#248;rer?']}
+  ],
+  erkendelse:'Klare rammer for bestyrelsens eget arbejde &#8212; og for samspillet med ledelsen.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t04-humant':{id:'t04-humant',type:'humant',trin:4,
+  fNum:'04',fRole:'DET MENNESKELIGE RUM',fTrin:'TILLID',
+  fQ:'Hvad bygger vi rammerne p&#229; &#8212; kontrol eller tillid?',
+  bQ:'Hvad bygger vi rammerne p&#229; &#8212; kontrol eller tillid?',
+  sections:[
+    {title:null,items:['Hvorn&#229;r skaber vi strukturer af tillid &#8212; og hvorn&#229;r af mistillid?','Hvad siger vores organisering om det, vi tror om hinanden?','Hvad sker der med mennesker, n&#229;r rammerne er uklare?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r bruger vi struktur som skjold mod det menneskelige?','Hvad sker der med relationer, n&#229;r alt bliver til processer?','Hvorn&#229;r er frav&#230;r af struktur det samme som frav&#230;r af omsorg?']},
+    {title:'PERSPEKTIV',items:['Hvad ville det betyde, hvis strukturerne var bygget p&#229; tillid til mennesker?','Hvorn&#229;r har en god ramme givet dig frihed &#8212; i stedet for begr&#230;nsning?','Hvad har I brug for af hinanden, for at rammerne kan b&#230;re?']}
+  ],
+  erkendelse:'Bevidsthed om hvad rammerne g&#248;r ved mennesker &#8212; og hvad mennesker g&#248;r ved rammerne.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 05 ── */
+'t05-skoleleder':{id:'t05-skoleleder',type:'trin',trin:5,
+  fNum:'05',fRole:'SKOLELEDER',fTrin:'TIRSDAG KL.\u00a010',
+  fQ:'Kan jeg m&#230;rke min strategi i det, der sker tirsdag kl.&#160;10?',
+  bQ:'Kan jeg m&#230;rke min strategi i det, der sker tirsdag kl.&#160;10?',
+  sections:[
+    {title:null,items:['Hvad ville jeg se, hvis jeg gik en runde tirsdag kl.&#160;10?','Kan medarbejderne m&#230;rke den retning, jeg har sat?','Hvor er afstanden st&#248;rst mellem min intention og virkeligheden?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r er min strategi kun noget, der findes p&#229; papir?','Hvad g&#248;r medarbejderne anderledes &#8212; som f&#248;lge af mine beslutninger?','Hvorn&#229;r holder jeg fast i planer, der ikke virker i praksis?']},
+    {title:'PERSPEKTIV',items:['Hvad er det vigtigste tegn p&#229;, at strategien lever?','Hvad skal justeres &#8212; for at det kan m&#230;rkes i morgen?','Hvad kan jeg g&#248;re i denne uge, der bringer strategi og hverdag t&#230;ttere?']}
+  ],
+  erkendelse:'Et &#230;rligt billede af om strategien kan m&#230;rkes &#8212; og hvad der skal justeres.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t05-ledelsesteam':{id:'t05-ledelsesteam',type:'trin',trin:5,
+  fNum:'05',fRole:'LEDELSESTEAM',fTrin:'TIRSDAG KL.\u00a010',
+  fQ:'Kan vi se vores f&#230;lles retning i det, der sker i hverdagen?',
+  bQ:'Kan vi se vores f&#230;lles retning i det, der sker i hverdagen?',
+  sections:[
+    {title:null,items:['Kan man se, at vi har en f&#230;lles retning &#8212; eller ligner det tilf&#230;ldigheder?','Hvad ville vi opdage, hvis vi byttede rundgang tirsdag kl.&#160;10?','Hvad fort&#230;ller medarbejdernes sp&#248;rgsm&#229;l os om vores tydelighed?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r er vores f&#230;lles plan kun f&#230;lles i ledelses m&#248;derne?','Hvad g&#248;r vi forskelligt &#8212; som skaber forvirring?','Hvorn&#229;r d&#230;kker vi over hinandens uklarhed?']},
+    {title:'PERSPEKTIV',items:['Hvad ville medarbejderne m&#230;rke, hvis vores retning var tydelig?','Hvad skal vi g&#248;re anderledes &#8212; fra i morgen?','Hvor er det vigtigste sted at justere lige nu &#8212; og hvem tager ansvar?']}
+  ],
+  erkendelse:'Et f&#230;lles realitetstjek &#8212; og konkrete justeringer til n&#230;ste uge.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t05-bestyrelse':{id:'t05-bestyrelse',type:'trin',trin:5,
+  fNum:'05',fRole:'BESTYRELSEN',fTrin:'TIRSDAG KL.\u00a010',
+  fQ:'Kan vi se skolens strategi i det, der faktisk sker?',
+  bQ:'Kan vi se skolens strategi i det, der faktisk sker?',
+  sections:[
+    {title:null,items:['Hvad ville vi se, hvis vi bes&#248;gte skolen tirsdag kl.&#160;10?','Kan vi som bestyrelse forklare, hvad skolens strategi betyder i praksis?','Hvad ville for&#230;ldrene sige, at skolen er optaget af lige nu?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r n&#248;jes vi med at h&#248;re, at alt g&#229;r godt?','Hvad ville vi opdage, hvis vi stillede andre sp&#248;rgsm&#229;l til ledelsen?','Hvorn&#229;r forveksler vi aktivitet med strategisk retning?']},
+    {title:'PERSPEKTIV',items:['Hvad er det vigtigste sp&#248;rgsm&#229;l, vi kan stille ledelsen n&#230;ste gang?','Hvordan kan vi f&#248;lge op &#8212; uden at kontrollere?','Hvad beslutter bestyrelsen at g&#248;re for at holde strategien levende?']}
+  ],
+  erkendelse:'Et realistisk billede af om strategien lever i praksis &#8212; og bestyrelsens n&#230;ste sp&#248;rgsm&#229;l.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t05-humant':{id:'t05-humant',type:'humant',trin:5,
+  fNum:'05',fRole:'DET MENNESKELIGE RUM',fTrin:'&#198;RLIGHED',
+  fQ:'Hvad ser vi &#8212; som vi ikke taler om?',
+  bQ:'Hvad ser vi &#8212; som vi ikke taler om?',
+  sections:[
+    {title:null,items:['Hvad ved alle &#8212; men ingen siger?','Hvad ville vi se, hvis vi turde se det?','Hvorn&#229;r er der forskel p&#229; det, vi siger, og det vi g&#248;r?']},
+    {title:'SK&#198;RPELSE',items:['Hvem betaler prisen, n&#229;r vi ikke er &#230;rlige om virkeligheden?','Hvad sker der med tilliden, n&#229;r afstanden mellem ord og praksis vokser?','Hvorn&#229;r er vi mere optaget af at beskytte os selv end af at lede?']},
+    {title:'PERSPEKTIV',items:['Hvad ville &#230;ndre sig, hvis vi talte om det, vi faktisk ser?','Hvad er det, I siger til hinanden nu &#8212; som I ikke har sagt f&#248;r?','Hvad er den ene ting, du tager ansvar for at sige &#8212; inden I forlader dette rum?']}
+  ],
+  erkendelse:'Mod til at tale om virkeligheden &#8212; som den er, ikke som vi &#248;nsker den var.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── TRIN 06 ── */
+'t06-skoleleder':{id:'t06-skoleleder',type:'trin',trin:6,
+  fNum:'06',fRole:'SKOLELEDER',fTrin:'FORANKRING',
+  fQ:'Hvordan fastholder jeg retningen, n&#229;r hverdagen presser?',
+  bQ:'Hvordan fastholder jeg retningen, n&#229;r hverdagen presser?',
+  sections:[
+    {title:null,items:['Hvad skal jeg g&#248;re i n&#230;ste uge for at holde retningen?','Hvem holder mig fast, n&#229;r jeg mister overblikket?','Hvad er min enkleste m&#229;de at m&#230;rke, om strategien lever?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r lader jeg hverdagens brandslukning &#230;de min strategiske tid?','Hvad er min st&#248;rste fristelse til at falde tilbage i gamle m&#248;nstre?','Hvad sker der, hvis jeg ikke forankrer det, vi har besluttet &#8212; hvem m&#230;rker det f&#248;rst?']},
+    {title:'PERSPEKTIV',items:['Hvad vil jeg kunne se om tre m&#229;neder, hvis forankringen lykkes?','Hvem skal vide, hvad jeg har besluttet &#8212; og hvorn&#229;r fort&#230;ller jeg det?','Hvad er det f&#248;rste tegn p&#229;, at jeg er ved at miste retningen igen &#8212; og hvad g&#248;r jeg s&#229;?']}
+  ],
+  erkendelse:'En konkret forankringsplan: hvad g&#248;r jeg, hvorn&#229;r, og hvem holder mig fast?',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t06-ledelsesteam':{id:'t06-ledelsesteam',type:'trin',trin:6,
+  fNum:'06',fRole:'LEDELSESTEAM',fTrin:'FORANKRING',
+  fQ:'Hvordan sikrer vi, at det vi har besluttet, lever videre?',
+  bQ:'Hvordan sikrer vi, at det vi har besluttet, lever videre?',
+  sections:[
+    {title:null,items:['Hvad g&#248;r vi sammen &#8212; i n&#230;ste uge &#8212; for at f&#248;lge op?','Hvordan holder vi hinanden fast p&#229; det aftalte?','Hvordan kommunikerer vi vores beslutninger til organisationen?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r har vi tidligere besluttet noget, der d&#248;de stille?','Hvad sker der, n&#229;r &#233;n af os falder tilbage &#8212; og de andre ikke siger noget?','Hvad er vores st&#248;rste risiko for at miste momentum?']},
+    {title:'PERSPEKTIV',items:['Hvad vil medarbejderne m&#230;rke om en m&#229;ned, hvis vi holder fast?','Hvorn&#229;r m&#248;des vi n&#230;ste gang &#8212; og hvad skal vi tale om?','Hvad aftaler vi konkret i dag &#8212; og hvem holder os fast p&#229; det?']}
+  ],
+  erkendelse:'En f&#230;lles forankringsaftale: hvad g&#248;r vi, hvem g&#248;r hvad, og hvorn&#229;r f&#248;lger vi op?',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t06-bestyrelse':{id:'t06-bestyrelse',type:'trin',trin:6,
+  fNum:'06',fRole:'BESTYRELSEN',fTrin:'FORANKRING',
+  fQ:'Hvordan f&#248;lger vi op &#8212; uden at overtage?',
+  bQ:'Hvordan f&#248;lger vi op &#8212; uden at overtage?',
+  sections:[
+    {title:null,items:['Hvad vil vi bede ledelsen om at rapportere p&#229; &#8212; og hvorn&#229;r?','Hvad er de vigtigste tegn p&#229;, at retningen holder?','Hvad er vores egen forankringsopgave som bestyrelse?']},
+    {title:'SK&#198;RPELSE',items:['Hvorn&#229;r forventer vi resultater hurtigere, end de kan leveres?','Hvad sker der, n&#229;r bestyrelsen mister t&#229;lmodigheden?','Hvorn&#229;r skifter vi kurs &#8212; i stedet for at holde fast og justere?']},
+    {title:'PERSPEKTIV',items:['Hvad er bestyrelsens vigtigste opgave det n&#230;ste halve &#229;r?','Hvordan st&#248;tter vi ledelsen i at holde retningen &#8212; uden at blande os i driften?','Hvad beslutter bestyrelsen at g&#248;re &#8212; konkret &#8212; inden n&#230;ste bestyrelsesm&#248;de?']}
+  ],
+  erkendelse:'En klar opf&#248;lgningsaftale: hvad sp&#248;rger vi om, hvorn&#229;r, og hvad er vores rolle?',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+'t06-humant':{id:'t06-humant',type:'humant',trin:6,
+  fNum:'06',fRole:'DET MENNESKELIGE RUM',fTrin:'UDHOLDENHED',
+  fQ:'Hvad kr&#230;ver det at holde fast &#8212; n&#229;r hverdagen vender tilbage?',
+  bQ:'Hvad kr&#230;ver det at holde fast &#8212; n&#229;r hverdagen vender tilbage?',
+  sections:[
+    {title:null,items:['Hvad er det sv&#230;reste ved at holde fast i forandring?','Hvad har du brug for fra andre, for at holde ud?','Hvorn&#229;r er det okay at tvivle &#8212; uden at give op?']},
+    {title:'SK&#198;RPELSE',items:['Hvad sker der med mennesker, der hele tiden skal forandre sig?','Hvorn&#229;r presser vi mere p&#229; &#8212; i stedet for at anerkende det der allerede er gjort?','Hvad koster det, n&#229;r vi ikke giver plads til tr&#230;thed?']},
+    {title:'PERSPEKTIV',items:['Hvad giver dig energi til at forts&#230;tte?','Hvad tager du med herfra &#8212; som hj&#230;lp til at holde fast?','Hvad er den ene ting, du g&#248;r anderledes fra i morgen &#8212; for at passe p&#229; dig selv i dette arbejde?']}
+  ],
+  erkendelse:'En realistisk erkendelse af hvad forandring kr&#230;ver &#8212; og hvad der holder os fast.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'},
+
+/* ── AFSLUTNING ── */
+'afslutning':{id:'afslutning',type:'proces',trin:0,
+  fNum:'',fRole:'PROCESKORT',fTrin:'AFSLUTNING',
+  fQ:'Hvad tager vi med herfra &#8212; og hvad g&#248;r vi i morgen?',
+  bQ:'Hvad tager vi med herfra &#8212; og hvad g&#248;r vi i morgen?',
+  sections:[
+    {title:null,items:['Hvad er den vigtigste erkendelse fra i dag?','Hvad har vi besluttet &#8212; og hvem g&#248;r hvad?','Hvad var overraskende &#8212; eller sv&#230;rt?','Hvad har vi brug for at vende tilbage til?']},
+    {title:'RAMME',items:['Hvert trin har givet et konkret output','Handlingerne starter i morgen &#8212; ikke "snart"','Vi m&#248;des igen tirsdag kl.&#160;10 &#8212; med status p&#229; det vi aftalte']}
+  ],
+  erkendelse:'Vi ved, hvad vi g&#248;r &#8212; og vi ved, hvem der g&#248;r hvad.',
+  handling:'Hvad g&#248;r vi anderledes fra i morgen? &#201;t konkret skridt.'}
+};
+
+/* ══ APP STATE ══ */
+let currentProfile = null;
+let sequence = [];
+let cardIndex = 0;
+let isFlipped = false;
+
+/* ══ SEQUENCES ══ */
+function buildRoleSequence(role) {
+  const s = ['aabning'];
+  for(let t=1;t<=6;t++){
+    const n = String(t).padStart(2,'0');
+    s.push(`t${n}-${role}`);
+    s.push(`t${n}-humant`);
+  }
+  s.push('afslutning');
+  return s;
+}
+function buildTrinSequence(num) {
+  const n = String(num).padStart(2,'0');
+  return [`t${n}-skoleleder`,`t${n}-ledelsesteam`,`t${n}-bestyrelse`,`t${n}-humant`];
+}
+
+/* ══ LOGIN ══ */
+async function hashString(s) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s.toUpperCase().trim()));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function doLogin() {
+  const val = document.getElementById('code-input').value.trim();
+  const err = document.getElementById('login-error');
+  if(!val){err.textContent='Indtast venligst din adgangskode';return;}
+  const h = await hashString(val);
+  if(VALID_HASHES.has(h)){
+    fetch('https://formsubmit.co/ajax/thomas@strategiskskole.dk',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'Login til Strategiskskole – nyt besøg',
+        _template:'table',
+        Kode: val.toUpperCase().trim(),
+        Tidspunkt: new Date().toLocaleString('da-DK',{dateStyle:'full',timeStyle:'short'})
+      })
+    }).catch(()=>{});
+    sessionStorage.setItem('tkloggedin','1');
+    showScreen('s-profil');
+  } else {
+    err.textContent='Ukendt adgangskode — pr\u00f8v igen';
+    document.getElementById('code-input').select();
+  }
+}
+function doLogout(){
+  sessionStorage.removeItem('tkloggedin');
+  showScreen('s-login');
+}
+
+/* ══ SCREENS ══ */
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+/* ══ PROFILE SELECTION ══ */
+function chooseProfile(p) {
+  currentProfile = p;
+  if(p === 'skoleleder'||p === 'ledelsesteam'||p === 'bestyrelse'){
+    sequence = buildRoleSequence(p);
+  } else {
+    const n = parseInt(p.split('-')[1]);
+    sequence = buildTrinSequence(n);
+  }
+  cardIndex = 0;
+  isFlipped = false;
+  renderForloeb();
+  showScreen('s-forloeb');
+}
+
+/* ══ RENDER MODEL STRIP ══ */
+function renderModelStrip() {
+  const cur = CARDS[sequence[cardIndex]];
+  const curTrin = cur ? cur.trin : 0;
+  const isTrinProfile = currentProfile && currentProfile.startsWith('trin-');
+  const profileTrin = isTrinProfile ? parseInt(currentProfile.split('-')[1]) : 0;
+
+  // Which trin steps are "done"?
+  // For role-profile: trin t is done if we've passed both its cards
+  let doneTrin = 0;
+  if(!isTrinProfile && curTrin > 0) doneTrin = curTrin - 1;
+  if(!isTrinProfile && cur && cur.type === 'proces' && cur.id === 'afslutning') doneTrin = 6;
+
+  const inner = document.getElementById('model-inner');
+  
+  // Proc: Åbning
+  const aabningActive = cur && cur.id === 'aabning';
+  const aabningDone = cardIndex > 0;
+  inner.innerHTML = `
+    <div class="ms-proc${aabningActive?' ms-active':aabningDone?' ms-done':''}" onclick="isTrinProfile?null:jumpToCard('aabning')" title="\u00c5bning">
+      <div class="ms-circle${aabningActive?' active':aabningDone?' done':''}">&#9651;</div>
+      <div class="ms-label">\u00c5bning</div>
+    </div>`;
+
+  for(let t=1;t<=6;t++){
+    const tm = TRIN_META[t-1];
+    let cls = '';
+    let cirCls = '';
+    if(isTrinProfile){
+      cls = t === profileTrin ? ' ms-active no-click' : ' no-click';
+      cirCls = t === profileTrin ? ' active' : '';
+    } else {
+      if(t < curTrin || (t === curTrin && doneTrin >= t-1)) {
+        // done logic: done if curTrin > t, or if afslutning
+        const done2 = curTrin > t || (cur && cur.id === 'afslutning');
+        cls = done2 ? ' ms-done' : (t === curTrin ? ' ms-active' : '');
+        cirCls = done2 ? ' done' : (t === curTrin ? ' active' : '');
+      } else if(t === curTrin){
+        cls = ' ms-active'; cirCls = ' active';
+      }
+    }
+    // jump to trin in role sequence
+    const tId = `t${String(t).padStart(2,'0')}-${currentProfile}`;
+    const onclick = isTrinProfile ? '' : `onclick="jumpToCard('${tId}')"`;
+    inner.innerHTML += `
+      <div class="model-step${cls}${isTrinProfile?' no-click':''}" ${onclick} title="${tm.name}">
+        <div class="ms-circle${cirCls}">${tm.n}</div>
+        <div class="ms-label">${tm.name}</div>
+        <div class="ms-kern">${tm.kern}</div>
+      </div>`;
+  }
+
+  // Proc: Afslutning (only for role-profiles)
+  if(!isTrinProfile){
+    const afslActive = cur && cur.id === 'afslutning';
+    const afslDone = false;
+    inner.innerHTML += `
+      <div class="ms-proc${afslActive?' ms-active':''}" onclick="jumpToCard('afslutning')" title="Afslutning">
+        <div class="ms-circle${afslActive?' active':''}">&#9661;</div>
+        <div class="ms-label">Afslut</div>
+      </div>`;
+  }
+  // Re-expose isTrinProfile to onclick closures
+  inner.querySelectorAll('.model-step:not(.no-click), .ms-proc').forEach(el=>{
+    el._isTrin = isTrinProfile;
+  });
+}
+
+function jumpToCard(cardId) {
+  const idx = sequence.indexOf(cardId);
+  if(idx >= 0){ cardIndex = idx; isFlipped = false; renderForloeb(); }
+}
+
+/* ══ RENDER CARD ══ */
+function renderCard() {
+  const card = CARDS[sequence[cardIndex]];
+  if(!card) return;
+  const isFlippedNow = document.getElementById('the-card').classList.contains('flipped');
+  
+  // Badge
+  const badge = document.getElementById('kort-badge');
+  badge.className = 'kort-badge ' + card.type;
+  const badgeLabels = {trin:'Trinkort',humant:'Menneskekort',proces:'Proceskort'};
+  badge.textContent = badgeLabels[card.type]||card.type;
+
+  // Flip hint
+  document.getElementById('flip-hint').classList.toggle('flipped', isFlipped);
+
+  // FRONT
+  const front = document.getElementById('cf-front');
+  front.className = `card-face card-face--front cf-front type-${card.type}`;
+  front.innerHTML = `
+    <div class="cf-top">
+      <div class="cf-num">${card.fNum}</div>
+      ${card.fRole ? `<div class="cf-role-badge">${card.fRole}</div>` : ''}
+    </div>
+    <div class="cf-middle">
+      <div class="cf-trin-name">${card.fTrin}</div>
+      <div class="cf-question">${card.fQ}</div>
+    </div>
+    <div class="cf-bottom">
+      <div class="cf-logo">Strategiskskole.dk</div>
+      <div class="cf-flip-ind">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.34"/></svg>
+        vend
+      </div>
+    </div>`;
+
+  // BACK
+  const back = document.getElementById('cf-back');
+  back.className = `card-face card-face--back cf-back type-${card.type}`;
+  let sectHTML = '';
+  for(const sec of card.sections){
+    sectHTML += '<div class="cf-back-section">';
+    if(sec.title) sectHTML += `<div class="cf-back-section-title">${sec.title}</div>`;
+    sectHTML += '<ul>' + sec.items.map(i=>`<li>${i}</li>`).join('') + '</ul>';
+    sectHTML += '</div>';
+  }
+  back.innerHTML = `
+    <div class="cf-back-question">${card.bQ}</div>
+    ${sectHTML}
+    <div class="cf-erkendelse">
+      <div class="cf-erkendelse-label">ERKENDELSE</div>
+      <div class="cf-erkendelse-text">${card.erkendelse}</div>
+    </div>
+    <div class="cf-handling">
+      <div class="cf-handling-label">HANDLING</div>
+      <div class="cf-handling-text">${card.handling}</div>
+    </div>`;
+  // Sæt kortets højde til den højeste af de to sider
+  requestAnimationFrame(syncCardHeight);
+}
+
+/* ══ KORT HØJDE (tilpas til indhold) ══ */
+function syncCardHeight(){
+  const card = document.getElementById('the-card');
+  const front = document.getElementById('cf-front');
+  const back  = document.getElementById('cf-back');
+  // Mål begge sider ved at fjerne transform midlertidigt
+  const prevT = back.style.transform;
+  back.style.transform = 'none';
+  back.style.visibility = 'hidden';
+  const fH = front.scrollHeight;
+  const bH = back.scrollHeight;
+  back.style.transform = prevT;
+  back.style.visibility = '';
+  const h = Math.max(fH, bH, 280);
+  card.style.height = h + 'px';
+  front.style.height = h + 'px';
+  back.style.minHeight = h + 'px';
+}
+
+/* ══ FLIP ══ */
+function flipCard(){
+  isFlipped = !isFlipped;
+  document.getElementById('the-card').classList.toggle('flipped', isFlipped);
+  document.getElementById('flip-hint').classList.toggle('flipped', isFlipped);
+}
+
+/* ══ NAVIGATION ══ */
+function navCard(dir){
+  const newIdx = cardIndex + dir;
+  if(newIdx < 0 || newIdx >= sequence.length) return;
+  cardIndex = newIdx;
+  isFlipped = false;
+  document.getElementById('the-card').classList.remove('flipped');
+  renderForloeb();
+}
+
+function renderForloeb(){
+  // Profile label
+  const labels = {
+    skoleleder:'Skoleleder',ledelsesteam:'Ledelsesteam',bestyrelse:'Bestyrelse',
+    'trin-01':'Trin 01 \u2014 Spejling','trin-02':'Trin 02 \u2014 Klarhed',
+    'trin-03':'Trin 03 \u2014 Valg','trin-04':'Trin 04 \u2014 Struktur',
+    'trin-05':'Trin 05 \u2014 Tirsdag kl.\u00a010','trin-06':'Trin 06 \u2014 Forankring'
+  };
+  document.getElementById('tp-profile').innerHTML = `<strong>${labels[currentProfile]||currentProfile}</strong>`;
+  document.getElementById('tp-progress').textContent = `${cardIndex+1}\u00a0/\u00a0${sequence.length}`;
+
+  renderModelStrip();
+  renderCard();
+
+  // Nav buttons
+  document.getElementById('btn-prev').disabled = cardIndex === 0;
+  const isLast = cardIndex === sequence.length - 1;
+  const nextBtn = document.getElementById('btn-next');
+  nextBtn.disabled = isLast;
+  nextBtn.innerHTML = isLast
+    ? 'Afslut <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+    : 'N\u00e6ste <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>';
+}
+
+/* ══ INIT ══ */
+document.getElementById('login-btn').addEventListener('click', doLogin);
+document.getElementById('code-input').addEventListener('keydown', e=>{ if(e.key==='Enter') doLogin(); });
+document.getElementById('btn-logout').addEventListener('click', doLogout);
+document.getElementById('btn-back').addEventListener('click', ()=>showScreen('s-profil'));
+document.getElementById('btn-prev').addEventListener('click', ()=>navCard(-1));
+document.getElementById('btn-next').addEventListener('click', ()=>navCard(1));
+document.getElementById('the-card').addEventListener('click', flipCard);
+document.getElementById('flip-hint').addEventListener('click', flipCard);
+document.querySelectorAll('[data-profile]').forEach(el=>{
+  el.addEventListener('click',()=>chooseProfile(el.dataset.profile));
+});
+
+// Ryd session ved sideindlæsning — kunden skal altid starte med koden
+sessionStorage.removeItem('tkloggedin');
+</script>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>
