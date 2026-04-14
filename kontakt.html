@@ -205,7 +205,8 @@
 <section class="page-hero" style="background: linear-gradient(to right, rgba(15,30,50,.88) 40%, rgba(15,30,50,.55) 100%), url('images/skoleudvikling.jpg') center/cover no-repeat;">
   <div class="page-hero-content">
     <div class="hero-eyebrow">Kontakt</div>
-    <h1>Kom i kontakt med os</h1>
+    <h1>Book en uforpligtende samtale</h1>
+    <p class="page-hero-subtitle">Ring, skriv eller udfyld formularen — vi vender tilbage inden for 1–2 hverdage.</p>
   </div>
 </section>
 
@@ -218,33 +219,104 @@
 <main>
 <section class="kontakt-layout">
   <div class="kontakt-inner">
+
+    <!-- Venstre kolonne: Thomas + direkte kontakt -->
     <div class="kontakt-info">
       <h2>Thomas Kjerstein</h2>
-      <p>Thomas Kjerstein er grundlæggeren af Strategiskskole.dk og arbejder som strategisk medudvikler, konsulent og sparringspartner for skoleledelser og bestyrelser.</p>
+      <p>Strategisk medudvikler, konsulent og sparringspartner for skoleledelser og bestyrelser i folkeskoler, frie grundskoler, efterskoler og friskoler.</p>
 
       <div class="thomas-photo">
         <img loading="lazy" src="images/thomas-kjerstein.jpg" alt="Thomas Kjerstein" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80'"/ width="400" height="500">
       </div>
 
-    </div>
-
-    <div class="kontakt-info">
-      <h2>Hvad kan jeg hjælpe jer med?</h2>
-      <p>Vi tager gerne en uforpligtende samtale om jeres skoles situation — uanset om I har en konkret udfordring eller blot er nysgerrige på, hvad et samarbejde kan indebære.</p>
-
-      <div style="margin-top:40px; padding:28px 32px; background:var(--light); border-left:3px solid var(--teal); border-radius:4px;">
-        <h3 style="font-size:1rem; color:var(--navy); margin-bottom:12px;">Fortrolighed og respekt</h3>
-        <p style="color:var(--muted); line-height:1.7; margin:0;">Mange henvendelser handler om situationer, der er følsomme — for skolelederen personligt, for ledelsesteamet eller for bestyrelsens interne arbejde. Alle samtaler og henvendelser behandles med absolut fortrolighed. Det koster ingenting at tage kontakt, og du binder dig ikke til noget.</p>
+      <div style="margin-top:28px; display:flex; flex-direction:column; gap:14px;">
+        <a href="tel:+4561657365" style="display:inline-flex; align-items:center; gap:10px; background:var(--teal); color:#fff; padding:14px 24px; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem; transition:.2s;" onmouseover="this.style.background='#3a9db0'" onmouseout="this.style.background='var(--teal)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Ring: 61 65 73 65
+        </a>
+        <a href="mailto:thomas@strategiskskole.dk" style="display:inline-flex; align-items:center; gap:10px; color:var(--navy); padding:14px 24px; border:2px solid var(--border); border-radius:6px; text-decoration:none; font-weight:600; font-size:.95rem; transition:.2s;" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          thomas@strategiskskole.dk
+        </a>
       </div>
 
+      <div style="margin-top:32px; padding:24px 28px; background:var(--light); border-left:3px solid var(--teal); border-radius:4px;">
+        <h3 style="font-size:.95rem; color:var(--navy); margin-bottom:10px;">Fortrolighed og respekt</h3>
+        <p style="color:var(--muted); line-height:1.7; margin:0; font-size:.9rem;">Alle samtaler og henvendelser behandles med absolut fortrolighed. Det koster ingenting at tage kontakt, og du binder dig ikke til noget.</p>
+      </div>
+    </div>
+
+    <!-- Højre kolonne: Kontaktformular -->
+    <div class="kontakt-info">
+      <h2>Skriv til os</h2>
+      <p style="color:var(--muted); margin-bottom:28px;">Fortæl kort om jeres situation — så vender Thomas tilbage med et forslag til, hvordan vi bedst kommer videre.</p>
+
+      <form action="https://formspree.io/f/xpwdqdkr" method="POST" style="display:grid; gap:18px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div>
+            <label style="display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:6px;">Navn *</label>
+            <input type="text" name="name" required placeholder="Dit navn" style="width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px; font-size:.95rem; font-family:'Open Sans',sans-serif; transition:.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:6px;">Skole / organisation</label>
+            <input type="text" name="school" placeholder="Skolens navn" style="width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px; font-size:.95rem; font-family:'Open Sans',sans-serif; transition:.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+        <div>
+          <label style="display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:6px;">Email *</label>
+          <input type="email" name="email" required placeholder="din@email.dk" style="width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px; font-size:.95rem; font-family:'Open Sans',sans-serif; transition:.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div>
+          <label style="display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:6px;">Hvad handler det om?</label>
+          <select name="topic" style="width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px; font-size:.95rem; font-family:'Open Sans',sans-serif; background:#fff; color:var(--text); transition:.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+            <option value="">V&aelig;lg emne...</option>
+            <option value="ny-leder">Ny i lederrollen</option>
+            <option value="strategi">Strategi i hverdagen</option>
+            <option value="bestyrelse">Bestyrelsessamarbejde</option>
+            <option value="forandring">Forandringsledelse</option>
+            <option value="workshop">Intro-workshop</option>
+            <option value="lederskifte">Lederskifte</option>
+            <option value="andet">Andet</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:6px;">Besked</label>
+          <textarea name="message" rows="5" placeholder="Beskriv kort jeres situation eller sp&oslash;rgsm&aring;l..." style="width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px; font-size:.95rem; font-family:'Open Sans',sans-serif; resize:vertical; transition:.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+        </div>
+        <button type="submit" style="background:var(--teal); color:#fff; border:none; padding:16px 36px; border-radius:6px; font-size:1.05rem; font-weight:600; font-family:'Open Sans',sans-serif; cursor:pointer; justify-self:start; transition:.2s; box-shadow:0 2px 8px rgba(46,125,140,.3);" onmouseover="this.style.background='#3a9db0'" onmouseout="this.style.background='var(--teal)'">Send besked</button>
+        <p style="font-size:.78rem; color:var(--muted); margin-top:-6px;">Alle henvendelser behandles med absolut fortrolighed.</p>
+      </form>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
-  <h2>Jeg glæder mig til at høre fra jer</h2>
-  <p>Uanset hvor I står nu, handler det først og fremmest om at høre, hvad som ligger jer på sinde.</p>
-  <a href="mailto:thomas@strategiskskole.dk" class="btn btn-primary">Skriv til os</a>
+<section style="padding:48px 24px; background:var(--light);">
+  <div style="max-width:800px; margin:0 auto; text-align:center;">
+    <h2 style="font-family:'Merriweather',serif; font-size:1.3rem; color:var(--navy); margin-bottom:12px;">S&aring;dan kommer I hurtigt i gang</h2>
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:28px; text-align:left;">
+      <div style="display:flex; gap:14px; align-items:flex-start;">
+        <span style="background:var(--teal); color:#fff; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0;">01</span>
+        <div>
+          <strong style="color:var(--navy); font-size:.9rem; display:block; margin-bottom:4px;">F&oslash;rste samtale — gratis, 60 min</strong>
+          <span style="color:var(--muted); font-size:.84rem; line-height:1.6;">Ring eller skriv. Vi taler om, hvor I er henne lige nu — ingen forpligtelse, ingen salgstal.</span>
+        </div>
+      </div>
+      <div style="display:flex; gap:14px; align-items:flex-start;">
+        <span style="background:var(--teal); color:#fff; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0;">02</span>
+        <div>
+          <strong style="color:var(--navy); font-size:.9rem; display:block; margin-bottom:4px;">Thomas sender et kort opl&aelig;g</strong>
+          <span style="color:var(--muted); font-size:.84rem; line-height:1.6;">Inden for f&aring; dage: hvad vi foresl&aring;r at starte med, og hvad det konkret indeb&aelig;rer.</span>
+        </div>
+      </div>
+      <div style="display:flex; gap:14px; align-items:flex-start;">
+        <span style="background:var(--teal); color:#fff; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0;">03</span>
+        <div>
+          <strong style="color:var(--navy); font-size:.9rem; display:block; margin-bottom:4px;">Vi starter inden for to uger</strong>
+          <span style="color:var(--muted); font-size:.84rem; line-height:1.6;">Ingen lang opstartsfase. F&oslash;rste m&oslash;de, f&oslash;rste greb — og strategien begynder at m&aelig;rkes i praksis.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
@@ -298,7 +370,7 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 Strategiskskole.dk</span>
-    <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;">Privatlivspolitik</a>
+    <a href="privatlivspolitik.html" style="color:rgba(255,255,255,.4);text-decoration:none;">Privatlivspolitik</a>
   </div>
 </footer>
 
