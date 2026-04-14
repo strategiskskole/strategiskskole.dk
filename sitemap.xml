@@ -138,6 +138,20 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <!-- Flagskib: Tre Stole-modellen™ -->
+  <url>
+    <loc>https://strategiskskole.dk/lp-tre-stole.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://strategiskskole.dk/tre-stole-a3-strategikort.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
   <url>
     <loc>https://strategiskskole.dk/lp-intro-workshop.html</loc>
     <lastmod>2026-04-08</lastmod>

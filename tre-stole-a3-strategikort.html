@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>A3-Strategikort · Tre Stole-modellen™ | Strategiskskole.dk</title>
+<meta name="description" content="Printbart A3-strategikort for Tre Stole-modellen™. Én side, tre kolonner, én fælles handling."/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --navy:#1A3A5C;
+    --blue:#2E6DA4;
+    --lys:#D5E8F0;
+    --gold:#C8A84B;
+    --grey:#5A5A5A;
+    --cream:#f4ede4;
+    --border:#d8d8d8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Open Sans',sans-serif;color:var(--navy);background:#e8e8e8;padding:20px}
+
+  .toolbar{max-width:1180px;margin:0 auto 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.9rem}
+  .toolbar button,.toolbar a{background:var(--navy);color:#fff;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;text-decoration:none;font-size:.88rem;font-family:inherit}
+  .toolbar button:hover,.toolbar a:hover{background:var(--blue)}
+  .toolbar .hint{color:var(--grey);font-size:.82rem}
+
+  .a3{
+    width:1180px;
+    max-width:100%;
+    margin:0 auto;
+    background:#fff;
+    padding:36px 40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.15);
+    border-radius:4px;
+    aspect-ratio:420/297; /* A3 landscape */
+    min-height:820px;
+  }
+
+  .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--navy);padding-bottom:14px;margin-bottom:20px}
+  .head .title{font-family:Merriweather,serif;font-size:1.6rem;font-weight:700;color:var(--navy);margin:0}
+  .head .sub{font-size:.82rem;color:var(--grey);margin:4px 0 0}
+  .head .brand{text-align:right;font-size:.78rem;color:var(--grey)}
+  .head .brand strong{color:var(--navy);display:block;font-size:.95rem}
+
+  .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;font-size:.82rem}
+  .meta .cell{border:1px solid var(--border);border-radius:6px;padding:10px 12px;min-height:44px}
+  .meta .cell label{display:block;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:4px}
+  .meta .cell .fill{border-bottom:1px dotted #bbb;min-height:20px}
+
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+  .col{border:2px solid var(--border);border-radius:10px;padding:16px;min-height:320px;display:flex;flex-direction:column}
+  .col.bestyrelse{border-top:5px solid var(--gold)}
+  .col.leder{border-top:5px solid var(--navy)}
+  .col.team{border-top:5px solid var(--blue)}
+  .col h3{margin:0 0 4px;font-family:Merriweather,serif;font-size:1.1rem}
+  .col .rolle{font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:12px}
+  .col .felt{margin-bottom:12px}
+  .col .felt label{display:block;font-size:.72rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .col .linje{border-bottom:1px dotted #bbb;height:20px;margin-bottom:3px}
+
+  .bund{background:var(--lys);border-radius:10px;padding:18px 20px;border-left:5px solid var(--gold)}
+  .bund h3{margin:0 0 10px;font-family:Merriweather,serif;color:var(--navy);font-size:1.1rem}
+  .bund .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;font-size:.82rem}
+  .bund label{display:block;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:4px}
+  .bund .fill{border-bottom:1px dotted #888;min-height:22px}
+
+  .test{margin-top:12px;background:var(--cream);padding:12px 16px;border-radius:8px;font-size:.88rem;font-style:italic;color:var(--navy);text-align:center;border:1px dashed var(--gold)}
+  .test strong{font-style:normal;color:var(--gold)}
+
+  .foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:.72rem;color:var(--grey);border-top:1px solid var(--border);padding-top:10px}
+
+  @media print{
+    @page{size:A3 landscape;margin:10mm}
+    body{background:#fff;padding:0}
+    .toolbar{display:none}
+    .a3{box-shadow:none;border-radius:0;width:100%;max-width:100%;padding:10mm}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">🖨️ Print / Gem som PDF</button>
+  <a href="lp-tre-stole.html">← Tilbage til Tre Stole-modellen™</a>
+  <span class="hint">Udfyld direkte i browseren før print, eller print blank og skriv i hånden. Printes i A3 landskab.</span>
+</div>
+
+<div class="a3" contenteditable="false">
+
+  <div class="head">
+    <div>
+      <h1 class="title">A3-Strategikort · Tre Stole-modellen&trade;</h1>
+      <p class="sub">Én side · Tre stole · Én fælles handling</p>
+    </div>
+    <div class="brand">
+      <strong>Strategiskskole.dk</strong>
+      Tirsdag kl. 10-modellen&reg;
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="cell">
+      <label>Skole</label>
+      <div class="fill" contenteditable="true"></div>
+    </div>
+    <div class="cell">
+      <label>Gælder fra — til</label>
+      <div class="fill" contenteditable="true"></div>
+    </div>
+    <div class="cell">
+      <label>Næste check-in</label>
+      <div class="fill" contenteditable="true"></div>
+    </div>
+  </div>
+
+  <div class="cols">
+
+    <div class="col bestyrelse">
+      <span class="rolle">Stol 1 · Retning</span>
+      <h3>Bestyrelsen</h3>
+      <div class="felt">
+        <label>Vores retning (hvor skal skolen hen?)</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>Det vi vælger til — og fra</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>Vores bidrag til handlingen</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+    </div>
+
+    <div class="col leder">
+      <span class="rolle">Stol 2 · Oversættelse</span>
+      <h3>Skolelederen</h3>
+      <div class="felt">
+        <label>Min oversættelse af retningen</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>De vigtigste prioriteringer</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>Mit bidrag til handlingen</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+    </div>
+
+    <div class="col team">
+      <span class="rolle">Stol 3 · Handling</span>
+      <h3>Ledelsesteamet</h3>
+      <div class="felt">
+        <label>Hvad det betyder tirsdag kl. 10</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>Strukturer vi ændrer</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+      <div class="felt">
+        <label>Vores bidrag til handlingen</label>
+        <div class="linje" contenteditable="true"></div>
+        <div class="linje" contenteditable="true"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bund">
+    <h3>Én fælles strategisk handling — bygget af alle tre stole</h3>
+    <div class="row">
+      <div>
+        <label>Hvad gør vi konkret?</label>
+        <div class="fill" contenteditable="true"></div>
+        <div class="fill" contenteditable="true"></div>
+      </div>
+      <div>
+        <label>Hvem gør hvad — og hvornår?</label>
+        <div class="fill" contenteditable="true"></div>
+        <div class="fill" contenteditable="true"></div>
+      </div>
+      <div>
+        <label>Hvordan ved vi at det er sket?</label>
+        <div class="fill" contenteditable="true"></div>
+        <div class="fill" contenteditable="true"></div>
+      </div>
+    </div>
+    <div class="test">
+      Den fjerde stol — <strong>eleven</strong> — spørger: <em>Kan jeg se det i det, der sker tirsdag kl. 10?</em>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Tre Stole-modellen&trade; · bygget på Tirsdag kl. 10-modellen&reg;</span>
+    <span>strategiskskole.dk · Thomas Kjerstein · 61 65 73 65</span>
+  </div>
+
+</div>
+
+</body>
+</html>
