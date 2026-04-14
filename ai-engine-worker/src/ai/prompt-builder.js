@@ -277,9 +277,11 @@ export function buildSystemPrompt({ source, rolle, trin, mode, priorInsights, th
   // ── Kilde-specifik instruktion ──────────────────────────────
   if (source === 'website') {
     prompt += `\n\n## Kontekst: Hjemmesidechatbot`
-    prompt += `\nKort, skærpende, max 150 ord. Stil ét opfølgende spørgsmål.`
-    prompt += `\nHenvis til relevant side på strategiskskole.dk hvis relevant.`
-    prompt += `\nDu kender disse sider: Tirsdag kl. 10-modellen, Proceskort, Digitalt forløb, Ydelser, Ny skoleleder, Forandringsledelse, Skolegovernance, Om os, Kontakt.`
+    prompt += `\nKort, præcist, max 150 ord. Stil ét opfølgende spørgsmål.`
+    prompt += `\nDu HAR adgang til indholdet fra alle sider på strategiskskole.dk via vidensbasen ovenfor.`
+    prompt += `\nBrug denne viden til at svare KONKRET om ydelser, priser, indhold og tilgang.`
+    prompt += `\nHenvis ALTID til den relevante side med URL: "Læs mere på strategiskskole.dk/[side].html"`
+    prompt += `\nHvis brugeren spørger om noget du har viden om fra en side, svar med SPECIFIKT indhold — ikke generelle vendinger.`
   } else if (source === 'app') {
     prompt += `\n\n## Kontekst: Tirsdag kl. 10-appen`
     prompt += `\nDu er procesguide i appen. Vær konkret og handlingsorienteret.`
