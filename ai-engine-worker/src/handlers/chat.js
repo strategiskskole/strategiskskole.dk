@@ -13,7 +13,8 @@ import {
   getSession, createSession, updateSessionMessageCount,
   getMessages, insertMessages,
   getPriorInsights, getThemes, getKeywords,
-  getSharedKnowledge, searchSharedKnowledge
+  getSharedKnowledge, searchSharedKnowledge,
+  insertSharedKnowledge
 } from '../data/db.js'
 
 // ── Tema-extraction fra brugerens besked ──────────────────────
@@ -101,6 +102,16 @@ export async function handleChat(body, env, ctx) {
     // Hent viden relevant for aktuelt trin, rolle og tema
     sharedKnowledge = await getSharedKnowledge(db, { tema, trin, rolle, limit: 5 })
 
+    // Website-chatbot: Hent også website-indhold (bredere søgning)
+    if (src === 'website') {
+      const searchWords = message.split(/\s+/).filter(w => w.length > 3).slice(0, 8).join(' ')
+      const websiteKnowledge = await searchSharedKnowledge(db, searchWords, 5)
+      const existingIds = new Set(sharedKnowledge.map(k => k.indhold))
+      for (const w of websiteKnowledge) {
+        if (!existingIds.has(w.indhold)) sharedKnowledge.push(w)
+      }
+    }
+
     // Supplér med tekstsøgning baseret på brugerens besked
     if (sharedKnowledge.length < 3) {
       const searchWords = message.split(/\s+/).filter(w => w.length > 3).slice(0, 6).join(' ')
@@ -171,6 +182,29 @@ export async function handleChat(body, env, ctx) {
       )
     } catch (e) {
       console.error('Extraction fejl:', e.message)
+    }
+  }
+
+  // ── Auto-promote gode AI-svar (dybe samtaler) ──────────────
+  if (!isFallback && history.length >= 6 && reply.length >= 80 && reply.length <= 400 && forloebId !== 'website-default') {
+    try {
+      const tema = extractTema(message) || 'generelt'
+      const searchTerm = reply.split(/\s+/).slice(0, 5).join(' ')
+      const existing = await searchSharedKnowledge(db, searchTerm, 1)
+      if (existing.length === 0) {
+        await insertSharedKnowledge(db, [{
+          tema,
+          trin,
+          rolle,
+          type: 'godt_svar',
+          indhold: reply.slice(0, 400),
+          kontekst: message.slice(0, 200),
+          kilde: 'auto-harvest',
+          kvalitet: 0.8
+        }])
+      }
+    } catch (e) {
+      // Auto-promote er optional — fejl stopper ikke samtalen
     }
   }
 

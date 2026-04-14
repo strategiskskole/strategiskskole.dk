@@ -10,5 +10,8 @@ binding = "DB"
 database_name = "strategiskskole-ai"
 database_id = "e3b67a7b-5dfd-4be2-8a36-6c0ecf770fdc"
 
+[triggers]
+crons = ["0 2 * * *"]  # Kører hver nat kl. 02:00 UTC (03:00 dansk tid)
+
 [vars]
 ALLOWED_ORIGINS = "https://strategiskskole.dk,https://www.strategiskskole.dk"

@@ -7,7 +7,8 @@
 import { THEME_TAXONOMY, TRIN_NAVNE } from '../data/model.js'
 import { runExtractionAI } from './workers-ai.js'
 import {
-  insertKeywords, upsertTheme, countMessages, upsertProgressSnapshot
+  insertKeywords, upsertTheme, countMessages, upsertProgressSnapshot,
+  insertSharedKnowledge, searchSharedKnowledge
 } from '../data/db.js'
 
 // ── Stopord (danske) ──────────────────────────────────────────
@@ -247,18 +248,77 @@ export async function runExtractionPipeline(env, db, sessionId, forloebId, userM
 
     const existingInsights = existing ? safeParseJSON(existing.key_insights, []) : []
 
+    const allInsights = [
+      ...existingInsights,
+      ...(insights.insights || [])
+    ].slice(-10)
+
     await upsertProgressSnapshot(db, {
       forloeb_id: forloebId,
       rolle,
       trin,
       status: depthScore >= 0.45 ? 'i-gang' : 'ikke-startet',
       depth_score: depthScore,
-      key_insights: [
-        ...existingInsights,
-        ...(insights.insights || [])
-      ].slice(-10),
+      key_insights: allInsights,
       carry_forward: insights.carry_forward || []
     })
+
+    // ── Auto-promote: Gem gode erkendelser i shared_knowledge ──
+    if (depthScore >= 0.45 && allInsights.length >= 2) {
+      const topTheme = ruleThemes[0]?.theme || 'generelt'
+      await autoPromoteInsights(db, {
+        insights: allInsights,
+        tema: topTheme,
+        trin,
+        rolle,
+        userMessage
+      })
+    }
+  }
+}
+
+// ══════════════════════════════════════════════════════════════
+// Auto-promote: Promovér gode erkendelser til shared_knowledge
+// Kører automatisk når dybde-score er høj nok
+// ══════════════════════════════════════════════════════════════
+
+async function autoPromoteInsights(db, { insights, tema, trin, rolle, userMessage }) {
+  try {
+    const toPromote = []
+
+    for (const insight of insights) {
+      // Spring korte/generiske erkendelser over
+      if (!insight || insight.length < 25) continue
+
+      // Deduplikér: Tjek om lignende indhold allerede findes
+      const searchTerm = insight.split(/\s+/).slice(0, 5).join(' ')
+      const existing = await searchSharedKnowledge(db, searchTerm, 1)
+      if (existing.length > 0) {
+        // Tjek for næsten-duplikat (>60% ord overlap)
+        const existingWords = new Set(existing[0].indhold.toLowerCase().split(/\s+/))
+        const newWords = insight.toLowerCase().split(/\s+/)
+        const overlap = newWords.filter(w => existingWords.has(w)).length / newWords.length
+        if (overlap > 0.6) continue
+      }
+
+      toPromote.push({
+        tema,
+        trin,
+        rolle,
+        type: 'indsigt',
+        indhold: insight.slice(0, 300),
+        kontekst: userMessage ? userMessage.slice(0, 200) : '',
+        kilde: 'auto-harvest',
+        kvalitet: 0.75
+      })
+    }
+
+    if (toPromote.length > 0) {
+      await insertSharedKnowledge(db, toPromote.slice(0, 3)) // Max 3 per samtale
+      console.log(`Auto-promote: ${toPromote.length} erkendelser → shared_knowledge (tema: ${tema})`)
+    }
+  } catch (e) {
+    console.error('Auto-promote fejl:', e.message)
   }
 }
 

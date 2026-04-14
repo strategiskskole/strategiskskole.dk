@@ -8,6 +8,7 @@
 import { handleChat } from './handlers/chat.js'
 import { handleCreateSession, handleGetSession } from './handlers/session.js'
 import { handleGetProgress } from './handlers/progress.js'
+import { handleScheduled } from './handlers/scheduled.js'
 
 // ── CORS ──────────────────────────────────────────────────────
 
@@ -45,6 +46,11 @@ async function checkRateLimit(env, key, maxPerMinute = 30) {
 // ── Routing ───────────────────────────────────────────────────
 
 export default {
+  // ── Nightly cron job (kl. 02:00 UTC) ─────────────────────────
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(handleScheduled(env))
+  },
+
   async fetch(request, env, ctx) {
     const origin = request.headers.get('Origin') || ''
     const url = new URL(request.url)
