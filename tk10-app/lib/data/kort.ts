@@ -212,29 +212,29 @@ export const KORT: KortDefinition[] = [
     trin: 5, rolle: 'skoleleder', type: 'model',
     forside: 'Er strategien til stede tirsdag kl. 10?',
     åbning: [
-      'Hvad sker der faktisk i vores møder?',
-      'Hvad siger dagsordenen om vores prioriteringer?',
-      'Hvad siger stemningen om kulturen?',
+      'FELTØVELSE: Gå til dit næste ledermøde eller personalemøde. Observér med disse spørgsmål: Hvad handler mødet reelt om — strategi eller drift?',
+      'Læg mærke til: Hvem taler? Om hvad? Henviser nogen til den retning I har sat?',
+      'Når du ser dagsordenen: Kan du se jeres strategiske valg afspejlet — eller er det samme dagsorden som for 6 måneder siden?',
     ],
     sektioner: [
       {
-        label: 'SKÆRPELSE',
+        label: 'OBSERVATION',
         spørgsmål: [
-          'Hvad beslutter vi — og hvad udskydes igen og igen?',
-          'Hvad er alle enige om at undgå?',
-          'Hvornår mærkes strategien — og hvornår mærkes den ikke?',
+          'Hvad lagde du mærke til ved mødet? Hvad overraskede dig?',
+          'Hvor var strategien synlig — og hvor var den fraværende?',
+          'Hvad sagde deltagernes adfærd om kulturen — uafhængigt af ordene?',
         ],
       },
       {
         label: 'PERSPEKTIV',
         spørgsmål: [
-          'Hvad kalder det på af ledelse fra mig?',
-          'Hvad er mit ansvar for det, jeg ser?',
-          'Hvad vil jeg gøre anderledes næste tirsdag?',
+          'Hvad kalder observationen på af ledelse fra dig?',
+          'Hvad er dit ansvar for det, du så?',
+          'Hvad vil du gøre anderledes næste tirsdag — helt konkret?',
         ],
       },
     ],
-    erkendelse: 'Et ærligt billede af, om strategien lever i hverdagen — eller kun på papiret.',
+    erkendelse: 'Et ærligt billede baseret på observation — ikke på antagelser — af om strategien lever i hverdagen.',
     handling: HANDLING,
   },
 
@@ -396,29 +396,29 @@ export const KORT: KortDefinition[] = [
     trin: 5, rolle: 'ledelsesteam', type: 'model',
     forside: 'Kan vi se vores fælles retning i det, der sker i hverdagen?',
     åbning: [
-      'Kan man se, at vi har en fælles retning — eller ligner det tilfældigheder?',
-      'Hvad ville vi opdage, hvis vi byttede rundgang tirsdag kl. 10?',
-      'Hvad fortæller medarbejdernes spørgsmål os om vores tydelighed?',
+      'FELTØVELSE: Aftal at hvert medlem af ledelsesteamet observerer ét møde eller én situation i denne uge. Observér: Kan man se jeres fælles retning i det der sker?',
+      'Prøv dette: Byt rundgang med en kollega tirsdag kl. 10. Hvad ser I, når I ser hinandens hverdag?',
+      'Spørg tre medarbejdere: "Hvad er skolens vigtigste prioritering lige nu?" — matcher svarene jeres strategi?',
     ],
     sektioner: [
       {
-        label: 'SKÆRPELSE',
+        label: 'OBSERVATION',
         spørgsmål: [
-          'Hvornår er vores fælles plan kun fælles i ledelses møderne?',
-          'Hvad gør vi forskelligt — som skaber forvirring?',
-          'Hvornår dækker vi over hinandens uklarhed?',
+          'Hvad opdagede I, da I observerede? Var jeres fælles retning synlig — eller usynlig?',
+          'Hvad gør I forskelligt i praksis — som medarbejderne kan mærke?',
+          'Hvad sagde medarbejdernes svar om jeres tydelighed som ledelsesteam?',
         ],
       },
       {
         label: 'PERSPEKTIV',
         spørgsmål: [
-          'Hvad ville medarbejderne mærke, hvis vores retning var tydelig?',
-          'Hvad skal vi gøre anderledes — fra i morgen?',
-          'Hvor er det vigtigste sted at justere lige nu — og hvem tager der ansvar?',
+          'Hvad ville medarbejderne mærke, hvis jeres retning var tydelig?',
+          'Hvad skal I gøre anderledes — fra i morgen — som team?',
+          'Hvor er det vigtigste sted at justere — og hvem tager ansvar for det?',
         ],
       },
     ],
-    erkendelse: 'Strategi der lever i hverdagen — ikke bare i møderummet.',
+    erkendelse: 'Et fælles billede baseret på observation — af om strategien lever i hverdagen eller kun i møderummet.',
     handling: HANDLING,
   },
 
@@ -580,29 +580,29 @@ export const KORT: KortDefinition[] = [
     trin: 5, rolle: 'bestyrelse', type: 'model',
     forside: 'Kan vi se skolens strategi i det, der faktisk sker?',
     åbning: [
-      'Hvad ville vi se, hvis vi besøgte skolen tirsdag kl. 10?',
-      'Kan vi som bestyrelse forklare, hvad skolens strategi betyder i praksis?',
-      'Hvad ville forældrene sige, at skolen er optaget af lige nu?',
+      'FELTØVELSE: Besøg skolen på en almindelig tirsdag kl. 10. Gå en tur i gangene, kig ind i et klasselokale, lyt til stemningen. Hvad ser I?',
+      'Alternativ: Bed skolelederen beskrive én helt almindelig tirsdag formiddag. Stil spørgsmålet: "Hvor i den beskrivelse kan vi se strategien?"',
+      'Spørg tre forældre: "Hvad er skolen mest optaget af lige nu?" — matcher svarene det I besluttede?',
     ],
     sektioner: [
       {
-        label: 'SKÆRPELSE',
+        label: 'OBSERVATION',
         spørgsmål: [
-          'Hvornår nøjes vi med at høre, at alt går godt?',
-          'Hvad ville vi opdage, hvis vi stillede andre spørgsmål til ledelsen?',
-          'Hvornår forveksler vi aktivitet med strategisk retning?',
+          'Hvad opdagede I — enten ved besøget eller i skolelederens beskrivelse?',
+          'Hvornår forvekslede I aktivitet med strategisk retning?',
+          'Hvad ville I have opdaget, hvis I havde stillet andre spørgsmål til ledelsen?',
         ],
       },
       {
         label: 'PERSPEKTIV',
         spørgsmål: [
-          'Hvad er det vigtigste spørgsmål, vi kan stille ledelsen næste gang?',
-          'Hvordan kan vi følge op — uden at kontrollere?',
-          'Hvad beslutter bestyrelsen at gøre for at holde strategien levende?',
+          'Hvad er det vigtigste spørgsmål I kan stille ledelsen ved næste bestyrelsesmøde?',
+          'Hvordan kan I følge op på strategien — uden at overtage driften?',
+          'Hvad beslutter bestyrelsen at gøre konkret for at holde strategien synlig?',
         ],
       },
     ],
-    erkendelse: 'Et realistisk billede af om strategien lever i praksis — og bestyrelsens næste spørgsmål.',
+    erkendelse: 'Et realistisk billede baseret på observation — af om strategien lever i praksis — og bestyrelsens næste spørgsmål til ledelsen.',
     handling: HANDLING,
   },
 
