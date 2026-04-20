@@ -9,6 +9,7 @@ import { handleChat } from './handlers/chat.js'
 import { handleCreateSession, handleGetSession } from './handlers/session.js'
 import { handleGetProgress } from './handlers/progress.js'
 import { handleScheduled } from './handlers/scheduled.js'
+import { handleClarityIngest } from './handlers/clarity-ingest.js'
 
 // ── CORS ──────────────────────────────────────────────────────
 
@@ -18,7 +19,7 @@ function corsHeaders(origin, env) {
   return {
     'Access-Control-Allow-Origin': isAllowed ? origin : allowed[0] || '*',
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, X-Org-Kode, X-Session-Token',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Org-Kode, X-Session-Token, X-Admin-Token',
   }
 }
 
@@ -69,6 +70,16 @@ export default {
         ai: 'workers-ai',
         db: 'd1'
       }, 200, origin, env)
+    }
+
+    // ── POST /api/clarity-ingest (manuel trigger, admin-token beskyttet) ──
+    if (path === '/api/clarity-ingest' && request.method === 'POST') {
+      const adminToken = request.headers.get('X-Admin-Token')
+      if (!env.ADMIN_TOKEN || adminToken !== env.ADMIN_TOKEN) {
+        return jsonResponse({ error: 'Unauthorized' }, 401, origin, env)
+      }
+      const result = await handleClarityIngest(env)
+      return jsonResponse(result, result.ok ? 200 : 500, origin, env)
     }
 
     // D1 database via env.DB binding

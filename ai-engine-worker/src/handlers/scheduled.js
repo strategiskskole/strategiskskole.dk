@@ -6,10 +6,21 @@
 // ============================================================
 
 import { searchSharedKnowledge, insertSharedKnowledge } from '../data/db.js'
+import { handleClarityIngest } from './clarity-ingest.js'
 
 export async function handleScheduled(env) {
   const db = env.DB
-  const stats = { promoted: 0, cleaned: 0, deduplicated: 0 }
+  const stats = { promoted: 0, cleaned: 0, deduplicated: 0, clarity_records: 0 }
+
+  // ── FASE 0: Clarity ingest (hvis token er sat) ────────────────
+  try {
+    if (env.CLARITY_API_TOKEN) {
+      const result = await handleClarityIngest(env)
+      stats.clarity_records = result.records_indsat || 0
+    }
+  } catch (e) {
+    console.error('Clarity ingest fejl:', e.message)
+  }
 
   // ── FASE 1: Promovér gode erkendelser fra progress_snapshots ──
   try {
@@ -95,7 +106,7 @@ export async function handleScheduled(env) {
   ).all()
   const total = countResult?.[0]?.cnt || 0
 
-  console.log(`Nightly job færdig: +${stats.promoted} promoted, -${stats.cleaned} cleaned, -${stats.deduplicated} deduped. Total: ${total}`)
+  console.log(`Nightly job færdig: +${stats.promoted} promoted, +${stats.clarity_records} clarity, -${stats.cleaned} cleaned, -${stats.deduplicated} deduped. Total: ${total}`)
 
   return stats
 }
