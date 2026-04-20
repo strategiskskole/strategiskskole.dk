@@ -17,14 +17,6 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Tirsdag Akademiet™ — flagskibs-LP -->
-  <url>
-    <loc>https://strategiskskole.dk/akademi.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
   <!-- Skolebyggeri-LP'er -->
   <url>
     <loc>https://strategiskskole.dk/lp-strategisk-skolebyggeri.html</loc>
