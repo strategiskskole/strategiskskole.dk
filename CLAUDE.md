@@ -9,7 +9,7 @@ Thomas Kjerstein — thomas@strategiskskole.dk — 61 65 73 65
 - Hold svar korte og præcise.
 
 ## Kerneprodukt — Tirsdag kl. 10-modellen®
-6 trin: Spejling → Analyse → Valg → Organisering → Kernen → Forankring
+6 trin: Spejling → Klarhed → Valg → Struktur → Kernen → Forankring
 Testspørgsmål: "Kan vi se strategien i det, der sker tirsdag kl. 10?"
 3 roller: Skoleleder, Ledelsesteam, Bestyrelsen
 Brug ALTID ® efter "Tirsdag kl. 10-modellen" og korrekte trin-navne med stort forbogstav.
