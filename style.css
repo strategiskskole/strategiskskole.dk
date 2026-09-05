@@ -246,7 +246,7 @@ nav { background: var(--paper); border-bottom: 1px solid var(--line); position: 
 .sidebar-cta h3 { color: #fff; }
 .sidebar-cta .btn { width: 100%; margin-top: 14px; }
 
-.result-box { background: var(--warm); border: 1px solid #E4D8C6; padding: 24px 26px; margin: 30px 0; }
+.result-box { background: var(--blue-soft); border: 1px solid #C3DCE8; padding: 24px 26px; margin: 30px 0; }
 .result-box h3 { color: var(--accent-deep); margin-bottom: 8px; }
 
 /* ============================ PAIN ======================== */
@@ -298,6 +298,13 @@ nav { background: var(--paper); border-bottom: 1px solid var(--line); position: 
 .forlob-section:not(.forlob-light) .forlob-steps li { color: rgba(255,255,255,.82); }
 .forlob-section:not(.forlob-light) .forlob-audience-label { color: var(--accent-lys); border-color: rgba(255,255,255,.18); }
 
+/* Tre Stole-modellen — flagskibskort med lys baggrund; skal have mørk tekst uanset sektionens mørke tema */
+#tre-stole h3,
+#tre-stole .forlob-pain,
+#tre-stole .forlob-steps li { color: var(--navy); }
+#tre-stole .forlob-pain { color: var(--text); }
+#tre-stole .forlob-steps li { color: var(--text); }
+
 .forlob-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); }
 .forlob-section-header { max-width: 62ch; margin-bottom: 42px; }
 .forlob-section-header h2 { margin-bottom: 14px; }
@@ -324,7 +331,7 @@ nav { background: var(--paper); border-bottom: 1px solid var(--line); position: 
 
 /* ============================ CTA-BANNER ================== */
 .cta-banner {
-  background: var(--warm); color: var(--text); text-align: center;
+  background: var(--blue-soft); color: var(--text); text-align: center;
   padding: clamp(56px,7vw,88px) var(--gut);
   border-top: 4px solid var(--accent);
 }
@@ -383,7 +390,8 @@ footer { background: var(--navy-ink); border-top: 4px solid var(--accent); color
 }
 
 /* småting brugt i markup, uden egne visuelle krav */
-.forlob-audience { display: block; }
+.forlob-audience { display: block; margin-bottom: 56px; }
+.forlob-audience:last-child { margin-bottom: 0; }
 .dropdown-group { display: block; }
 
 /* ============================================================
@@ -494,7 +502,7 @@ footer { background: var(--navy-ink); border-top: 4px solid var(--accent); color
 .om-os-intro-text h2 { max-width: 22ch; margin-bottom: 18px; }
 .om-os-intro-text p { max-width: 68ch; }
 
-.om-os-thomas { background: var(--warm); padding: var(--sp-sec) 0; border-top: 1px solid #E4D8C6; }
+.om-os-thomas { background: var(--blue-soft); padding: var(--sp-sec) 0; border-top: 1px solid #C3DCE8; }
 .om-os-thomas-inner {
   max-width: var(--max); margin: 0 auto; padding: 0 var(--gut);
   display: grid; grid-template-columns: 340px minmax(0,1fr); gap: 48px; align-items: start;
