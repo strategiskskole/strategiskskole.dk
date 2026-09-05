@@ -53,57 +53,67 @@ Sekundær: Folkeskoler og kommunale institutioner.
 ### For skolelederen
 1. NY I ROLLEN — DE FØRSTE 100 DAGE
    Sparringsforløb for nye skoleledere. Kortlæg dit strategiske ståsted fra dag ét. Find de 2-3 greb der skaber tillid og retning tidligt. 3 sparringssessioner over de første 10 uger med Thomas. Typisk 3-4 måneders varighed, 4-6 individuelle samtaler.
-   Side: /ny-skoleleder
+   Side: https://strategiskskole.dk/ny-leder.html
 
 2. STRATEGI DER KAN MÆRKES — TIRSDAG KL. 10
    For skolelederen der har en strategi, men oplever at til næste personalemøde taler de stadig om de samme ting. Kortlæg gabet mellem strategi og daglig praksis. Find de strukturelle ændringer der skaber mest bevægelse. 4-6 sessioner med løbende opfølgning.
-   Side: /strategi-i-praksis
+   Side: https://strategiskskole.dk/strategi-i-hverdagspraksis.html
 
 3. INDIVIDUEL AFKLARING
    Fortrolige samtaler for skoleledere om ledelsessituation, udfordringer og retning. Bruges som fundament for stærkere fælles processer. Alle henvendelser behandles med absolut fortrolighed.
-   Side: /individuel-afklaring
+   Side: https://strategiskskole.dk/individuel-afklaring.html
 
 ### For lederteamet
 4. INTRODUKTIONSWORKSHOP — KOM I GANG
    2-3 timer, ingen forberedelse. Arbejder med Trin 01 Spejling og Trin 02 Klarhed i Tirsdag kl. 10-modellen®. Giver et fælles sprog og afsæt for videre arbejde.
-   Side: /introduktionsworkshop
+   Side: https://strategiskskole.dk/lp-intro-workshop.html
 
 5. MØDEKULTUR MED STRATEGISK RETNING
    Redesign af skolens mødestruktur. Møder bruges som redskab til strategisk ledelse — ikke bare informationsdeling.
+   Side: https://strategiskskole.dk/moedekultur.html
 
 6. LEDELSESUDVIKLING FOR LEDERTEAMS
    Udvikling af ledergruppen som strategisk enhed. Fokus på fælles sprog, koordinering og rolleklarhed.
+   Side: https://strategiskskole.dk/lp-ledelsesudvikling-skole.html
 
 ### For bestyrelsen
 7. GOVERNANCE, SAMSPIL OG STRATEGISK KLARHED
    Bestyrelsen som strategisk aktiv — ikke kun orientering og administration. Klar rollefordeling: bestyrelsens opgave vs. hvad det ikke er. Etablér strategisk dialogformat med skolelederen. 2 workshops for bestyrelse og skoleleder samlet.
-   Side: /bestyrelsesarbejde
+   Side: https://strategiskskole.dk/skolegovernance.html
 
 8. LEDERSKIFTE — TRYGHED OG KONTINUITET
    For skoler der skifter leder — en af de mest sårbare faser. Struktureret overlevering fra dag ét. Bestyrelsens rolle konkret og afklaret. Onboarding-sparring med Thomas, typisk 2-6 måneder.
-   Side: /lederskifte
+   Side: https://strategiskskole.dk/lp-lederskifte-skole.html
 
 ### Tematiske ydelser
 9. FORANDRINGSLEDELSE
    Systematisk procesarbejde fra analyse af forandringsbehov til kulturel forankring. Fokus på menneskelig dimension og interessenthåndtering. Typisk 3-12 måneder afhængig af omfang.
-   Side: /forandringsledelse
+   Side: https://strategiskskole.dk/forandringsledelse.html
 
 10. KOORDINERING SOM STRATEGISK DISCIPLIN
     Design af koordineringsstrukturer der holder arbejdet i sammenhæng uden at overbelaste. Koordinering er ikke et personaletræk — det er en strukturel opgave.
-    Side: /koordinering
+    Side: https://strategiskskole.dk/koordinering.html
 
 11. LEDELSE SOM DESIGN AF RAMMER
     Rammesætning som aktiv ledelsesdisciplin. Strukturelle løsninger frem for adfærdsregulering. Ledelse handler om at designe de rammer, andre arbejder inden for.
-    Side: /ledelse-som-design
+    Side: https://strategiskskole.dk/ledelse-som-design.html
 
 12. ARBEJDSMILJØ GENNEM TYDELIG ORGANISERING
     Strukturelle løsninger: rolleafklaring, klare kontaktveje, bæredygtige arbejdsformer og psykologisk tryghed. Arbejdsmiljø er ikke kun trivsel — det er organisering.
-    Side: /arbejdsmiljoe
+    Side: https://strategiskskole.dk/arbejdsmiljoe.html
 
 ## Sådan kommer man i gang — 3 trin
 1. Første samtale — gratis, 20 min. Ring eller skriv. Ingen forpligtelse.
 2. Thomas sender et kort oplæg inden for få dage med forslag og indhold.
 3. Vi starter inden for to uger. Første møde, første greb — strategien begynder at mærkes.
+
+## Nøglesider — brug KUN disse adresser når du henviser til hjemmesiden
+- Forside: https://strategiskskole.dk/
+- Ydelsesoverblik (alle forløb): https://strategiskskole.dk/ydelser.html
+- Tirsdag kl. 10-modellen®: https://strategiskskole.dk/tirsdag-kl10-modellen.html
+- Om os / Thomas Kjerstein: https://strategiskskole.dk/om-os.html
+- Kontakt / book en gratis samtale: https://strategiskskole.dk/kontakt.html
+(De 12 ydelser ovenfor har hver deres egen "Side:"-adresse — brug den specifikke adresse, ikke ydelsesoverblikket, når spørgsmålet handler om én bestemt ydelse.)
 
 ## Faglig baggrundsviden — brug aktivt i svar
 
@@ -450,7 +460,7 @@ function safeJSON(str, fallback) {
 
 // ── AI: workers-ai.js ─────────────────────────────────────────
 
-const MODEL_8B  = '@cf/meta/llama-3.1-8b-instruct'
+const MODEL_8B  = '@cf/meta/llama-3.1-8b-instruct-fast'
 const MODEL_70B = '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
 
 function selectModel(source) { return source === 'forloeb' ? MODEL_70B : MODEL_8B }
@@ -518,7 +528,7 @@ function buildSystemPrompt({ source, rolle, trin, mode, priorInsights, themes, k
   }
 
   if (source === 'website') {
-    prompt += `\n\n## Kontekst: Hjemmesidechatbot\nKort, skærpende, max 150 ord. Stil ét opfølgende spørgsmål.\nHenvis til relevant side på strategiskskole.dk hvis relevant.\nDu kender disse sider: Tirsdag kl. 10-modellen, Proceskort, Digitalt forløb, Ydelser, Ny skoleleder, Forandringsledelse, Skolegovernance, Om os, Kontakt.`
+    prompt += `\n\n## Kontekst: Hjemmesidechatbot — SALGSFOKUS\nDu taler med en besøgende på hjemmesiden — ikke en kunde midt i et forløb. Formålet er at hjælpe personen videre og guide til et salg (booking af gratis samtale eller den rigtige ydelsesside).\n\nRegler, i denne rækkefølge:\n1. SVAR ALTID først direkte og konkret på det, personen spørger om. Brug "Ydelseskatalog" og "Faglig baggrundsviden" ovenfor aktivt. Stil IKKE et modspørgsmål i stedet for at svare.\n2. Henvis derefter aktivt til den mest relevante side med en naturlig sproglig henvisning OG et rigtigt link i formatet [sidenavn](URL). Brug KUN adresser fra "Ydelseskatalog" og "Nøglesider" ovenfor — opfind, forkort eller gæt ALDRIG en adresse.\n3. Du kan afslutte med ét kort, naturligt opfølgende spørgsmål eller en invitation til en gratis samtale — men først efter du har svaret på spørgsmålet.\n4. Hvis spørgsmålet er bredt (f.eks. "hvilke ydelser har I?"), giv 2-3 konkrete eksempler med links i stedet for kun at stille et spørgsmål tilbage.\nMax 150 ord.`
   } else if (source === 'app') {
     prompt += `\n\n## Kontekst: Tirsdag kl. 10-appen\nDu er procesguide i appen. Vær konkret og handlingsorienteret.\nHenvis til proceskortets spørgsmål. Foreslå beslutninger og handlinger.\nMax 200 ord.`
   } else if (source === 'forloeb') {
