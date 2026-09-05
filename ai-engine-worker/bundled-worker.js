@@ -100,10 +100,6 @@ Sekundær: Folkeskoler og kommunale institutioner.
     Strukturelle løsninger: rolleafklaring, klare kontaktveje, bæredygtige arbejdsformer og psykologisk tryghed. Arbejdsmiljø er ikke kun trivsel — det er organisering.
     Side: /arbejdsmiljoe
 
-### DIGITALT PROCESFORLØB
-Digitalt værktøj der følger Tirsdag kl. 10-modellen®. Tre niveauer: Skoleleder, Ledelsesteam, Bestyrelse. Bruges i rådgivning og procesfacilitering. 6 kort pr. aktør — ét for hvert trin i modellen.
-Side: /digitalt-forloeb
-
 ## Sådan kommer man i gang — 3 trin
 1. Første samtale — gratis, 20 min. Ring eller skriv. Ingen forpligtelse.
 2. Thomas sender et kort oplæg inden for få dage med forslag og indhold.
