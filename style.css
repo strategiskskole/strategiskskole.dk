@@ -21,7 +21,7 @@
   /* neutraler — svagt blåtonede, valgt ikke arvet */
   --ink:        #1D2C3A;
   --text:       #4A5765;
-  --muted:      #6E7C8A;
+  --muted:      #61707F;
   --line:       #DDE5EC;
   --line-soft:  #EBF0F4;
   --paper:      #FFFFFF;
@@ -191,7 +191,7 @@ nav { background: var(--paper); border-bottom: 1px solid var(--line); position: 
   border: 2px solid transparent; transition: background .18s, color .18s, border-color .18s, transform .18s;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--accent); color: var(--navy-ink); border-color: var(--accent); }
+.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
 .btn-primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
 .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.45); }
 .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
@@ -370,7 +370,7 @@ footer { background: var(--navy-ink); border-top: 4px solid var(--accent); color
 .footer-brand .logo { color: #fff; font-size: 1.3rem; }
 .footer-brand .logo span { color: var(--accent-lys); }
 .footer-brand p { font-size: .87rem; line-height: 1.85; margin-top: 16px; }
-.footer-col h3 {
+.footer-col h3, .footer-col h4 {
   color: var(--accent-lys); font-family: 'Open Sans', sans-serif;
   font-size: .69rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 15px;
 }
@@ -479,19 +479,19 @@ footer { background: var(--navy-ink); border-top: 4px solid var(--accent); color
 .kerne-label {
   font-variant-numeric: tabular-nums;
   font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--accent-lys); margin-bottom: 12px;
+  color: #7BC4D4; margin-bottom: 12px;
 }
 .om-os-kerne-box h3 { color: #fff; font-size: 1.6rem; margin-bottom: 8px; }
 .kerne-sub {
   font-family: 'Merriweather', serif; font-style: italic;
-  color: var(--accent-lys); font-size: 1.04rem; margin-bottom: 18px;
+  color: #7BC4D4; font-size: 1.04rem; margin-bottom: 18px;
 }
 .om-os-kerne-box strong { color: #fff; }
 .kerne-link {
   display: inline-block; margin-top: 10px; font-weight: 700; font-size: .92rem;
-  color: var(--accent-lys); text-decoration: none; border-bottom: 1px solid transparent;
+  color: #7BC4D4; text-decoration: none; border-bottom: 1px solid transparent;
 }
-.kerne-link:hover { border-bottom-color: var(--accent-lys); }
+.kerne-link:hover { border-bottom-color: #7BC4D4; }
 
 /* ---- om os ---- */
 .om-os-hero-text { max-width: var(--max); margin: 0 auto; padding: var(--sp-sec) var(--gut) 0; }
@@ -532,7 +532,7 @@ footer { background: var(--navy-ink); border-top: 4px solid var(--accent); color
    :root og påvirkes ikke.
    ============================================================ */
 :root {
-  --teal:        #2E7D8C;   /* uændret — de gamle inline-referencer */
+  --teal:        #1C5A66;   /* mørkere end tidligere — sikrer kontrast på lyseblå bund (result-box, cta-banner) */
   --teal2:       #3A9DB0;   /* uændret                              */
   --teal-light:  var(--blue-soft);
   --navy2:       var(--blue);
