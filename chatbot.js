@@ -50,6 +50,7 @@
   let isOpen    = false;
   let isLoading = false;
   let history   = [];   // [{role:"user"|"assistant", content:"..."}]
+  let sessionId = null; // Sætter serveren efter første besked — bevarer samtalekontekst
 
   // ─── CSS ──────────────────────────────────────────────────────────────────────
   const style = el("style");
@@ -320,13 +321,20 @@
   }
 
   function formatText(text) {
-    // Konverter **fed** → <strong>, *kursiv* → <em>, linjeskift → <br>
+    // Konverter **fed** → <strong>, *kursiv* → <em>, [tekst](url) → <a>,
+    // bare URL'er → <a>, linjeskift → <br>
     return text
       .replace(/&/g,  "&amp;")
       .replace(/</g,  "&lt;")
       .replace(/>/g,  "&gt;")
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.+?)\*/g,     "<em>$1</em>")
+      // Markdown-links: [tekst](https://...)
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      // Resterende bare URL'er (ikke allerede inde i et href="...")
+      .replace(/(?<!href=")(https?:\/\/[^\s<]+)/g,
+        '<a href="$1" target="_blank" rel="noopener">$1</a>')
       .replace(/\n/g, "<br>");
   }
 
@@ -362,7 +370,7 @@
       const res = await fetch(WORKER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, history: history.slice(-6) }),
+        body: JSON.stringify({ message: text, history: history.slice(-6), session_id: sessionId }),
         signal: controller.signal,
       });
 
@@ -373,6 +381,7 @@
 
       if (data.error) throw new Error(data.error);
       const reply = data.answer || data.reply || "Beklager, jeg kunne ikke generere et svar.";
+      if (data.session_id) sessionId = data.session_id;
 
       history.push({ role: "assistant", content: reply });
       addBotMessage(reply);
