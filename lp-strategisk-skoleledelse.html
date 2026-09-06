@@ -40,6 +40,7 @@
   <style>
     /* ── Page-specific styles (spejler tirsdag-kl10-modellen.html) ── */
     .pri-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:1.6rem; }
+    @media (max-width: 600px) { .pri-grid { grid-template-columns: 1fr; } }
     .pri-card { background:var(--light); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:1.2rem 1.3rem; }
     .pri-n { font-size:.65rem; font-weight:700; letter-spacing:1.5px; color:var(--teal); text-transform:uppercase; margin-bottom:.4rem; }
     .pri-card p { font-size:.92rem; color:var(--navy); font-weight:600; margin:0; }

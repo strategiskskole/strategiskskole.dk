@@ -51,7 +51,7 @@
 
     /* Who it is for — role cards */
     .role-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:2.8rem; }
- .role-cards{grid-template-columns:1fr;}
+    @media (max-width: 900px) { .role-cards { grid-template-columns: 1fr; } }
 
     .role-card {
       background:#fff;
@@ -79,6 +79,7 @@
 
     /* Principles grid */
     .pri-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.2rem; }
+    @media (max-width: 600px) { .pri-grid { grid-template-columns: 1fr; } }
 
     .pri-card { background:var(--light); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:1.2rem 1.3rem; }
 

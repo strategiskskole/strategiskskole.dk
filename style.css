@@ -337,6 +337,9 @@ nav { background: var(--paper); border-bottom: 1px solid var(--line); position: 
 }
 .cta-banner h2 { color: var(--navy); max-width: 20ch; margin: 0 auto 16px; }
 .cta-banner p { color: var(--text); max-width: 56ch; margin: 0 auto 30px; }
+/* Knapperne står som løse inline-block-elementer uden wrapper. Margin sikrer
+   mellemrum både side om side (desktop) og når de knækker til to linjer (mobil). */
+.cta-banner .btn { margin: 7px; }
 .cta-banner .btn-outline { color: var(--navy); border-color: var(--navy); }
 .cta-banner .btn-outline:hover { background: var(--navy); color: #fff; }
 
@@ -574,6 +577,10 @@ label { color: var(--navy); }
 
 @media (max-width: 600px) {
   button, .btn, input[type=submit] { min-height: 44px; }
+  /* Sikkerhedsnet: disse kort-grids bruger minmax() med en min-bredde, der er
+     større end den tilgængelige plads på de smalleste mobiler (fx 320px bred
+     iPhone SE), hvilket giver vandret scroll. Under 600px tvinges én kolonne. */
+  .forlob-grid, .felter-grid, .focus-grid, .values-grid, .related-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
