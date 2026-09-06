@@ -108,6 +108,31 @@
     .research-box { padding: 24px 20px; }
     .research-quote { font-size: 1.02rem; }
   }
+
+  /* LEADMAGNET — gratis guide til ledelse og bestyrelse */
+  .leadmagnet-section { background: var(--navy-deep); padding: var(--sp-sec) 0; }
+  .leadmagnet-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--gut);
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;
+  }
+  .leadmagnet-section .section-eyebrow { color: var(--accent-lys); }
+  .leadmagnet-section h2 { color: #fff; max-width: 18ch; margin-bottom: 14px; }
+  .leadmagnet-lead { color: rgba(255,255,255,.82); font-size: 1.02rem; max-width: 48ch; margin-bottom: 22px; }
+  .leadmagnet-points { list-style: none; display: grid; gap: 10px; margin-bottom: 30px; }
+  .leadmagnet-points li { color: rgba(255,255,255,.86); font-size: .92rem; padding-left: 26px; position: relative; }
+  .leadmagnet-points li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-lys); font-weight: 700; }
+  .leadmagnet-note { color: rgba(255,255,255,.55); font-size: .8rem; margin-top: 14px; }
+  .leadmagnet-cover { display: flex; justify-content: center; }
+  .leadmagnet-cover img {
+    width: 100%; max-width: 300px; border-radius: 6px; display: block;
+    box-shadow: 0 20px 50px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+    transform: rotate(1.5deg);
+  }
+  @media (max-width: 900px) {
+    .leadmagnet-inner { grid-template-columns: 1fr; gap: 36px; }
+    .leadmagnet-cover { order: -1; }
+    .leadmagnet-cover img { max-width: 220px; }
+  }
   </style>
 </head>
 <body>
@@ -318,6 +343,27 @@
       <span class="research-label">Understøttet af forskning</span>
       <blockquote class="research-quote">„Hvis du kun har syn for det langsigtede, og du ikke får samlet de succeser op undervejs, der byder sig, eller anledninger der kommer – tænker du så strategisk nok?“</blockquote>
       <p class="research-text">Sådan siger en skoleleder i CBS/UCC-rapporten <em>Strategisk ledelse i folkeskolen</em> (Sløk &amp; Ryberg, 2010) — en undersøgelse blandt 22 danske skoleledere. Konklusionen er tydelig: strategi, der kun lever som en plan på papir, mister sin kraft i hverdagen. Det er præcis den kløft, Tirsdag kl. 10-modellen® er bygget til at lukke.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEADMAGNET: Gratis guide til ledelse og bestyrelse -->
+<section class="leadmagnet-section">
+  <div class="leadmagnet-inner">
+    <div class="leadmagnet-text">
+      <span class="section-eyebrow">Gratis guide til ledelse og bestyrelse</span>
+      <h2>5 greb, I kan gå i gang med i morgen</h2>
+      <p class="leadmagnet-lead">En kort, konkret guide til skoleledere og bestyrelser, der vil omsætte strategi til hverdagspraksis — med et kig ind i Tirsdag kl. 10-modellen®.</p>
+      <ul class="leadmagnet-points">
+        <li>5 konkrete greb, I kan bruge til næste ledelses- eller bestyrelsesmøde</li>
+        <li>Kort introduktion til Tirsdag kl. 10-modellen®</li>
+        <li>Kontaktinfo, hvis I vil tage det videre</li>
+      </ul>
+      <a href="5-greb-strategisk-skoleledelse.pdf" class="btn btn-primary" download>Download guiden gratis (PDF) →</a>
+      <p class="leadmagnet-note">Ingen tilmelding nødvendig — hent den direkte.</p>
+    </div>
+    <div class="leadmagnet-cover">
+      <img src="images/guide-cover.jpg" alt="Forside af guiden: De 5 vigtigste greb i strategisk skoleledelse" width="700" height="989" loading="lazy"/>
     </div>
   </div>
 </section>
